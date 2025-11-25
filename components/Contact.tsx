@@ -15,11 +15,8 @@ const Contact: React.FC = () => {
           
           {/* Contact Info */}
           <div>
-            <span className="text-nature-green font-bold tracking-widest uppercase text-xs mb-2 block">Get In Touch</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">Visit Our Clinic</h2>
-            <p className="text-stone-400 mb-10 text-lg leading-relaxed max-w-md">
-              Start your journey towards a disease-free life today. Contact us for consultation regarding chronic diseases and natural detoxification.
-            </p>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 leading-tight">Contact Best Naturopathy Doctor in Lucknow for Naturopathic Treatment</h1>
+            <h2 className="text-2xl md:text-3xl font-serif text-stone-300 mb-10">Natural Treatment in Lucknow, Naturopath for Disease Cure without Side Effects</h2>
             
             <div className="space-y-8">
               <div className="flex items-start group">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
@@ -8,6 +9,10 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import { MessageCircle } from 'lucide-react';
 import { WHATSAPP } from '@/lib/constants';
+
+export const metadata: Metadata = {
+  title: "#1 Naturopath in Lucknow, Naturopathy Hospital, Naturopathic Doctor",
+};
 
 export default function Home() {
   return (
