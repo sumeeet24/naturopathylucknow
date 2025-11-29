@@ -43,122 +43,124 @@ const Header: React.FC = () => {
   const navUnderlineClass = "absolute bottom-0 left-0 w-0 h-0.5 bg-nature-green transition-all duration-300 group-hover:w-full";
 
   return (
-    <header
-        className={`fixed w-full top-0 z-[100] transition-all duration-500 border-b ${
-            scrolled
+    <>
+      <header
+        className={`fixed w-full top-0 z-[9999] transition-all duration-500 border-b overflow-visible ${
+          scrolled
             ? 'bg-white/90 backdrop-blur-xl shadow-sm border-stone-200 py-3'
             : 'bg-white/60 backdrop-blur-md border-transparent py-5'
         }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          {/* Logo / Brand Name for SEO */}
-          <div className="flex-shrink-0 flex items-center relative z-50">
-            <Link href="/" className="group flex flex-col md:flex-row md:items-baseline">
-              <span className="text-2xl md:text-3xl font-serif font-bold text-nature-green tracking-tight transition-transform duration-300 group-hover:scale-105">
-                Lucknow
-              </span>
-              <span className="text-earth-brown md:ml-1 text-2xl md:text-3xl font-serif font-bold tracking-tight transition-colors duration-300 group-hover:text-nature-dark">
-                Naturopathy
-              </span>
-            </Link>
-          </div>
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center">
+            {/* Logo / Brand Name for SEO */}
+            <div className="flex-shrink-0 flex items-center relative z-50">
+              <Link href="/" className="group flex flex-col md:flex-row md:items-baseline">
+                <span className="text-2xl md:text-3xl font-serif font-bold text-nature-green tracking-tight transition-transform duration-300 group-hover:scale-105">
+                  Lucknow
+                </span>
+                <span className="text-earth-brown md:ml-1 text-2xl md:text-3xl font-serif font-bold tracking-tight transition-colors duration-300 group-hover:text-nature-dark">
+                  Naturopathy
+                </span>
+              </Link>
+            </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8 items-center">
-            <Link href="/" className={navLinkClass}>
-              Home
-              <span className={navUnderlineClass}></span>
-            </Link>
-            
-            {/* Treatments Dropdown */}
-            <div className="relative group">
-              <button className={`${navLinkClass} flex items-center outline-none`}>
-                Treatments <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex space-x-8 items-center">
+              <Link href="/" className={navLinkClass}>
+                Home
                 <span className={navUnderlineClass}></span>
-              </button>
-              <div className="absolute left-0 mt-0 w-72 z-[101] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/95 backdrop-blur-md border border-stone-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left translate-y-4 group-hover:translate-y-0 overflow-hidden">
-                <div className="p-3 grid gap-1">
-                  {TREATMENTS.slice(0, 6).map(item => (
-                    <Link key={item.id} href={`/treatment/${item.id}`} className="flex items-center justify-between px-4 py-3 text-sm text-stone-600 hover:bg-nature-light hover:text-nature-green rounded-xl transition-all duration-200 group/item">
-                      {item.title}
-                      <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
-                    </Link>
-                  ))}
-                  <div className="border-t border-stone-100 mt-2 pt-2">
-                    <Link href="/treatments" className="block px-4 py-3 text-sm font-bold text-nature-green hover:bg-nature-light rounded-xl text-center transition-colors">
-                        View All Treatments
-                    </Link>
+              </Link>
+
+              {/* Treatments Dropdown */}
+              <div className="relative group">
+                <button className={`${navLinkClass} flex items-center outline-none`}>
+                  Treatments <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
+                  <span className={navUnderlineClass}></span>
+                </button>
+                <div className="absolute left-0 top-full mt-2 w-72 z-[10000] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/95 backdrop-blur-md border border-stone-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left translate-y-4 group-hover:translate-y-0 overflow-hidden">
+                  <div className="p-3 grid gap-1">
+                    {TREATMENTS.slice(0, 6).map(item => (
+                      <Link key={item.id} href={`/treatment/${item.id}`} className="flex items-center justify-between px-4 py-3 text-sm text-stone-600 hover:bg-nature-light hover:text-nature-green rounded-xl transition-all duration-200 group/item">
+                        {item.title}
+                        <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                      </Link>
+                    ))}
+                    <div className="border-t border-stone-100 mt-2 pt-2">
+                      <Link href="/treatments" className="block px-4 py-3 text-sm font-bold text-nature-green hover:bg-nature-light rounded-xl text-center transition-colors">
+                          View All Treatments
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Conditions Dropdown */}
-            <div className="relative group">
-              <button className={`${navLinkClass} flex items-center outline-none`}>
-                Diseases We Cure <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
-                <span className={navUnderlineClass}></span>
-              </button>
-              <div className="absolute left-0 mt-0 w-72 z-[101] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/95 backdrop-blur-md border border-stone-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left translate-y-4 group-hover:translate-y-0 overflow-hidden">
-                <div className="p-3 grid gap-1">
-                  {CONDITIONS.slice(0, 6).map(item => (
-                    <Link key={item.id} href={`/condition/${item.id}`} className="flex items-center justify-between px-4 py-3 text-sm text-stone-600 hover:bg-nature-light hover:text-nature-green rounded-xl transition-all duration-200 group/item">
-                      {item.title}
-                       <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
-                    </Link>
-                  ))}
+              {/* Conditions Dropdown */}
+              <div className="relative group">
+                <button className={`${navLinkClass} flex items-center outline-none`}>
+                  Diseases We Cure <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
+                  <span className={navUnderlineClass}></span>
+                </button>
+                <div className="absolute left-0 top-full mt-2 w-72 z-[10000] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/95 backdrop-blur-md border border-stone-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left translate-y-4 group-hover:translate-y-0 overflow-hidden">
+                  <div className="p-3 grid gap-1">
+                    {CONDITIONS.slice(0, 6).map(item => (
+                      <Link key={item.id} href={`/condition/${item.id}`} className="flex items-center justify-between px-4 py-3 text-sm text-stone-600 hover:bg-nature-light hover:text-nature-green rounded-xl transition-all duration-200 group/item">
+                        {item.title}
+                        <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
+
+              <Link href="/pricing" className={navLinkClass}>
+                Pricing
+                <span className={navUnderlineClass}></span>
+              </Link>
+              <Link href="/doctor" className={navLinkClass}>
+                About Doctor
+                <span className={navUnderlineClass}></span>
+              </Link>
+              <Link href="/contact" className={navLinkClass}>
+                Contact
+                <span className={navUnderlineClass}></span>
+              </Link>
+            </nav>
+
+            {/* Call to Action Button */}
+            <div className="hidden lg:flex items-center">
+              <a
+                href={`https://wa.me/${WHATSAPP}?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment.`}
+                target="_blank"
+                rel="noreferrer"
+                className="group relative inline-flex items-center px-6 py-3 overflow-hidden rounded-full bg-nature-green text-white shadow-lg shadow-nature-green/30 transition-all duration-300 hover:shadow-xl hover:shadow-nature-green/40 hover:-translate-y-0.5"
+              >
+                <div className="absolute inset-0 w-full h-full bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></div>
+                <span className="relative flex items-center text-sm font-bold tracking-wide">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Book Appointment
+                </span>
+              </a>
             </div>
 
-            <Link href="/pricing" className={navLinkClass}>
-              Pricing
-              <span className={navUnderlineClass}></span>
-            </Link>
-            <Link href="/doctor" className={navLinkClass}>
-              About Doctor
-              <span className={navUnderlineClass}></span>
-            </Link>
-            <Link href="/contact" className={navLinkClass}>
-              Contact
-              <span className={navUnderlineClass}></span>
-            </Link>
-          </nav>
-
-          {/* Call to Action Button */}
-          <div className="hidden lg:flex items-center">
-            <a
-              href={`https://wa.me/${WHATSAPP}?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment.`}
-              target="_blank"
-              rel="noreferrer"
-              className="group relative inline-flex items-center px-6 py-3 overflow-hidden rounded-full bg-nature-green text-white shadow-lg shadow-nature-green/30 transition-all duration-300 hover:shadow-xl hover:shadow-nature-green/40 hover:-translate-y-0.5"
-            >
-              <div className="absolute inset-0 w-full h-full bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></div>
-              <span className="relative flex items-center text-sm font-bold tracking-wide">
-                <Phone className="w-4 h-4 mr-2" />
-                Book Appointment
-              </span>
-            </a>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center z-50">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-full text-stone-600 hover:text-nature-green hover:bg-nature-light focus:outline-none transition-colors"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
-            </button>
+            {/* Mobile menu button */}
+            <div className="lg:hidden flex items-center z-50">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="inline-flex items-center justify-center p-2 rounded-full text-stone-600 hover:text-nature-green hover:bg-nature-light focus:outline-none transition-colors"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Moved outside Header to avoid being clipped by header's backdrop-filter containing block */}
       <div
-        className={`lg:hidden fixed inset-0 z-40 bg-white transform transition-transform duration-500 ease-in-out ${
+        className={`lg:hidden fixed inset-0 z-[9998] bg-white transform transition-transform duration-500 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         style={{ top: '0', paddingTop: '80px' }} // Offset for header height
@@ -215,7 +217,7 @@ const Header: React.FC = () => {
             </div>
           </div>
       </div>
-    </header>
+    </>
   );
 };
 
