@@ -43,10 +43,9 @@ const Header: React.FC = () => {
   const navUnderlineClass = "absolute bottom-0 left-0 w-0 h-0.5 bg-nature-green transition-all duration-300 group-hover:w-full";
 
   return (
-    <>
-      <header
-        className={`fixed w-full top-0 z-[9999] transition-all duration-500 border-b overflow-visible ${
-          scrolled
+    <header
+        className={`fixed w-full top-0 z-[9999] transition-all duration-500 border-b ${
+            scrolled
             ? 'bg-white/90 backdrop-blur-xl shadow-sm border-stone-200 py-3'
             : 'bg-white/60 backdrop-blur-md border-transparent py-5'
         }`}
@@ -70,46 +69,37 @@ const Header: React.FC = () => {
               <Link href="/" className={navLinkClass}>
                 Home
                 <span className={navUnderlineClass}></span>
-              </Link>
-
-              {/* Treatments Dropdown */}
-              <div className="relative group">
-                <button className={`${navLinkClass} flex items-center outline-none`}>
-                  Treatments <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
-                  <span className={navUnderlineClass}></span>
-                </button>
-                <div className="absolute left-0 top-full mt-2 w-72 z-[10000] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/95 backdrop-blur-md border border-stone-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left translate-y-4 group-hover:translate-y-0 overflow-hidden">
-                  <div className="p-3 grid gap-1">
-                    {TREATMENTS.slice(0, 6).map(item => (
-                      <Link key={item.id} href={`/treatment/${item.id}`} className="flex items-center justify-between px-4 py-3 text-sm text-stone-600 hover:bg-nature-light hover:text-nature-green rounded-xl transition-all duration-200 group/item">
-                        {item.title}
-                        <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
-                      </Link>
-                    ))}
-                    <div className="border-t border-stone-100 mt-2 pt-2">
-                      <Link href="/treatments" className="block px-4 py-3 text-sm font-bold text-nature-green hover:bg-nature-light rounded-xl text-center transition-colors">
-                          View All Treatments
-                      </Link>
-                    </div>
+              </button>
+              <div className="absolute left-0 mt-0 w-72 z-[10000] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/95 backdrop-blur-md border border-stone-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left translate-y-4 group-hover:translate-y-0 overflow-hidden">
+                <div className="p-3 grid gap-1">
+                  {TREATMENTS.slice(0, 6).map(item => (
+                    <Link key={item.id} href={`/treatment/${item.id}`} className="flex items-center justify-between px-4 py-3 text-sm text-stone-600 hover:bg-nature-light hover:text-nature-green rounded-xl transition-all duration-200 group/item">
+                      {item.title}
+                      <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                    </Link>
+                  ))}
+                  <div className="border-t border-stone-100 mt-2 pt-2">
+                    <Link href="/treatments" className="block px-4 py-3 text-sm font-bold text-nature-green hover:bg-nature-light rounded-xl text-center transition-colors">
+                        View All Treatments
+                    </Link>
                   </div>
                 </div>
               </div>
 
-              {/* Conditions Dropdown */}
-              <div className="relative group">
-                <button className={`${navLinkClass} flex items-center outline-none`}>
-                  Diseases We Cure <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
-                  <span className={navUnderlineClass}></span>
-                </button>
-                <div className="absolute left-0 top-full mt-2 w-72 z-[10000] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/95 backdrop-blur-md border border-stone-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left translate-y-4 group-hover:translate-y-0 overflow-hidden">
-                  <div className="p-3 grid gap-1">
-                    {CONDITIONS.slice(0, 6).map(item => (
-                      <Link key={item.id} href={`/condition/${item.id}`} className="flex items-center justify-between px-4 py-3 text-sm text-stone-600 hover:bg-nature-light hover:text-nature-green rounded-xl transition-all duration-200 group/item">
-                        {item.title}
-                        <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
-                      </Link>
-                    ))}
-                  </div>
+            {/* Conditions Dropdown */}
+            <div className="relative group">
+              <button className={`${navLinkClass} flex items-center outline-none`}>
+                Diseases We Cure <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
+                <span className={navUnderlineClass}></span>
+              </button>
+              <div className="absolute left-0 mt-0 w-72 z-[10000] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/95 backdrop-blur-md border border-stone-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left translate-y-4 group-hover:translate-y-0 overflow-hidden">
+                <div className="p-3 grid gap-1">
+                  {CONDITIONS.slice(0, 6).map(item => (
+                    <Link key={item.id} href={`/condition/${item.id}`} className="flex items-center justify-between px-4 py-3 text-sm text-stone-600 hover:bg-nature-light hover:text-nature-green rounded-xl transition-all duration-200 group/item">
+                      {item.title}
+                       <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
+                    </Link>
+                  ))}
                 </div>
               </div>
 
