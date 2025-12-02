@@ -80,6 +80,8 @@ const Header: React.FC = () => {
             <nav className="hidden lg:flex space-x-8 items-center" aria-label="Main Navigation">
               <Link href="/" className={navLinkClass}>Home</Link>
 
+              <Link href="/physiotherapy" className={navLinkClass}>Physiotherapy</Link>
+
               {/* Desktop Dropdown: Treatments */}
               <div className="relative group">
                 <button
@@ -188,6 +190,7 @@ const Header: React.FC = () => {
         <div className="h-full overflow-y-auto px-4 pb-20">
             <nav className="space-y-1">
                 <Link href="/" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Home</Link>
+                <Link href="/physiotherapy" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Physiotherapy</Link>
 
                 {/* Mobile Dropdown: Treatments */}
                 <div className="border-b border-stone-100">

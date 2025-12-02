@@ -37,6 +37,7 @@ const Footer: React.FC = () => {
                 <ul className="space-y-4 text-sm">
                     {[
                         { label: "Home", href: "/" },
+                        { label: "Physiotherapy", href: "/physiotherapy" },
                         { label: "About Naturopathy", href: "/about-naturopathy" },
                         { label: "Treatments", href: "/treatments" },
                         { label: "About Dr. Gupta", href: "/doctor" },
