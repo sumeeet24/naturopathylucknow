@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/treatment/acupressure',
+        destination: '/acupressure-in-lucknow',
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
