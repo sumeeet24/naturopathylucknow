@@ -81,6 +81,7 @@ const Header: React.FC = () => {
               <Link href="/" className={navLinkClass}>Home</Link>
 
               <Link href="/physiotherapy" className={navLinkClass}>Physiotherapy</Link>
+              <Link href="/acupressure-in-lucknow" className={navLinkClass}>Acupressure</Link>
 
               {/* Desktop Dropdown: Treatments */}
               <div className="relative group">
@@ -191,6 +192,7 @@ const Header: React.FC = () => {
             <nav className="space-y-1">
                 <Link href="/" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Home</Link>
                 <Link href="/physiotherapy" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Physiotherapy</Link>
+                <Link href="/acupressure-in-lucknow" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Acupressure</Link>
 
                 {/* Mobile Dropdown: Treatments */}
                 <div className="border-b border-stone-100">
