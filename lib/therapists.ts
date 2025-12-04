@@ -1,67 +1,31 @@
-export interface TherapistProfile {
+export interface Therapist {
   slug: string;
   name: string;
-  designation: string;
-  image: string;
-  certificateImage: string;
-  phone: string;
-  email?: string;
-  shortBio: string;
-  detailedBio: string[];
-  specializations: string[];
-  certifications: string[];
-  isPlaceholder?: boolean; // For blank cards
+  specialty: string; // e.g., "Acupressure Specialist"
+  qualifications: string[];
+  bio: string;
+  image: string; // URL
+  certificateImage?: string; // URL for certificate placeholder
+  contactNumber: string;
+  email: string;
+  availableDays: string[]; // e.g., ["Mon", "Tue", ...]
+  availableHours: string; // e.g., "10:00 AM - 05:00 PM"
+  description: string; // For SEO meta description
 }
 
-export const THERAPISTS: TherapistProfile[] = [
+export const THERAPISTS: Therapist[] = [
   {
-    slug: 'kawaljeet-singh',
-    name: 'Kawaljeet Singh',
-    designation: 'Acupressure Therapist',
-    image: '/images/team/kawaljeet-singh.jpg',
-    certificateImage: '/images/team/kawaljeet-singh-certificate.jpg',
-    phone: '+91 76072 06523',
-    shortBio: 'Certified Acupressure Therapist specializing in pain relief and energy balancing.',
-    detailedBio: [
-      "Kawaljeet Singh is a dedicated Acupressure Therapist with extensive experience in the field of alternative medicine.",
-      "He holds a Diploma in Acupressure Therapy (D.A.T.) and has been successfully treating patients for various conditions including chronic pain, stress-related disorders, and muscular tension.",
-      "His approach combines traditional acupressure techniques with a deep understanding of the body's energy meridians to promote natural healing and well-being."
-    ],
-    specializations: [
-      "Pain Management",
-      "Stress Relief",
-      "Muscular Tension",
-      "Energy Balancing"
-    ],
-    certifications: [
-      "Diploma in Acupressure Therapy (D.A.T.) - Sambhav Acupressure Research, Training N Treatment Institute"
-    ]
-  },
-  // Placeholders for future additions
-  {
-    slug: 'placeholder-1',
-    name: 'Join Our Team',
-    designation: 'Acupressure Therapist',
-    image: '',
-    certificateImage: '',
-    phone: '',
-    shortBio: '',
-    detailedBio: [],
-    specializations: [],
-    certifications: [],
-    isPlaceholder: true
-  },
-  {
-    slug: 'placeholder-2',
-    name: 'Join Our Team',
-    designation: 'Acupressure Therapist',
-    image: '',
-    certificateImage: '',
-    phone: '',
-    shortBio: '',
-    detailedBio: [],
-    specializations: [],
-    certifications: [],
-    isPlaceholder: true
+    slug: "kawaljeet-singh",
+    name: "Kawaljeet Singh",
+    specialty: "Certified Acupressure Therapist",
+    qualifications: ["Diploma in Acupressure Therapy", "Advanced Certificate in Reflexology"],
+    bio: "Kawaljeet Singh is a certified Acupressure Therapist in Lucknow with over 8 years of experience. He specializes in treating chronic pain, sciatica, and migraine through precise pressure point stimulation. His holistic approach combines traditional acupressure with modern stress-relief techniques.",
+    image: "/images/placeholders/kawaljeet-singh.jpg",
+    certificateImage: "/images/placeholders/certificate-kawaljeet.jpg",
+    contactNumber: "+91 88742 06748",
+    email: "biotb.instantreply@gmail.com",
+    availableDays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    availableHours: "10:00 AM - 06:00 PM",
+    description: "Book an appointment with Kawaljeet Singh, top Acupressure Therapist in Lucknow. Expert in treating arthritis, back pain, and slip disc naturally."
   }
 ];
