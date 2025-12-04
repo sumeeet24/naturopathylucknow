@@ -1,207 +1,286 @@
 import React from 'react';
-import { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Metadata } from 'next';
+import { DOCTOR, PHONE, ADDRESS } from '@/lib/constants';
 import { THERAPISTS } from '@/lib/therapists';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { ArrowRight, Star, Leaf, Award } from 'lucide-react';
-import { generateBreadcrumbSchema } from '@/lib/utils';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Acupressure in Lucknow | Acupuncture in Lucknow',
-  description: 'Best Acupressure and Acupuncture treatment in Lucknow. Expert therapists for pain relief, stress management, and holistic healing. Book now.',
+  title: 'Acupressure in Lucknow | Acupuncture in Lucknow — Natural Treatment Hospital',
+  description: 'Best Acupressure and Acupuncture treatment in Lucknow. Certified therapist Kawaljeet Singh offers holistic pain relief for sciatica, cervical, and migraine in Gomti Nagar.',
+  keywords: ['Acupressure in Lucknow', 'Acupuncture in Lucknow', 'Acupressure Therapist Lucknow', 'Kawaljeet Singh Acupressure', 'Pain Management Lucknow'],
   alternates: {
-    canonical: '/acupressure-in-lucknow',
+    canonical: 'https://naturaltreatmenthospital.com/acupressure-in-lucknow',
   },
+  openGraph: {
+    title: 'Acupressure & Acupuncture Treatment in Lucknow',
+    description: 'Relieve chronic pain naturally with Acupressure. Consult Kawaljeet Singh at Natural Treatment Hospital, Gomti Nagar.',
+    url: 'https://naturaltreatmenthospital.com/acupressure-in-lucknow',
+    type: 'website',
+  }
 };
 
-export default function AcupressurePage() {
-  const breadcrumbJson = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://lucknownaturopathy.com' },
-    { name: 'Acupressure & Acupuncture', url: 'https://lucknownaturopathy.com/acupressure-in-lucknow' }
-  ]);
+const AcupressurePage = () => {
+  const therapist = THERAPISTS[0]; // Kawaljeet Singh
 
-  const activeTherapists = THERAPISTS.filter(t => !t.isPlaceholder);
-  const placeholders = THERAPISTS.filter(t => t.isPlaceholder);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Natural Treatment Hospital - Acupressure Clinic",
+    "image": therapist.image,
+    "@id": "https://naturaltreatmenthospital.com",
+    "url": "https://naturaltreatmenthospital.com/acupressure-in-lucknow",
+    "telephone": PHONE,
+    "priceRange": "₹300 - ₹1000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": ADDRESS,
+      "addressLocality": "Lucknow",
+      "addressRegion": "UP",
+      "postalCode": "226010",
+      "addressCountry": "IN"
+    },
+    "medicalSpecialty": ["Acupressure", "Acupuncture", "AlternativeMedicine"],
+    "employee": {
+      "@type": "Person",
+      "name": therapist.name,
+      "jobTitle": therapist.specialty,
+      "image": therapist.image,
+      "description": therapist.bio
+    }
+  };
 
-  // Combine to show placeholders if needed, or just map placeholders for layout demonstration
-  const displayTeam = [...activeTherapists, ...placeholders];
+  const breadcrumbJson = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://naturaltreatmenthospital.com"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Acupressure & Acupuncture",
+      "item": "https://naturaltreatmenthospital.com/acupressure-in-lucknow"
+    }]
+  };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-grow pt-20">
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
-        />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
+      />
 
+      <main className="min-h-screen bg-stone-50 text-stone-800 font-sans">
         {/* Hero Section */}
-        <div className="bg-stone-50 border-b border-stone-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-            <div className="text-center max-w-3xl mx-auto">
-              <span className="text-nature-green font-bold tracking-widest uppercase text-sm mb-3 block">Holistic Healing</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-stone-900 mb-6 leading-tight">
-                Acupressure & Acupuncture <br/>
-                <span className="text-nature-green">in Lucknow</span>
-              </h1>
-              <p className="text-xl text-stone-600 leading-relaxed mb-8">
-                Restore your body&apos;s natural balance and eliminate pain through the ancient art of pressure point therapy.
-                We combine both Acupressure and Acupuncture therapies to provide comprehensive relief for our patients.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Introduction Section */}
-        <div className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-serif font-bold text-stone-900 mb-6">Why Combine Acupressure & Acupuncture?</h2>
-                <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
-                  <p>
-                    While distinct in their application, both Acupressure and Acupuncture share the same fundamental principle:
-                    stimulating specific points along the body&apos;s energy meridians to promote healing and pain relief.
-                  </p>
-                  <p>
-                    We present these therapies together because many patients benefit from a synergistic approach.
-                    Whether you prefer the needle-free touch of Acupressure or the deep precision of Acupuncture,
-                    our specialists in Lucknow are equipped to guide your healing journey.
-                  </p>
-                </div>
-                <div className="mt-8 grid grid-cols-2 gap-4">
-                  <div className="bg-nature-light/30 p-4 rounded-xl border border-nature-green/10">
-                    <Leaf className="w-8 h-8 text-nature-green mb-2" />
-                    <h3 className="font-bold text-stone-800">Drugless Therapy</h3>
-                    <p className="text-sm text-stone-500">100% natural pain relief</p>
-                  </div>
-                  <div className="bg-nature-light/30 p-4 rounded-xl border border-nature-green/10">
-                    <Star className="w-8 h-8 text-nature-green mb-2" />
-                    <h3 className="font-bold text-stone-800">Holistic Care</h3>
-                    <p className="text-sm text-stone-500">Treats root cause</p>
-                  </div>
-                </div>
-              </div>
-              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                 {/* Decorative Image */}
-                 <Image
-                   src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop"
-                   alt="Acupressure Treatment"
-                   fill
-                   className="object-cover"
-                 />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Certificate Section */}
-        <div className="py-16 bg-stone-50 border-y border-stone-200">
-           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-             <div className="bg-white rounded-2xl shadow-xl overflow-hidden md:flex">
-                <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                   <div className="inline-flex items-center space-x-2 text-nature-green mb-4">
-                      <Award className="w-6 h-6" />
-                      <span className="font-bold tracking-wide uppercase">Certified Excellence</span>
-                   </div>
-                   <h2 className="text-3xl font-serif font-bold text-stone-900 mb-4">Acupressure Specialist Certificate</h2>
-                   <p className="text-stone-600 text-lg mb-6">
-                      Our Lead Therapist, <span className="font-bold text-stone-900">Kawaljeet Singh</span>, is a certified professional
-                      dedicated to maintaining the highest standards of safety and efficacy in alternative medicine treatments.
-                   </p>
-                   <div className="space-y-2">
-                      <div className="flex justify-between border-b border-stone-100 pb-2">
-                        <span className="text-stone-500">Therapist</span>
-                        <span className="font-medium text-stone-900">Kawaljeet Singh</span>
-                      </div>
-                      <div className="flex justify-between border-b border-stone-100 pb-2">
-                        <span className="text-stone-500">Designation</span>
-                        <span className="font-medium text-stone-900">Acupressure Therapist</span>
-                      </div>
-                      <div className="flex justify-between pt-2">
-                        <span className="text-stone-500">Contact</span>
-                        <span className="font-medium text-stone-900">+91 76072 06523</span>
-                      </div>
-                   </div>
-                </div>
-                <div className="md:w-1/2 bg-stone-200 relative min-h-[300px]">
-                   {/* Certificate Image */}
-                   <Image
-                      src="/images/team/kawaljeet-singh-certificate.jpg"
-                      alt="Acupressure Certificate"
-                      fill
-                      className="object-cover"
-                   />
-                </div>
-             </div>
+        <section className="relative w-full h-[60vh] flex items-center justify-center bg-nature-brown text-white overflow-hidden">
+           <div className="absolute inset-0 z-0 opacity-30">
+            <Image
+               src="/images/placeholders/acupressure-hero.jpg"
+               alt="Acupressure Treatment in Lucknow"
+               fill
+               className="object-cover"
+               priority
+            />
            </div>
-        </div>
+           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+             <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4 drop-shadow-md">
+               Acupressure & Acupuncture in Lucknow
+             </h1>
+             <p className="text-xl md:text-2xl mb-8 font-light">
+               Ancient Healing for Modern Pain. No Medicine. No Surgery.
+             </p>
+             <Link href="/contact" className="bg-white text-nature-brown px-8 py-3 rounded-full font-semibold hover:bg-stone-100 transition-colors shadow-lg">
+               Book Appointment
+             </Link>
+           </div>
+        </section>
 
-        {/* Team Section */}
-        <div className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-4">Our Acupressure Therapists</h2>
-              <p className="text-stone-500 text-lg max-w-2xl mx-auto">
-                Meet our dedicated team of certified professionals committed to your well-being.
-              </p>
-            </div>
+        <div className="max-w-5xl mx-auto px-6 py-12">
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {displayTeam.map((therapist, idx) => (
-                <div key={idx} className="group bg-white rounded-xl shadow-lg border border-stone-100 overflow-hidden hover:shadow-2xl transition-all duration-300">
-                  {therapist.isPlaceholder ? (
-                    // Placeholder Card
-                    <div className="h-full flex flex-col items-center justify-center p-8 bg-stone-50/50 min-h-[400px]">
-                       <div className="w-32 h-32 rounded-full bg-stone-200 mb-6 flex items-center justify-center">
-                          <Leaf className="w-10 h-10 text-stone-400" />
-                       </div>
-                       <h3 className="text-xl font-bold text-stone-400 mb-2">{therapist.name}</h3>
-                       <span className="text-stone-400 text-sm mb-6">{therapist.designation}</span>
-                       <div className="w-16 h-1 bg-stone-200 rounded-full"></div>
-                    </div>
-                  ) : (
-                    // Active Profile Card
-                    <Link href={`/acupressure-therapist/${therapist.slug}`} className="block h-full flex flex-col">
-                      <div className="relative h-80 overflow-hidden bg-stone-200">
-                        <Image
-                          src={therapist.image}
-                          alt={therapist.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                        <div className="absolute bottom-4 left-4 text-white">
-                           <span className="bg-nature-green text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Specialist</span>
-                        </div>
-                      </div>
-                      <div className="p-6 flex-grow flex flex-col">
-                        <h3 className="text-2xl font-serif font-bold text-stone-900 mb-1 group-hover:text-nature-green transition-colors">
-                          {therapist.name}
-                        </h3>
-                        <p className="text-stone-500 font-medium text-sm mb-4">{therapist.designation}</p>
+          {/* Intro */}
+          <section className="mb-16 text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl font-serif font-bold text-nature-green mb-6">
+              Holistic Pain Relief in Lucknow
+            </h2>
+            <p className="text-lg leading-relaxed text-stone-700 mb-4">
+              Suffering from chronic back pain, cervical spondylitis, or migraines? <strong>Natural Treatment Hospital</strong> offers the most effective <strong>Acupressure and Acupuncture in Lucknow</strong>. Our drugless therapy stimulates your body&apos;s self-healing mechanisms, providing relief where modern medicine often relies on painkillers.
+            </p>
+            <p className="text-lg leading-relaxed text-stone-700">
+              Combining the wisdom of Traditional Chinese Medicine (TCM) with Indian reflexology, our expert therapists unlock blocked energy channels (Meridians) to restore balance and health.
+            </p>
+          </section>
 
-                        <p className="text-stone-600 line-clamp-3 mb-6 flex-grow">
-                          {therapist.shortBio}
-                        </p>
-
-                        <div className="mt-auto flex items-center text-nature-green font-bold text-sm tracking-wide">
-                          View Full Profile <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </div>
-                      </div>
-                    </Link>
-                  )}
+          {/* Therapist Spotlight */}
+          <section className="bg-white rounded-2xl shadow-lg overflow-hidden mb-16 border border-stone-100">
+            <div className="md:flex">
+                <div className="md:w-1/3 relative h-80 md:h-auto bg-stone-200">
+                    <Image
+                        src={therapist.image}
+                        alt={therapist.name}
+                        fill
+                        className="object-cover"
+                    />
                 </div>
-              ))}
+                <div className="p-8 md:w-2/3">
+                    <div className="uppercase tracking-wide text-sm text-nature-green font-semibold">{therapist.specialty}</div>
+                    <Link href={`/acupressure-therapist/${therapist.slug}`} className="block mt-1 text-2xl leading-tight font-serif font-bold text-black hover:underline">
+                        {therapist.name}
+                    </Link>
+                    <p className="mt-4 text-stone-600 leading-relaxed">
+                        {therapist.bio}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                        {therapist.qualifications.map((q, i) => (
+                            <span key={i} className="bg-stone-100 text-stone-600 px-3 py-1 rounded-full text-sm border border-stone-200">{q}</span>
+                        ))}
+                    </div>
+                    <div className="mt-6 flex items-center gap-4">
+                        <Link href={`/acupressure-therapist/${therapist.slug}`} className="bg-nature-green text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition">
+                            View Profile
+                        </Link>
+                        <a href={`tel:${therapist.contactNumber}`} className="text-nature-green font-semibold hover:underline">
+                            Call: {therapist.contactNumber}
+                        </a>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+          {/* Long Form Sections */}
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="md:col-span-2 space-y-12">
+                <section>
+                    <h2 className="text-2xl font-serif font-bold text-nature-green mb-4">What is Acupressure?</h2>
+                    <p className="text-stone-700 leading-relaxed">
+                        Acupressure is a non-invasive healing art where physical pressure is applied to specific points along the body&apos;s energy meridians. Unlike acupuncture which uses needles, acupressure uses fingers, palms, or elbows. It is particularly effective for stress-related ailments and is safe for all ages. In our Lucknow clinic, we use it extensively for tension headaches and lower back pain.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-serif font-bold text-nature-green mb-4">What is Acupuncture?</h2>
+                    <p className="text-stone-700 leading-relaxed">
+                        Acupuncture involves the insertion of extremely thin, sterile needles at strategic points on your body. It is a key component of traditional Chinese medicine. From a Western medical perspective, acupuncture points are seen as places where nerves, muscles, and connective tissue can be stimulated. This stimulation boosts your body&apos;s natural painkillers (endorphins). It is highly effective for sciatica, arthritis, and frozen shoulder.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-serif font-bold text-nature-green mb-4">Conditions We Treat</h2>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                        <div className="bg-stone-50 p-4 rounded-lg border-l-4 border-nature-green">
+                            <h3 className="font-bold text-stone-800">Arthritis & Joint Pain</h3>
+                            <p className="text-sm text-stone-600 mt-1">Reduces inflammation and improves mobility in knees and hands.</p>
+                        </div>
+                        <div className="bg-stone-50 p-4 rounded-lg border-l-4 border-nature-green">
+                            <h3 className="font-bold text-stone-800">Migraine & Headaches</h3>
+                            <p className="text-sm text-stone-600 mt-1">Triggers release of serotonin to block pain signals.</p>
+                        </div>
+                        <div className="bg-stone-50 p-4 rounded-lg border-l-4 border-nature-green">
+                            <h3 className="font-bold text-stone-800">Sciatica & Back Pain</h3>
+                            <p className="text-sm text-stone-600 mt-1">Relieves compression on the sciatic nerve.</p>
+                        </div>
+                        <div className="bg-stone-50 p-4 rounded-lg border-l-4 border-nature-green">
+                            <h3 className="font-bold text-stone-800">Digestive Issues</h3>
+                            <p className="text-sm text-stone-600 mt-1">Regulates stomach acid and bowel movements (IBS).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-serif font-bold text-nature-green mb-4">Acupressure vs. Acupuncture vs. Physiotherapy</h2>
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-left text-sm border-collapse">
+                            <thead>
+                                <tr className="bg-stone-100 border-b border-stone-200">
+                                    <th className="py-3 px-4 font-semibold text-stone-700">Therapy</th>
+                                    <th className="py-3 px-4 font-semibold text-stone-700">Method</th>
+                                    <th className="py-3 px-4 font-semibold text-stone-700">Best For</th>
+                                    <th className="py-3 px-4 font-semibold text-stone-700">Invasiveness</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="border-b border-stone-100">
+                                    <td className="py-3 px-4 font-bold">Acupressure</td>
+                                    <td className="py-3 px-4">Finger Pressure</td>
+                                    <td className="py-3 px-4">Mild pain, Stress, Self-care</td>
+                                    <td className="py-3 px-4">None</td>
+                                </tr>
+                                <tr className="border-b border-stone-100">
+                                    <td className="py-3 px-4 font-bold">Acupuncture</td>
+                                    <td className="py-3 px-4">Thin Needles</td>
+                                    <td className="py-3 px-4">Chronic pain, Nerves</td>
+                                    <td className="py-3 px-4">Minimally Invasive</td>
+                                </tr>
+                                <tr className="border-b border-stone-100">
+                                    <td className="py-3 px-4 font-bold">Physiotherapy</td>
+                                    <td className="py-3 px-4">Exercises, Machines</td>
+                                    <td className="py-3 px-4">Rehab, Muscle weakness</td>
+                                    <td className="py-3 px-4">None</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
             </div>
 
+            {/* Sidebar / Extra Info */}
+            <div className="md:col-span-1 space-y-8">
+                <div className="bg-nature-light/10 p-6 rounded-xl border border-nature-green/20">
+                    <h3 className="text-xl font-serif font-bold text-nature-green mb-4">Safety & Side Effects</h3>
+                    <p className="text-sm text-stone-600 mb-4">
+                        Acupressure is generally very safe. Acupuncture carries a small risk of bruising or bleeding at needle sites. We use single-use, sterile disposable needles to ensure zero risk of infection.
+                    </p>
+                    <p className="text-sm text-stone-600">
+                        <strong>Note:</strong> Inform us if you are pregnant, have a pacemaker, or are on blood thinners.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-xl font-serif font-bold text-nature-green mb-4">FAQs</h3>
+                    <div className="space-y-4">
+                        <details className="group">
+                            <summary className="font-semibold cursor-pointer list-none flex justify-between items-center">
+                                Does Acupuncture hurt?
+                                <span className="transition group-open:rotate-180">▼</span>
+                            </summary>
+                            <p className="text-stone-600 mt-2 text-sm">Most people feel only a slight prick or a dull ache. It is not painful like an injection.</p>
+                        </details>
+                        <details className="group">
+                            <summary className="font-semibold cursor-pointer list-none flex justify-between items-center">
+                                How many sessions do I need?
+                                <span className="transition group-open:rotate-180">▼</span>
+                            </summary>
+                            <p className="text-stone-600 mt-2 text-sm">Chronic conditions usually require 10-15 sessions, while acute pain may resolve in 3-5 sessions.</p>
+                        </details>
+                        <details className="group">
+                            <summary className="font-semibold cursor-pointer list-none flex justify-between items-center">
+                                Is it covered by insurance?
+                                <span className="transition group-open:rotate-180">▼</span>
+                            </summary>
+                            <p className="text-stone-600 mt-2 text-sm">Some policies cover alternative treatments. Please check with your provider.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <div className="bg-stone-800 text-white p-6 rounded-xl text-center">
+                    <h3 className="font-serif font-bold text-xl mb-2">Book Your Session</h3>
+                    <p className="text-sm text-stone-300 mb-4">Don&apos;t live with pain. Get treated naturally.</p>
+                    <Link href="/contact" className="inline-block w-full bg-nature-green py-2 rounded font-bold hover:bg-opacity-90">
+                        Contact Us
+                    </Link>
+                </div>
+            </div>
           </div>
         </div>
-
       </main>
-      <Footer />
-    </div>
+    </>
   );
-}
+};
+
+export default AcupressurePage;
