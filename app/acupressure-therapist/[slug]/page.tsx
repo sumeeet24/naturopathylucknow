@@ -121,7 +121,7 @@ export default function TherapistProfile({ params }: Props) {
                 src={therapist.image}
                 alt={therapist.name}
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
             </div>

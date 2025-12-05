@@ -152,7 +152,7 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
                 src={doctor.image}
                 alt={doctor.name}
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
             </div>
