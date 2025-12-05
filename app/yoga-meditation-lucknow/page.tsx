@@ -113,7 +113,7 @@ export default function YogaPage() {
         {/* Placeholder for background image */}
         <div className="absolute inset-0 z-0 bg-stone-300">
              <Image
-                src="/images/placeholders/yoga-hero.jpg" // Placeholder path, Next.js won't crash if missing, just wont load.
+                src="/images/hero/yoga.jpg"
                 alt="Yoga Classes in Lucknow"
                 fill
                 className="object-cover opacity-60"

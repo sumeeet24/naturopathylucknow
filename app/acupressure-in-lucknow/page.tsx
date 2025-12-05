@@ -82,7 +82,7 @@ const AcupressurePage = () => {
         <section className="relative w-full h-[60vh] flex items-center justify-center bg-nature-brown text-white overflow-hidden">
            <div className="absolute inset-0 z-0 opacity-30">
             <Image
-               src="/images/placeholders/acupressure-hero.jpg"
+               src="/images/hero/acupressure.jpg"
                alt="Acupressure Treatment in Lucknow"
                fill
                className="object-cover"

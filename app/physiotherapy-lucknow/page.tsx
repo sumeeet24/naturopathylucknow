@@ -76,7 +76,7 @@ const PhysiotherapyPage = () => {
         <section className="relative w-full h-[60vh] flex items-center justify-center bg-blue-900 text-white overflow-hidden">
            <div className="absolute inset-0 z-0 opacity-40">
             <Image
-               src="/images/placeholders/physio-hero.jpg"
+               src="/images/hero/physiotherapy.jpg"
                alt="Physiotherapy Clinic in Lucknow"
                fill
                className="object-cover"
