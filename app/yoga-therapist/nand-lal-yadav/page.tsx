@@ -244,7 +244,7 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
               <h2 className="text-2xl font-playfair font-bold text-stone-800 mb-6">
                 Certifications
               </h2>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-8">
                 {doctor.certifications.map((cert, index) => (
                   <li key={index} className="flex items-center gap-3 text-stone-700">
                     <svg className="w-5 h-5 text-nature-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,6 +254,23 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
                   </li>
                 ))}
               </ul>
+
+              {/* Certificate Images */}
+              <div className="flex flex-wrap gap-4">
+                  {[
+                    "/images/certificate/nand-lal-yadav-certificate-1.jpg",
+                    "/images/certificate/nand-lal-yadav-certificate-2.jpg"
+                  ].map((img, i) => (
+                    <div key={i} className="relative w-full md:w-48 h-64 rounded-lg overflow-hidden border border-stone-200 shadow-md">
+                        <Image
+                            src={img}
+                            alt={`${doctor.name} Certificate ${i + 1}`}
+                            fill
+                            className="object-cover hover:scale-105 transition duration-300"
+                        />
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
