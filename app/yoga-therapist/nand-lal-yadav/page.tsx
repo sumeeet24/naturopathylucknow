@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { SEO_AREAS } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Dr. Nand Lal Yadav | Expert Yoga Therapist in Lucknow',
@@ -70,12 +71,76 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
     "knowsAbout": doctor.specializations
   };
 
+  const breadcrumbJson = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://naturaltreatmenthospital.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Yoga & Meditation",
+        "item": "https://naturaltreatmenthospital.com/yoga-meditation-lucknow"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": doctor.name,
+        "item": "https://naturaltreatmenthospital.com/yoga-therapist/nand-lal-yadav"
+      }
+    ]
+  };
+
+  const faqJson = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can Dr. Yadav help with severe back pain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Dr. Yadav specializes in Yoga Therapy for spinal issues. He designs gentle, therapeutic sequences specifically for back pain relief and strengthening the spine without strain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need prior yoga experience?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at all. The sessions are customized to your level. Beginners are welcomed and guided step-by-step."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is online consultation available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Dr. Yadav offers online sessions for those who cannot visit the center in Lucknow. Please contact the clinic to schedule."
+        }
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-stone-50">
       {/* Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
       />
 
       {/* Hero / Header Section */}
@@ -242,6 +307,15 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
           </div>
         </div>
       </section>
+
+      {/* Areas Served Footer */}
+      <section className="py-8 bg-stone-100 text-stone-500 text-xs text-center border-t border-stone-200">
+         <div className="container mx-auto px-4">
+            <p className="mb-2 font-bold uppercase tracking-wider">Serving Patients From</p>
+            <p>{SEO_AREAS.join(" | ")}</p>
+         </div>
+      </section>
+
     </main>
   );
 }
