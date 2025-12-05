@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { THERAPISTS } from '@/lib/therapists';
-import { PHONE, ADDRESS } from '@/lib/constants';
+import { PHONE, ADDRESS, SEO_AREAS } from '@/lib/constants';
 import Link from 'next/link';
 
 interface Props {
@@ -56,11 +56,40 @@ export default function TherapistProfile({ params }: Props) {
     }
   };
 
+  const breadcrumbJson = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://naturaltreatmenthospital.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Acupressure Therapists",
+        "item": "https://naturaltreatmenthospital.com/acupressure-in-lucknow"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": therapist.name,
+        "item": `https://naturaltreatmenthospital.com/acupressure-therapist/${therapist.slug}`
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
       />
 
       <main className="min-h-screen bg-stone-50 py-12 px-4 font-sans">
@@ -149,6 +178,15 @@ export default function TherapistProfile({ params }: Props) {
 
           </div>
         </div>
+
+        {/* Areas Served Footer */}
+        <section className="py-8 mt-12 bg-stone-100 text-stone-500 text-xs text-center border-t border-stone-200">
+           <div className="container mx-auto px-4">
+              <p className="mb-2 font-bold uppercase tracking-wider">Serving Patients From</p>
+              <p>{SEO_AREAS.join(" | ")}</p>
+           </div>
+        </section>
+
       </main>
     </>
   );

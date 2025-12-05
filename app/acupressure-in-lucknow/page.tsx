@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { THERAPISTS } from '@/lib/therapists';
-import { PHONE, ADDRESS } from '@/lib/constants';
+import { PHONE, ADDRESS, SEO_AREAS } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Acupressure & Acupuncture in Lucknow – Certified Therapy & Treatments',
@@ -695,6 +695,14 @@ export default function AcupressurePage() {
             <Link href="/yoga-meditation-lucknow" className="hover:text-white transition">Yoga Classes Lucknow</Link>
             <span>|</span>
             <Link href="/contact" className="hover:text-white transition">Contact Us</Link>
+         </div>
+      </section>
+
+      {/* Areas Served */}
+      <section className="py-8 bg-stone-100 text-stone-500 text-xs border-t border-stone-200">
+         <div className="container mx-auto px-4 text-center">
+            <p className="mb-2 font-bold uppercase tracking-wider">Serving Areas in Lucknow</p>
+            <p>{SEO_AREAS.join(" | ")}</p>
          </div>
       </section>
 

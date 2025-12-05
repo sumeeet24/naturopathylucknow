@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { SEO_AREAS } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Yoga & Meditation in Lucknow | Yoga Classes & Meditation Training',
@@ -78,7 +79,104 @@ export default function YogaPage() {
       },
       {
         "@type": "FAQPage",
-        "mainEntity": [] // Will be populated in the FAQ section if I were generating dynamic JSON, but here it's static in the component mostly. I should add some FAQ schema items here or just rely on the content.
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Medical Yoga safe for everyone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Medical Yoga is designed to be safe for all ages and conditions. However, it must be practiced under the guidance of a certified therapist like Dr. Nand Lal Yadav. He customizes the poses to suit your physical limitations, ensuring there is no strain or injury."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Yoga cure high Blood Pressure (BP)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yoga is highly effective in managing hypertension. Poses like Shavasana and pranayamas like Chandra Bhedi cool down the system and lower BP. While it may not 'cure' it overnight, regular practice can significantly reduce the need for medication."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Yoga helpful for Thyroid problems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Specific throat-stimulating poses like Sarvangasana (Shoulder Stand) and Matsyasana (Fish Pose) massage the thyroid gland, regulating the secretion of thyroxine. It helps in both Hypo and Hyperthyroidism."
+            }
+          },
+          {
+             "@type": "Question",
+             "name": "How does meditation help with Insomnia?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Meditation shifts the brain from the active Beta waves to the relaxed Alpha and Theta waves. This transition is essential for sleep initiation. Techniques like Yoga Nidra provide a deep state of conscious rest that mimics sleep."
+             }
+          },
+          {
+             "@type": "Question",
+             "name": "How long does it take to see results?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "You will feel mental relaxation after the very first session. For physical benefits like flexibility and pain relief, consistent practice for 4-8 weeks is usually required. Chronic conditions may take 3-6 months for significant improvement."
+             }
+          },
+          {
+             "@type": "Question",
+             "name": "What is the best time to practice Yoga?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "The Brahma Muhurta (early morning before sunrise) is considered ideal as the air is fresh and the mind is calm. However, evening practice (before dinner) is also good for relieving the day's stress."
+             }
+          },
+          {
+             "@type": "Question",
+             "name": "Who should avoid certain asanas?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "People with recent surgeries, hernia, severe back pain, or pregnancy should avoid intense core work and deep twists. Always inform your instructor about your medical history before starting."
+             }
+          },
+          {
+             "@type": "Question",
+             "name": "Can I do Yoga if I am stiff?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Yes! Flexibility is a result of yoga, not a prerequisite. In fact, stiff people benefit the most. We use props like belts and blocks to help you perform poses comfortably."
+             }
+          },
+          {
+             "@type": "Question",
+             "name": "Do you offer private home sessions in Lucknow?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Yes, Dr. Nand Lal Yadav offers private home sessions for patients who are bedridden or prefer privacy. These are premium sessions tailored exclusively for you."
+             }
+          },
+          {
+             "@type": "Question",
+             "name": "What should I wear to class?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Wear loose, comfortable cotton clothing that allows free movement. Avoid tight synthetic wear that restricts blood flow or breathing."
+             }
+          },
+          {
+             "@type": "Question",
+             "name": "Is there an age limit for Yoga?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "No, yoga is for everyone from age 5 to 95. We have specific batches for kids, adults, and senior citizens to cater to their specific needs."
+             }
+          },
+          {
+             "@type": "Question",
+             "name": "Can Yoga help with weight loss?",
+             "acceptedAnswer": {
+               "@type": "Answer",
+               "text": "Yes, dynamic forms of yoga like Surya Namaskar burn calories. More importantly, yoga reduces stress eating and regulates metabolism, leading to sustainable weight loss."
+             }
+          }
+        ]
       },
       {
         "@type": "BreadcrumbList",
@@ -832,6 +930,14 @@ export default function YogaPage() {
              Call 81154 00106 to Book
            </a>
         </div>
+      </section>
+
+      {/* Areas Served */}
+      <section className="py-8 bg-stone-100 text-stone-500 text-xs border-t border-stone-200">
+         <div className="container mx-auto px-4 text-center">
+            <p className="mb-2 font-bold uppercase tracking-wider">Serving Areas in Lucknow</p>
+            <p>{SEO_AREAS.join(" | ")}</p>
+         </div>
       </section>
 
     </main>

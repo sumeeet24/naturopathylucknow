@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import { DOCTOR, PHONE, ADDRESS } from '@/lib/constants';
+import { DOCTOR, PHONE, ADDRESS, SEO_AREAS } from '@/lib/constants';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -44,6 +44,37 @@ const PhysiotherapyPage = () => {
     ]
   };
 
+  const faqJson = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need a doctor's referral?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not necessarily. You can consult our physiotherapists directly. However, if you have recent X-rays or MRI, please bring them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is a session?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical session lasts 45 to 60 minutes depending on the treatment required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Physiotherapy painful?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It should not be painful. You might feel mild soreness after stretching (like after a gym workout), which is normal."
+        }
+      }
+    ]
+  };
+
   const breadcrumbJson = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -69,6 +100,10 @@ const PhysiotherapyPage = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJson) }}
       />
 
       <main className="min-h-screen bg-stone-50 text-stone-800 font-sans">
@@ -221,6 +256,15 @@ const PhysiotherapyPage = () => {
           </div>
 
         </div>
+
+        {/* Areas Served Footer */}
+        <section className="py-8 bg-stone-100 text-stone-500 text-xs text-center border-t border-stone-200">
+           <div className="container mx-auto px-4">
+              <p className="mb-2 font-bold uppercase tracking-wider">Serving Patients From</p>
+              <p>{SEO_AREAS.join(" | ")}</p>
+           </div>
+        </section>
+
       </main>
     </>
   );
