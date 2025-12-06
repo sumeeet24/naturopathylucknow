@@ -139,7 +139,7 @@ export default function DrNilamProfile() {
                     className="bg-stone-800 text-white px-8 py-3 rounded-full font-bold hover:bg-stone-900 transition shadow-lg flex items-center justify-center gap-2"
                   >
                     <Phone className="w-5 h-5" />
-                    <span>Call {doctor.phone}</span>
+                    <span>Call</span>
                   </a>
                   <a
                     href={`https://wa.me/91${doctor.whatsapp}?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Nilam.`}
@@ -265,7 +265,7 @@ export default function DrNilamProfile() {
                 href={`tel:${doctor.phone.replace(/\s+/g, '')}`}
                 className="bg-white text-nature-green px-8 py-4 rounded-full font-bold hover:bg-stone-100 transition"
               >
-                Call {doctor.phone}
+                Call
               </a>
               <Link
                 href="/contact"
