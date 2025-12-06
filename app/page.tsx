@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import AboutPrinciples from '@/components/AboutPrinciples';
 import Services from '@/components/Services';
+import NaturopathyDoctor from '@/components/NaturopathyDoctor';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
@@ -24,6 +25,7 @@ export default function Home() {
         <Hero />
         <AboutPrinciples />
         <Services />
+        <NaturopathyDoctor />
         <Testimonials />
         <FAQ />
         <Contact />
