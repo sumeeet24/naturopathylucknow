@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   title: 'Acupressure & Acupuncture in Lucknow – Certified Therapy & Treatments',
   description: 'Certified acupressure & acupuncture treatments in Lucknow for pain relief, stress management, sleep, digestion and holistic wellness. Book now.',
   alternates: {
-    canonical: 'https://naturaltreatmenthospital.com/acupressure-in-lucknow',
+    canonical: 'https://naturopathlucknow.in/acupressure-acupuncture-lucknow',
   },
   openGraph: {
     title: 'Acupressure & Acupuncture in Lucknow | Natural Treatment Hospital',
     description: 'Certified acupressure & acupuncture treatments in Lucknow for pain relief, stress management, sleep, digestion and holistic wellness. Book now.',
-    url: 'https://naturaltreatmenthospital.com/acupressure-in-lucknow',
+    url: 'https://naturopathlucknow.in/acupressure-acupuncture-lucknow',
     type: 'website',
   }
 };
@@ -105,7 +105,7 @@ export default function AcupressurePage() {
             "@type": "ListItem",
             "position": 2,
             "name": "Acupressure in Lucknow",
-            "item": "https://naturaltreatmenthospital.com/acupressure-in-lucknow"
+            "item": "https://naturopathlucknow.in/acupressure-acupuncture-lucknow"
           }
         ]
       }

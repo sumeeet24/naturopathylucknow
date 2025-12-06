@@ -2,7 +2,7 @@ import { TREATMENTS, CONDITIONS, SEO_AREAS } from '@/lib/constants';
 import { getBlogPosts } from '@/lib/blog';
 import { Metadata, Route } from 'next';
 
-const BASE_URL = 'https://naturaltreatmenthospital.com';
+const BASE_URL = 'https://naturopathlucknow.in';
 
 export default function sitemap() {
   const routes = [
@@ -14,7 +14,7 @@ export default function sitemap() {
     '/contact',
     '/faq',
     '/blog',
-    '/acupressure-in-lucknow',
+    '/acupressure-acupuncture-lucknow',
     '/yoga-meditation-lucknow',
     '/physiotherapy-lucknow',
     '/acupressure-therapist/kawaljeet-singh',

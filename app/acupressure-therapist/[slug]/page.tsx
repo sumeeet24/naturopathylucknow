@@ -38,7 +38,7 @@ export default function TherapistProfile({ params }: Props) {
     "@type": "Person",
     "name": therapist.name,
     "jobTitle": therapist.specialty,
-    "image": `https://naturaltreatmenthospital.com${therapist.image}`,
+    "image": `https://naturopathlucknow.in${therapist.image}`,
     "description": therapist.longBio || therapist.bio,
     "telephone": therapist.contactNumber,
     "email": therapist.email,
@@ -65,19 +65,19 @@ export default function TherapistProfile({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://naturaltreatmenthospital.com"
+        "item": "https://naturopathlucknow.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Acupressure Therapists",
-        "item": "https://naturaltreatmenthospital.com/acupressure-in-lucknow"
+        "item": "https://naturopathlucknow.in/acupressure-acupuncture-lucknow"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": therapist.name,
-        "item": `https://naturaltreatmenthospital.com/acupressure-therapist/${therapist.slug}`
+        "item": `https://naturopathlucknow.in/acupressure-therapist/${therapist.slug}`
       }
     ]
   };
