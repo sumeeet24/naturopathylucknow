@@ -6,7 +6,7 @@ import { SEO_AREAS } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Dr. Nand Lal Yadav | Expert Yoga Therapist in Lucknow',
-  description: 'Meet Dr. Nand Lal Yadav, a certified Yoga Therapist and Meditation Instructor with 10+ years of experience in treating lifestyle disorders naturally.',
+  description: 'Meet Dr. Nand Lal Yadav, a certified Yoga Therapist and Meditation Instructor with 28 years of experience in treating lifestyle disorders naturally.',
 };
 
 export default function DoctorProfile() {
@@ -14,9 +14,16 @@ export default function DoctorProfile() {
     name: "Dr. Nand Lal Yadav",
     role: "Yoga Therapist & Meditation Instructor",
     image: "/images/team/dr-nand-lal-yadav.jpg",
-    experience: "10+ Years",
+    experience: "28 years of experience",
     phone: "+91 81154 00106",
     whatsapp: "https://wa.me/918115400106",
+    qualifications: [
+      "BYN (Bachelor of Yoga and Naturopathy)",
+      "PGDNYS (Post Graduate Diploma in Yoga and Naturopathy)",
+      "UGC NET Qualified for Assistant Professor, Yoga",
+      "28 Years Experience in Yoga and Naturopathy",
+      "Successfully Treated More Than 1,00,000 Patients"
+    ],
     specializations: [
       "Medical Yoga",
       "Yoga Therapy",
@@ -32,7 +39,7 @@ export default function DoctorProfile() {
       "Advanced Pranayama Training",
       "Naturopathy & Yoga Science Certification"
     ],
-    biography: `Dr. Nand Lal Yadav is a distinguished Yoga Therapist and Meditation Instructor based in Lucknow, dedicated to the holistic well-being of his patients. With over a decade of hands-on experience, he has successfully treated thousands of individuals suffering from chronic lifestyle disorders through the scientific application of Yoga and Meditation.
+    biography: `Dr. Nand Lal Yadav is a highly qualified distinguished Yoga Therapist and Meditation Instructor based in Lucknow, dedicated to the holistic well-being of his patients. With about 3 decades of hands-on experience, he has successfully treated over one hundred thousand individuals suffering from chronic lifestyle disorders through the scientific application of Yoga and Meditation with the prowess of a UGC qualified professorship.
 
 His journey began with a deep-rooted passion for ancient Indian sciences, leading him to pursue rigorous training and certification in Yoga Therapy. Unlike generic yoga instructors, Dr. Yadav specializes in "Medical Yoga"—a therapeutic approach designed to address specific ailments such as Diabetes, Hypertension (BP), Thyroid disorders, and Spinal issues. He believes that every body is unique, and thus, he customizes yoga sequences to match the physiological and psychological needs of each patient.
 
@@ -56,6 +63,20 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
         title: "Corporate Wellness",
         description: "Designing ergonomic yoga programs for professionals to prevent back pain and burnout."
       }
+    ],
+    certificateImages: [
+        {
+            src: "/images/certificate/nand-lal-yadav-degree-2010.jpg",
+            alt: "Degree certificate of Dr. Nand Lal Yadav – Yoga & Naturopathy"
+        },
+        {
+            src: "/images/certificate/nand-lal-yadav-certificate-1.jpg",
+            alt: "Certificate 1"
+        },
+        {
+            src: "/images/certificate/nand-lal-yadav-certificate-2.jpg",
+            alt: "Certificate 2"
+        }
     ]
   };
 
@@ -152,7 +173,7 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
                 src={doctor.image}
                 alt={doctor.name}
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
             </div>
@@ -163,6 +184,19 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
               <p className="text-xl md:text-2xl text-stone-600 mb-6 font-medium">
                 {doctor.role}
               </p>
+
+              {/* Qualifications List - New Section */}
+              <div className="mb-8 bg-white/50 p-4 rounded-xl border border-nature-green/20 inline-block text-left">
+                  <ul className="space-y-2">
+                      {doctor.qualifications.map((qual, index) => (
+                          <li key={index} className="flex items-start gap-2 text-stone-700 font-medium">
+                              <span className="mt-1.5 w-1.5 h-1.5 bg-nature-green rounded-full flex-shrink-0"></span>
+                              <span>{qual}</span>
+                          </li>
+                      ))}
+                  </ul>
+              </div>
+
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
                 <a
                   href={`tel:${doctor.phone.replace(/\s+/g, '')}`}
@@ -179,16 +213,47 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
                   <span>WhatsApp</span>
                 </a>
               </div>
-              <div className="flex flex-col md:flex-row gap-6 text-stone-700">
-                <div>
-                  <span className="font-bold block text-nature-green">Experience</span>
-                  {doctor.experience}
-                </div>
-                <div>
-                  <span className="font-bold block text-nature-green">Location</span>
-                  Lucknow, India
-                </div>
-              </div>
+
+              {/* Removed old Experience / Location block as "28 Years Experience" is now in qualifications list.
+                  Adding Location back in a smaller format if needed, but user only requested adding the list.
+                  However, Location "Lucknow, India" is useful. I'll add it below buttons or keep it separate.
+                  The prompt said "Replace or append the qualification list...".
+                  The previous block had Experience and Location. I replaced it with the qualification list.
+                  I will append the Location below the buttons just to be safe, or assume it's fine.
+                  Actually, the user said "Replace or append...".
+                  I'll leave Location out for now as it's not explicitly requested to be kept, but usually location is good.
+                  The user said "Replace or append the qualification list... Ensure these appear under the profile image and before the biography text."
+                  I have placed it under the Role (and before buttons visually, or after).
+                  I placed it BEFORE buttons in the code above, which puts it under the Role.
+                  "Ensure these appear under the profile image and before the biography text."
+                  On desktop: Right column. Under Role. Before buttons? Or after buttons?
+                  The user said "Below Profile Picture" which is the Left Column.
+                  But also "before the biography text".
+                  If I put it in the Right Column, it satisfies "before biography".
+                  If I put it in Left Column, it's very narrow (w-80).
+                  The current code puts it in the Right Column, under Role, before Buttons.
+                  This makes it very prominent.
+                  Let's check the request again: "Ensure these appear under the profile image and before the biography text."
+                  If "Below Profile Picture" is literal:
+                  <div className="flex flex-col ...">
+                     <div className="left-col">
+                        <Image ... />
+                        <QualificationsList />
+                     </div>
+                     <div className="right-col">...</div>
+                  </div>
+                  But on mobile, the left column (Image) comes first, so the list would be immediately under the image.
+                  Then the Name/Role (Right column) comes after?
+                  Usually on mobile: Image -> Name -> Role -> ...
+                  If I put it in Left Column, on mobile it is: Image -> Qualifications -> Name -> Role. This is weird.
+                  Standard Mobile: Image -> Name -> Role -> Qualifications -> Buttons.
+                  So putting it in the Right Column (Text Column) is correct for Mobile flow.
+                  In the Right Column, putting it under Role is good.
+                  I will stick with the code I wrote above.
+               */}
+               <div className="text-stone-600 font-medium mt-4">
+                  <span className="font-bold text-nature-green">Location: </span> Lucknow, India
+               </div>
             </div>
           </div>
         </div>
@@ -257,14 +322,11 @@ At the Natural Treatment Hospital, Dr. Yadav leads the Yoga department, working 
 
               {/* Certificate Images */}
               <div className="flex flex-wrap gap-4">
-                  {[
-                    "/images/certificate/nand-lal-yadav-certificate-1.jpg",
-                    "/images/certificate/nand-lal-yadav-certificate-2.jpg"
-                  ].map((img, i) => (
+                  {doctor.certificateImages.map((img, i) => (
                     <div key={i} className="relative w-full md:w-48 h-64 rounded-lg overflow-hidden border border-stone-200 shadow-md">
                         <Image
-                            src={img}
-                            alt={`${doctor.name} Certificate ${i + 1}`}
+                            src={img.src}
+                            alt={img.alt || `${doctor.name} Certificate ${i + 1}`}
                             fill
                             className="object-cover hover:scale-105 transition duration-300"
                         />
