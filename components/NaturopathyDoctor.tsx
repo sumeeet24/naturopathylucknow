@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Phone, Award } from 'lucide-react';
+import { ArrowRight, MessageCircle, Award } from 'lucide-react';
 
 const NaturopathyDoctor: React.FC = () => {
   return (
@@ -60,11 +60,13 @@ const NaturopathyDoctor: React.FC = () => {
               </Link>
 
               <a
-                href="tel:8115400106"
-                className="inline-flex items-center justify-center border-2 border-stone-200 text-stone-700 px-8 py-4 rounded-full font-bold hover:border-nature-green hover:text-nature-green transition-colors duration-300"
+                href="https://wa.me/918115400106?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Nilam."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-[#25D366] text-white px-8 py-4 rounded-full font-bold hover:bg-[#20bd5a] transition-colors duration-300 shadow-lg"
               >
-                <Phone className="mr-2 w-5 h-5" />
-                81154 00106
+                <MessageCircle className="mr-2 w-5 h-5" />
+                WhatsApp
               </a>
             </div>
 
