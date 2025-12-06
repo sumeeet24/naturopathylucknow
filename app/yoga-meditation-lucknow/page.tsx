@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Yoga & Meditation in Lucknow | Yoga Classes & Meditation Training',
   description: 'Join the best Yoga & Meditation classes in Lucknow with Dr. Nand Lal Yadav. Specialized Medical Yoga for diabetes, BP, thyroid, and stress management. Call 81154 00106.',
   alternates: {
-    canonical: 'https://naturaltreatmenthospital.com/yoga-meditation-lucknow',
+    canonical: 'https://naturopathlucknow.in/yoga-meditation-lucknow',
   },
 };
 
@@ -19,8 +19,8 @@ export default function YogaPage() {
       {
         "@type": "MedicalClinic",
         "name": "Natural Treatment Hospital",
-        "image": "https://naturaltreatmenthospital.com/images/logo.png",
-        "url": "https://naturaltreatmenthospital.com",
+        "image": "https://naturopathlucknow.in/images/logo.png",
+        "url": "https://naturopathlucknow.in",
         "telephone": "+918115400106",
         "address": {
           "@type": "PostalAddress",
@@ -74,7 +74,7 @@ export default function YogaPage() {
       {
         "@type": "Person",
         "name": "Dr. Nand Lal Yadav",
-        "url": "https://naturaltreatmenthospital.com/yoga-therapist/nand-lal-yadav",
+        "url": "https://naturopathlucknow.in/yoga-therapist/nand-lal-yadav",
         "jobTitle": "Yoga Therapist"
       },
       {
@@ -185,13 +185,13 @@ export default function YogaPage() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://naturaltreatmenthospital.com"
+            "item": "https://naturopathlucknow.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Yoga & Meditation in Lucknow",
-            "item": "https://naturaltreatmenthospital.com/yoga-meditation-lucknow"
+            "item": "https://naturopathlucknow.in/yoga-meditation-lucknow"
           }
         ]
       }
@@ -357,7 +357,7 @@ export default function YogaPage() {
       <section className="py-8 bg-nature-green text-white">
          <div className="container mx-auto px-4 text-center">
             <p className="text-xl mb-4 font-playfair">Suffering from chronic pain? Explore our specialized treatments.</p>
-            <Link href="/acupressure-in-lucknow" className="inline-block bg-white text-nature-green px-8 py-3 rounded-full font-bold hover:bg-stone-100 transition">
+            <Link href="/acupressure-acupuncture-lucknow" className="inline-block bg-white text-nature-green px-8 py-3 rounded-full font-bold hover:bg-stone-100 transition">
                Explore Acupressure in Lucknow
             </Link>
          </div>

@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/treatment/acupressure',
-        destination: '/acupressure-in-lucknow',
+        destination: '/acupressure-acupuncture-lucknow',
         permanent: true,
       },
     ];

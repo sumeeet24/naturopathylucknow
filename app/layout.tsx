@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   description: "Top-rated Naturopathy Centre in Lucknow. Specializing in drugless healing, mud therapy, shirodhara, yoga, and detox. Cure chronic diseases naturally.",
   keywords: ["Naturopathy in Lucknow", "Naturopathy Centre Lucknow", "Natural Healing Lucknow", "Yoga Therapy Lucknow", "Detox Center Lucknow", "Mud Therapy", "Shirodhara Lucknow", "Drugless Treatment", "Best Naturopath Lucknow"],
-  metadataBase: new URL('https://naturaltreatmenthospital.com'),
+  metadataBase: new URL('https://naturopathlucknow.in'),
   alternates: {
     canonical: '/',
   },
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     google: "verification_token",
     yandex: "yandex_verification",
     other: {
-      "me": ["biotb.instantreply@gmail.com", "https://naturaltreatmenthospital.com"],
+      "me": ["biotb.instantreply@gmail.com", "https://naturopathlucknow.in"],
     },
   },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://naturaltreatmenthospital.com/',
+    url: 'https://naturopathlucknow.in/',
     siteName: 'Lucknow Naturopathy & Holistic Healing Centre',
     images: [
       {
