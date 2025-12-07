@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, ChevronDown, ArrowRight, Leaf } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown, ArrowRight, Leaf, Home, Activity, Sun, Flower, CreditCard, Stethoscope, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { WHATSAPP, TREATMENTS, CONDITIONS } from '../lib/constants';
@@ -44,12 +44,13 @@ const Header: React.FC = () => {
   };
 
   const navLinkClass = "group flex items-center text-sm font-semibold tracking-wide text-stone-700 hover:text-nature-green transition-colors duration-300 py-2 cursor-pointer";
+  const mobileNavLinkClass = "flex items-center gap-3 px-4 py-4 text-lg font-serif font-medium text-stone-800 border-b border-stone-100/50 active:bg-nature-light/50 transition-colors";
 
   return (
     <>
       {/*
         Main Header Bar
-        Z-Index: 50 - High enough to sit over content, but mobile menu will be higher (60).
+        Z-Index: 50 - High enough to sit over content.
       */}
       <header
         className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
@@ -93,11 +94,6 @@ const Header: React.FC = () => {
                 >
                   Treatments <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:rotate-180 transition-transform duration-300" />
                 </button>
-                {/*
-                  Dropdown Content
-                  Using invisible/opacity group-hover for pure CSS interaction.
-                  Added 'pt-4' to bridge the gap so mouse doesn't leave hover area.
-                */}
                 <div className="absolute left-0 top-full pt-4 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto">
                    <div className="bg-white rounded-2xl shadow-xl border border-stone-100 overflow-hidden ring-1 ring-black ring-opacity-5">
                       <div className="py-2">
@@ -178,37 +174,49 @@ const Header: React.FC = () => {
 
       {/*
         Mobile Menu Overlay
-        Z-Index: 40 - Just below the header bar so the logo/X button stay visible on top,
-        BUT we need the content to be fully accessible.
-        Actually, let's make it cover everything below the header.
-        Top padding handles the header height.
+        Premium Modern Look with Glassmorphism
       */}
       <div
-        className={`fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transform transition-transform duration-300 ease-in-out lg:hidden ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ paddingTop: '85px' }} // Hardcoded offset to ensure it sits below the header bar
+        style={{ paddingTop: '85px' }} // Sitting below the header
       >
-        <div className="h-full overflow-y-auto px-4 pb-20">
-            <nav className="space-y-1">
-                <Link href="/" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Home</Link>
-                <Link href="/physiotherapy-lucknow" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Physiotherapy</Link>
-                <Link href="/acupressure-acupuncture-lucknow" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Acupressure</Link>
-                <Link href="/yoga-meditation-lucknow" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Yoga & Meditation</Link>
+        <div className="h-full overflow-y-auto px-4 pb-20 no-scrollbar">
+            <nav className="space-y-1 mt-4">
+                <Link href="/" className={mobileNavLinkClass}>
+                   <Home className="w-5 h-5 text-nature-green" />
+                   Home
+                </Link>
+                <Link href="/physiotherapy-lucknow" className={mobileNavLinkClass}>
+                   <Activity className="w-5 h-5 text-nature-green" />
+                   Physiotherapy
+                </Link>
+                <Link href="/acupressure-acupuncture-lucknow" className={mobileNavLinkClass}>
+                   <Flower className="w-5 h-5 text-nature-green" />
+                   Acupressure
+                </Link>
+                <Link href="/yoga-meditation-lucknow" className={mobileNavLinkClass}>
+                   <Sun className="w-5 h-5 text-nature-green" />
+                   Yoga & Meditation
+                </Link>
 
                 {/* Mobile Dropdown: Treatments */}
-                <div className="border-b border-stone-100">
+                <div className="border-b border-stone-100/50">
                     <button
                         onClick={() => toggleMobileDropdown('treatments')}
-                        className="w-full flex justify-between items-center px-4 py-4 text-lg font-medium text-stone-800 active:bg-nature-light/50 outline-none"
+                        className="w-full flex justify-between items-center px-4 py-4 text-lg font-serif font-medium text-stone-800 active:bg-nature-light/50 outline-none group"
                     >
-                        Treatments
+                        <span className="flex items-center gap-3">
+                            <Leaf className="w-5 h-5 text-nature-green" />
+                            Treatments
+                        </span>
                         <ChevronDown className={`w-5 h-5 text-stone-400 transition-transform duration-300 ${activeMobileDropdown === 'treatments' ? 'rotate-180' : ''}`} />
                     </button>
                     <div className={`overflow-hidden transition-all duration-300 ease-in-out bg-stone-50/50 ${activeMobileDropdown === 'treatments' ? 'max-h-[60vh] opacity-100' : 'max-h-0 opacity-0'}`}>
                         <div className="px-4 py-2 space-y-1">
                             {TREATMENTS.map(item => (
-                                <Link key={item.id} href={`/treatment/${item.id}`} className="block px-4 py-3 text-base text-stone-600 rounded-lg active:bg-white active:text-nature-green">
+                                <Link key={item.id} href={`/treatment/${item.id}`} className="block px-4 py-3 text-base text-stone-600 rounded-lg active:bg-white active:text-nature-green ml-8 border-l-2 border-stone-200 hover:border-nature-green transition-colors">
                                     {item.title}
                                 </Link>
                             ))}
@@ -217,18 +225,21 @@ const Header: React.FC = () => {
                 </div>
 
                 {/* Mobile Dropdown: Conditions */}
-                <div className="border-b border-stone-100">
+                <div className="border-b border-stone-100/50">
                     <button
                         onClick={() => toggleMobileDropdown('conditions')}
-                        className="w-full flex justify-between items-center px-4 py-4 text-lg font-medium text-stone-800 active:bg-nature-light/50 outline-none"
+                        className="w-full flex justify-between items-center px-4 py-4 text-lg font-serif font-medium text-stone-800 active:bg-nature-light/50 outline-none"
                     >
-                        Diseases We Cure
+                        <span className="flex items-center gap-3">
+                            <Activity className="w-5 h-5 text-nature-green" />
+                            Diseases We Cure
+                        </span>
                         <ChevronDown className={`w-5 h-5 text-stone-400 transition-transform duration-300 ${activeMobileDropdown === 'conditions' ? 'rotate-180' : ''}`} />
                     </button>
                     <div className={`overflow-hidden transition-all duration-300 ease-in-out bg-stone-50/50 ${activeMobileDropdown === 'conditions' ? 'max-h-[60vh] opacity-100' : 'max-h-0 opacity-0'}`}>
                         <div className="px-4 py-2 space-y-1">
                             {CONDITIONS.map(item => (
-                                <Link key={item.id} href={`/condition/${item.id}`} className="block px-4 py-3 text-base text-stone-600 rounded-lg active:bg-white active:text-nature-green">
+                                <Link key={item.id} href={`/condition/${item.id}`} className="block px-4 py-3 text-base text-stone-600 rounded-lg active:bg-white active:text-nature-green ml-8 border-l-2 border-stone-200 hover:border-nature-green transition-colors">
                                     {item.title}
                                 </Link>
                             ))}
@@ -236,15 +247,24 @@ const Header: React.FC = () => {
                     </div>
                 </div>
 
-                <Link href="/pricing" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Pricing</Link>
-                <Link href="/doctor" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">About Doctor</Link>
-                <Link href="/contact" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Contact</Link>
+                <Link href="/pricing" className={mobileNavLinkClass}>
+                   <CreditCard className="w-5 h-5 text-nature-green" />
+                   Pricing
+                </Link>
+                <Link href="/doctor" className={mobileNavLinkClass}>
+                   <Stethoscope className="w-5 h-5 text-nature-green" />
+                   About Doctor
+                </Link>
+                <Link href="/contact" className={mobileNavLinkClass}>
+                   <Mail className="w-5 h-5 text-nature-green" />
+                   Contact
+                </Link>
             </nav>
 
             <div className="mt-8 px-4">
                 <a
                     href={`https://wa.me/${WHATSAPP}?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment.`}
-                    className="w-full flex justify-center items-center px-6 py-4 text-lg font-bold rounded-xl text-white bg-nature-green shadow-lg shadow-nature-green/20 active:scale-[0.98] transition-all"
+                    className="w-full flex justify-center items-center px-6 py-4 text-lg font-bold rounded-xl text-white bg-gradient-to-r from-nature-green to-nature-dark shadow-xl shadow-nature-green/20 active:scale-[0.98] transition-all"
                     target="_blank"
                     rel="noreferrer"
                 >
