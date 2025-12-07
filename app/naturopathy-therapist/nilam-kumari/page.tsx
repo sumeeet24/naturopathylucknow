@@ -90,7 +90,7 @@ export default function DrNilamProfile() {
                     src={doctor.image}
                     alt={doctor.name}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-center"
                     priority
                   />
                 </div>
@@ -217,12 +217,12 @@ export default function DrNilamProfile() {
                 {/* Certificate Images */}
                 <div className="flex flex-wrap gap-4">
                     {doctor.certificateImages.map((img, i) => (
-                      <div key={i} className="relative w-full md:w-48 h-64 rounded-lg overflow-hidden border border-stone-200 shadow-md">
+                      <div key={i} className="relative w-full md:w-48 h-64 rounded-lg overflow-hidden border border-stone-200 shadow-md bg-white">
                           <Image
                               src={img.src}
                               alt={img.alt || `${doctor.name} Certificate ${i + 1}`}
                               fill
-                              className="object-cover hover:scale-105 transition duration-300"
+                              className="object-contain hover:scale-105 transition duration-300"
                           />
                       </div>
                     ))}
