@@ -19,7 +19,7 @@ const NaturopathyDoctor: React.FC = () => {
                 src="/images/team/dr-nilam-kumari.jpg"
                 alt="Dr. Nilam Kumari - Naturopathy Expert"
                 fill
-                className="object-cover object-top hover:scale-105 transition duration-700"
+                className="object-cover object-center hover:scale-105 transition duration-700"
               />
 
               {/* Floating Badge */}
