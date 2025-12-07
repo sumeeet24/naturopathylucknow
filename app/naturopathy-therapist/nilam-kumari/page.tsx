@@ -90,7 +90,7 @@ export default function DrNilamProfile() {
                     src={doctor.image}
                     alt={doctor.name}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-center"
                     priority
                   />
                 </div>
