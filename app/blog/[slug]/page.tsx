@@ -5,12 +5,18 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { generateBreadcrumbSchema } from '@/lib/utils';
-import { Calendar, User, Tag } from 'lucide-react';
+import { Calendar, User } from 'lucide-react';
 import Link from 'next/link';
 import { DOCTOR } from '@/lib/constants';
 
 interface Props {
   params: { slug: string }
+}
+
+function parseAuthors(authorString: string): string[] {
+    if (!authorString) return [];
+    // Split by comma or '&' to handle "Dr A, Dr B & Dr C"
+    return authorString.split(/,|&/).map(a => a.trim()).filter(a => a.length > 0);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -20,11 +26,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Post Not Found' };
   }
 
+  const authors = parseAuthors(post.author);
+
   return {
     title: post.title,
     description: post.excerpt,
     keywords: post.keywords,
-    authors: [{ name: post.author }],
+    authors: authors.map(name => ({ name })),
     alternates: {
       canonical: `/blog/${params.slug}`,
     },
@@ -33,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description: post.excerpt,
         type: 'article',
         publishedTime: post.date,
-        authors: [post.author],
+        authors: authors,
     }
   };
 }
@@ -52,6 +60,8 @@ export default function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const authors = parseAuthors(post.author);
+
   const breadcrumbJson = generateBreadcrumbSchema([
     { name: 'Home', url: 'https://lucknownaturopathy.com' },
     { name: 'Blog', url: 'https://lucknownaturopathy.com/blog' },
@@ -64,10 +74,10 @@ export default function BlogPostPage({ params }: Props) {
     "headline": post.title,
     "description": post.excerpt,
     "image": "https://lucknownaturopathy.com/opengraph-image", // Fallback to OG image
-    "author": {
-      "@type": "Person",
-      "name": post.author
-    },
+    "author": authors.map(name => ({
+        "@type": "Person",
+        "name": name
+    })),
     "publisher": {
         "@type": "Organization",
         "name": "Lucknow Naturopathy & Holistic Healing Centre",
@@ -129,8 +139,8 @@ export default function BlogPostPage({ params }: Props) {
                         👨‍⚕️
                      </div>
                      <div>
-                        <h3 className="font-bold text-stone-900">Written by {DOCTOR.name}</h3>
-                        <p className="text-sm text-stone-600">{DOCTOR.title}. {DOCTOR.bio[0].split('.')[0]}.</p>
+                        <h3 className="font-bold text-stone-900">Medical Review</h3>
+                        <p className="text-sm text-stone-600">This article has been reviewed by our panel of experts: {authors.join(', ')}.</p>
                      </div>
                 </div>
             </div>
