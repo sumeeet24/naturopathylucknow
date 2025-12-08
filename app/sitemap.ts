@@ -14,6 +14,8 @@ export default function sitemap() {
     '/contact',
     '/faq',
     '/blog',
+    '/case-studies',
+    '/case-studies/satvik-diet-reversing-chronic-diseases',
     '/acupressure-acupuncture-lucknow',
     '/yoga-meditation-lucknow',
     '/physiotherapy-lucknow',

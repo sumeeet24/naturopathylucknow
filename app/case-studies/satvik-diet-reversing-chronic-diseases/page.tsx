@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description: "Clinical case study on the effectiveness of Satvik Diet in reversing PCOS and digestive issues. Evidence-based naturopathic guide by Dr. Nilima & Dr. Gupta.",
   keywords: ["Satvik Diet Case Study", "Reverse PCOS Naturally", "Naturopathy Diet Plan", "Satvik Diet Benefits", "Digestive Health Case Study", "Dr Nilima Naturopathy", "Lucknow Naturopathy"],
   authors: [{ name: "Dr. Nilima Kumari" }, { name: "Dr. Ravi Gupta" }, { name: "Dr. Nand Lal Yadav" }],
+  alternates: {
+    canonical: '/case-studies/satvik-diet-reversing-chronic-diseases',
+  },
   openGraph: {
     title: "Satvik Diet Case Study: Reversing Chronic Diseases Naturally",
     description: "Discover how the Satvik Diet can reverse chronic diseases like PCOS and IBS. Read the clinical case study.",
@@ -35,7 +38,7 @@ const tocItems = [
   { id: "case-study", title: "9. The Case Study (PCOS)" },
   { id: "research", title: "10. Scientific Support" },
   { id: "myths", title: "11. Myths Debunked" },
-  { id: "conclusion", title: "17. Conclusion" },
+  { id: "conclusion", title: "12. Conclusion" },
 ];
 
 export default function SatvikDietCaseStudy() {
@@ -377,7 +380,7 @@ export default function SatvikDietCaseStudy() {
               </section>
 
               <section id="conclusion" className="mt-12 mb-12">
-                <h2>17. Conclusion</h2>
+                <h2>12. Conclusion</h2>
                 <p>
                   The Satvik diet is not a regression to the past, but a progression toward a more conscious future of health. It is a naturopathic prescription that transforms the biological terrain of the body.
                 </p>

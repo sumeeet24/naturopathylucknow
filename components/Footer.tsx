@@ -40,6 +40,7 @@ const Footer: React.FC = () => {
                         { label: "Physiotherapy", href: "/physiotherapy" },
                         { label: "About Naturopathy", href: "/about-naturopathy" },
                         { label: "Treatments", href: "/treatments" },
+                        { label: "Case Studies", href: "/case-studies" },
                         { label: "About Dr. Gupta", href: "/doctor" },
                         { label: "Packages & Pricing", href: "/pricing" },
                         { label: "Contact Us", href: "/contact" },
