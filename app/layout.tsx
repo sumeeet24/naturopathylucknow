@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   keywords: ["Naturopathy in Lucknow", "Naturopathy Centre Lucknow", "Natural Healing Lucknow", "Yoga Therapy Lucknow", "Detox Center Lucknow", "Mud Therapy", "Shirodhara Lucknow", "Drugless Treatment", "Best Naturopath Lucknow"],
   metadataBase: new URL('https://naturopathlucknow.in'),
   alternates: {
-    canonical: '/',
+    canonical: './',
   },
   verification: {
     google: "verification_token",

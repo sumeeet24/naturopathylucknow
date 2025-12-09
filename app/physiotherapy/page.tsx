@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: PHYSIO_HERO_SUBTITLE,
   keywords: "Physiotherapist in Lucknow, Physiotherapy Clinic Lucknow, Sports Injury Rehab, Back Pain Treatment, Dr. Anjali Sharma, Best Physiotherapist, Post Surgery Rehab Lucknow",
   alternates: {
-    canonical: 'https://lucknownaturopathy.com/physiotherapy',
+    canonical: 'https://naturopathlucknow.in/physiotherapy',
   },
 };
 
@@ -52,8 +52,8 @@ const PhysioFAQ = () => {
 
 export default function PhysiotherapyPage() {
   const breadcrumbItems = [
-    { name: "Home", url: "https://lucknownaturopathy.com" },
-    { name: "Physiotherapy", url: "https://lucknownaturopathy.com/physiotherapy" }
+    { name: "Home", url: "https://naturopathlucknow.in" },
+    { name: "Physiotherapy", url: "https://naturopathlucknow.in/physiotherapy" }
   ];
 
   return (

@@ -222,7 +222,7 @@ export default function DrNeelamProfile() {
                               src={img.src}
                               alt={img.alt || `${doctor.name} Certificate ${i + 1}`}
                               fill
-                              className="object-cover hover:scale-105 transition duration-300"
+                              className="object-contain hover:scale-105 transition duration-300"
                           />
                       </div>
                     ))}

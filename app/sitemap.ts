@@ -1,4 +1,5 @@
 import { TREATMENTS, CONDITIONS, SEO_AREAS } from '@/lib/constants';
+import { THERAPISTS } from '@/lib/therapists';
 import { getBlogPosts } from '@/lib/blog';
 import { Metadata, Route } from 'next';
 
@@ -19,13 +20,23 @@ export default function sitemap() {
     '/acupressure-acupuncture-lucknow',
     '/yoga-meditation-lucknow',
     '/physiotherapy-lucknow',
-    '/acupressure-therapist/kawaljeet-singh',
+    '/physiotherapy',
+    '/naturopathy-therapist/neelam-kumari',
     '/yoga-therapist/nand-lal-yadav',
+    '/privacy',
+    '/terms',
   ].map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: route === '' ? 1 : 0.8,
+  }));
+
+  const therapistRoutes = THERAPISTS.map((therapist) => ({
+    url: `${BASE_URL}/acupressure-therapist/${therapist.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
   }));
 
   const treatmentRoutes = TREATMENTS.map((treatment) => ({
@@ -56,5 +67,5 @@ export default function sitemap() {
     priority: 0.8,
   }));
 
-  return [...routes, ...treatmentRoutes, ...conditionRoutes, ...locationRoutes, ...blogRoutes];
+  return [...routes, ...therapistRoutes, ...treatmentRoutes, ...conditionRoutes, ...locationRoutes, ...blogRoutes];
 }
