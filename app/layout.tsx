@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { generateMedicalClinicSchema } from "@/lib/utils";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 import { Lato, Playfair_Display } from 'next/font/google';
 import "./globals.css";
 
@@ -70,7 +71,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <MobileStickyCTA />
+      </body>
     </html>
   );
 }

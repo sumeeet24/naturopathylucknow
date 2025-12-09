@@ -6,27 +6,15 @@
   - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 1773ms
- ○ Compiling /yoga-therapist/nand-lal-yadav ...
- ✓ Compiled /yoga-therapist/nand-lal-yadav in 7.7s (603 modules)
- GET /yoga-therapist/nand-lal-yadav 200 in 8314ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1741ms
  ○ Compiling / ...
- ✓ Compiled / in 2.3s (680 modules)
- GET / 200 in 2874ms
- GET /yoga-therapist/nand-lal-yadav 200 in 59ms
- GET / 200 in 240ms
- GET /yoga-therapist/nand-lal-yadav 200 in 41ms
- GET / 200 in 207ms
- ○ Compiling /case-studies/satvik-diet-reversing-chronic-diseases ...
- ✓ Compiled /case-studies/satvik-diet-reversing-chronic-diseases in 705ms (689 modules)
- GET /case-studies/satvik-diet-reversing-chronic-diseases 200 in 913ms
- ✓ Compiled /_not-found in 252ms (692 modules)
- GET /images/pattern.png 404 in 331ms
- ✓ Compiled /naturopathy-therapist/neelam-kumari in 338ms (698 modules)
- ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- GET /naturopathy-therapist/neelam-kumari 200 in 449ms
- GET /yoga-therapist/nand-lal-yadav 200 in 95ms
- GET / 200 in 293ms
- GET /case-studies/satvik-diet-reversing-chronic-diseases 200 in 126ms
- GET /images/pattern.png 404 in 50ms
- GET /naturopathy-therapist/neelam-kumari 200 in 53ms
+ ✓ Compiled / in 9.7s (700 modules)
+ GET / 200 in 11455ms
+ ○ Compiling /acupressure-acupuncture-lucknow ...
+ ✓ Compiled /acupressure-acupuncture-lucknow in 1035ms (697 modules)
+ GET /acupressure-acupuncture-lucknow 200 in 1307ms
