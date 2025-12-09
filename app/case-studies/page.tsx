@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 const CASE_STUDIES = [
     {
         title: "Satvik Diet Case Study: Reversing Chronic Diseases Naturally",
-        excerpt: "Clinical case study on the effectiveness of Satvik Diet in reversing PCOS and digestive issues. Evidence-based naturopathic guide by Dr. Nilima & Dr. Gupta.",
+        excerpt: "Clinical case study on the effectiveness of Satvik Diet in reversing PCOS and digestive issues. Evidence-based naturopathic guide by Dr. Neelam & Dr. Gupta.",
         slug: "satvik-diet-reversing-chronic-diseases",
         date: "May 22, 2024",
-        author: "Dr. Nilima Kumari"
+        author: "Dr. Neelam Kumari"
     }
 ];
 

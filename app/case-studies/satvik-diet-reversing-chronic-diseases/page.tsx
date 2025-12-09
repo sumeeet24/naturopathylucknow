@@ -11,9 +11,9 @@ import { MessageCircle, Calendar, User, Clock, ArrowRight, Share2, Printer, Volu
 
 export const metadata: Metadata = {
   title: "Satvik Diet Case Study: Reversing Chronic Diseases Naturally | Naturopathy Lucknow",
-  description: "Clinical case study on the effectiveness of Satvik Diet in reversing PCOS and digestive issues. Evidence-based naturopathic guide by Dr. Nilima & Dr. Gupta.",
-  keywords: ["Satvik Diet Case Study", "Reverse PCOS Naturally", "Naturopathy Diet Plan", "Satvik Diet Benefits", "Digestive Health Case Study", "Dr Nilima Naturopathy", "Lucknow Naturopathy"],
-  authors: [{ name: "Dr. Nilima Kumari" }, { name: "Dr. Ravi Gupta" }, { name: "Dr. Nand Lal Yadav" }],
+  description: "Clinical case study on the effectiveness of Satvik Diet in reversing PCOS and digestive issues. Evidence-based naturopathic guide by Dr. Neelam & Dr. Gupta.",
+  keywords: ["Satvik Diet Case Study", "Reverse PCOS Naturally", "Naturopathy Diet Plan", "Satvik Diet Benefits", "Digestive Health Case Study", "Dr Neelam Naturopathy", "Lucknow Naturopathy"],
+  authors: [{ name: "Dr. Neelam Kumari" }, { name: "Dr. Ravi Gupta" }, { name: "Dr. Nand Lal Yadav" }],
   alternates: {
     canonical: '/case-studies/satvik-diet-reversing-chronic-diseases',
   },
@@ -50,8 +50,8 @@ export default function SatvikDietCaseStudy() {
     "author": [
       {
         "@type": "Person",
-        "name": "Dr. Nilima Kumari",
-        "url": "https://naturopathlucknow.in/naturopathy-therapist/dr-nilima-kumari"
+        "name": "Dr. Neelam Kumari",
+        "url": "https://naturopathlucknow.in/naturopathy-therapist/neelam-kumari"
       },
       {
         "@type": "Person",
@@ -69,6 +69,12 @@ export default function SatvikDietCaseStudy() {
     "about": {
       "@type": "MedicalCondition",
       "name": "PCOS, IBS, Metabolic Syndrome"
+    },
+    "reviewer": {
+      "@type": "Person",
+      "name": "Dr. Nand Lal Yadav",
+      "jobTitle": "Naturopathic Doctor & Yoga Expert",
+      "url": "https://naturopathlucknow.in/yoga-therapist/nand-lal-yadav"
     }
   };
 
@@ -102,6 +108,14 @@ export default function SatvikDietCaseStudy() {
               <h1 className="font-serif text-3xl md:text-5xl font-bold mb-6 leading-tight">
                 The Satvik Diet: A Clinical Case Study on <span className="text-earth-brown italic">Holistic Healing</span>
               </h1>
+
+               {/* Medical Review Metadata - TOP Placement as per option */}
+              <div className="mb-6 inline-block bg-white/10 px-4 py-2 rounded-lg border border-white/20">
+                 <p className="text-sm font-medium text-white/90">
+                    Medically reviewed by <span className="font-bold text-white">Dr. Nand Lal Yadav</span>, Naturopathic Doctor & Yoga Expert
+                 </p>
+              </div>
+
               <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
                 A comprehensive guide and clinical analysis of reversing chronic diseases like PCOS and IBS through Naturopathic nutrition.
               </p>
@@ -109,7 +123,7 @@ export default function SatvikDietCaseStudy() {
               <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base text-white/80 font-medium">
                 <div className="flex items-center gap-2">
                   <User className="w-5 h-5" />
-                  <span>Dr. Nilima, Dr. Gupta, Dr. Yadav</span>
+                  <span>Dr. Neelam, Dr. Gupta, Dr. Yadav</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
@@ -306,7 +320,7 @@ export default function SatvikDietCaseStudy() {
 
               <section id="meal-plan" className="mt-12">
                 <h2>8. Full 7-Day Satvik Meal Plan</h2>
-                <p>Optimized for North Indian availability (e.g., Lucknow). Consult our <Link href="/naturopathy-therapist/dr-nilima-kumari">experts</Link> for customization.</p>
+                <p>Optimized for North Indian availability (e.g., Lucknow). Consult our <Link href="/naturopathy-therapist/neelam-kumari">experts</Link> for customization.</p>
                 <div className="overflow-x-auto not-prose">
                   <table className="w-full border-collapse bg-white text-xs md:text-sm shadow-sm rounded-lg">
                     <thead className="bg-earth-brown text-white">
@@ -393,16 +407,46 @@ export default function SatvikDietCaseStudy() {
           </div>
         </div>
 
+        {/* Profile Snippet Box for Dr. Nand Lal Yadav - ADDED as per request */}
+        <div className="container mx-auto px-4 mt-8 mb-12">
+             <div className="bg-white border border-stone-200 rounded-xl p-6 shadow-sm max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
+                <div className="w-24 h-24 flex-shrink-0 relative rounded-full overflow-hidden border-2 border-nature-green/30">
+                     <Image
+                        src="/images/team/dr-nand-lal-yadav.jpg"
+                        alt="Dr. Nand Lal Yadav"
+                        fill
+                        className="object-cover object-center"
+                     />
+                </div>
+                <div className="flex-grow text-center md:text-left">
+                    <h3 className="text-xl font-bold text-stone-800">Dr. Nand Lal Yadav</h3>
+                    <p className="text-nature-green font-medium text-sm mb-2">Naturopathic Doctor & Yoga Expert</p>
+                    <p className="text-stone-600 text-sm mb-4 md:mb-0 max-w-xl">
+                        “28+ years of experience in Yoga & Naturopathy, treated over 1,00,000 patients.”
+                    </p>
+                </div>
+                <div className="flex-shrink-0">
+                    <Link
+                        href="/yoga-therapist/nand-lal-yadav"
+                        className="inline-block bg-nature-green text-white text-sm font-bold px-6 py-3 rounded-full hover:bg-stone-800 transition-colors"
+                    >
+                        View Full Profile
+                    </Link>
+                </div>
+             </div>
+        </div>
+
+
         {/* Author Section */}
         <div className="bg-stone-100 py-16 mt-16 border-t border-stone-200">
           <div className="container mx-auto px-4 text-center">
             <h3 className="font-serif text-2xl text-nature-dark mb-8">About the Authors</h3>
             <div className="flex flex-wrap justify-center gap-8">
-              <Link href="/naturopathy-therapist/dr-nilima-kumari" className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all max-w-xs w-full">
+              <Link href="/naturopathy-therapist/neelam-kumari" className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all max-w-xs w-full">
                  <div className="w-20 h-20 bg-stone-200 rounded-full mx-auto mb-4 overflow-hidden">
-                   <Image src="/images/therapist/nilima.png" alt="Dr. Nilima" width={80} height={80} className="w-full h-full object-cover object-top" />
+                   <Image src="/images/therapist/nilima.png" alt="Dr. Neelam" width={80} height={80} className="w-full h-full object-cover object-top" />
                  </div>
-                 <h4 className="font-serif font-bold text-lg group-hover:text-nature-green transition-colors">Dr. Nilima Kumari</h4>
+                 <h4 className="font-serif font-bold text-lg group-hover:text-nature-green transition-colors">Dr. Neelam Kumari</h4>
                  <p className="text-xs text-stone-500 uppercase tracking-wide">Senior Naturopath</p>
               </Link>
               <div className="bg-white p-6 rounded-xl shadow-sm max-w-xs w-full">
@@ -417,7 +461,7 @@ export default function SatvikDietCaseStudy() {
                    <Image src="/images/therapist/nandlal.jpg" alt="Dr. Nand Lal Yadav" width={80} height={80} className="w-full h-full object-cover object-center" />
                  </div>
                  <h4 className="font-serif font-bold text-lg group-hover:text-nature-green transition-colors">Dr. Nand Lal Yadav</h4>
-                 <p className="text-xs text-stone-500 uppercase tracking-wide">Yoga Therapist</p>
+                 <p className="text-xs text-stone-500 uppercase tracking-wide">Naturopathic Doctor & Yoga Expert</p>
               </Link>
             </div>
           </div>
