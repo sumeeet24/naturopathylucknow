@@ -184,74 +184,75 @@ const Header: React.FC = () => {
         Top padding handles the header height.
       */}
       <div
-        className={`fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transform transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) lg:hidden ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ paddingTop: '85px' }} // Hardcoded offset to ensure it sits below the header bar
+        style={{ paddingTop: '90px' }} // Hardcoded offset to ensure it sits below the header bar
       >
-        <div className="h-full overflow-y-auto px-4 pb-20">
-            <nav className="space-y-1">
-                <Link href="/" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Home</Link>
-                <Link href="/physiotherapy-lucknow" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Physiotherapy</Link>
-                <Link href="/acupressure-acupuncture-lucknow" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Acupressure</Link>
-                <Link href="/yoga-meditation-lucknow" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Yoga & Meditation</Link>
+        <div className="h-full overflow-y-auto px-6 pb-32">
+            <nav className="space-y-4">
+                <Link href="/" className="block text-2xl font-serif font-medium text-stone-800 hover:text-nature-green transition-colors animate-fade-in-up" style={{ animationDelay: '100ms' }}>Home</Link>
+                <div className="h-px bg-stone-100 w-full" />
+
+                <Link href="/physiotherapy-lucknow" className="block text-2xl font-serif font-medium text-stone-800 hover:text-nature-green transition-colors animate-fade-in-up" style={{ animationDelay: '150ms' }}>Physiotherapy</Link>
+                <div className="h-px bg-stone-100 w-full" />
+
+                <Link href="/acupressure-acupuncture-lucknow" className="block text-2xl font-serif font-medium text-stone-800 hover:text-nature-green transition-colors animate-fade-in-up" style={{ animationDelay: '200ms' }}>Acupressure</Link>
+                <div className="h-px bg-stone-100 w-full" />
+
+                <Link href="/yoga-meditation-lucknow" className="block text-2xl font-serif font-medium text-stone-800 hover:text-nature-green transition-colors animate-fade-in-up" style={{ animationDelay: '250ms' }}>Yoga & Meditation</Link>
+                <div className="h-px bg-stone-100 w-full" />
 
                 {/* Mobile Dropdown: Treatments */}
-                <div className="border-b border-stone-100">
+                <div className="animate-fade-in-up" style={{ animationDelay: '300ms' }}>
                     <button
                         onClick={() => toggleMobileDropdown('treatments')}
-                        className="w-full flex justify-between items-center px-4 py-4 text-lg font-medium text-stone-800 active:bg-nature-light/50 outline-none"
+                        className="w-full flex justify-between items-center text-2xl font-serif font-medium text-stone-800 outline-none"
                     >
                         Treatments
                         <ChevronDown className={`w-5 h-5 text-stone-400 transition-transform duration-300 ${activeMobileDropdown === 'treatments' ? 'rotate-180' : ''}`} />
                     </button>
-                    <div className={`overflow-hidden transition-all duration-300 ease-in-out bg-stone-50/50 ${activeMobileDropdown === 'treatments' ? 'max-h-[60vh] opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="px-4 py-2 space-y-1">
+                    <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeMobileDropdown === 'treatments' ? 'max-h-[60vh] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                        <div className="pl-4 space-y-3 border-l-2 border-nature-light/50 ml-2">
                             {TREATMENTS.map(item => (
-                                <Link key={item.id} href={`/treatment/${item.id}`} className="block px-4 py-3 text-base text-stone-600 rounded-lg active:bg-white active:text-nature-green">
+                                <Link key={item.id} href={`/treatment/${item.id}`} className="block text-lg text-stone-600 hover:text-nature-green transition-colors">
                                     {item.title}
                                 </Link>
                             ))}
                         </div>
                     </div>
                 </div>
+                <div className="h-px bg-stone-100 w-full" />
 
                 {/* Mobile Dropdown: Conditions */}
-                <div className="border-b border-stone-100">
+                <div className="animate-fade-in-up" style={{ animationDelay: '350ms' }}>
                     <button
                         onClick={() => toggleMobileDropdown('conditions')}
-                        className="w-full flex justify-between items-center px-4 py-4 text-lg font-medium text-stone-800 active:bg-nature-light/50 outline-none"
+                        className="w-full flex justify-between items-center text-2xl font-serif font-medium text-stone-800 outline-none"
                     >
                         Diseases We Cure
                         <ChevronDown className={`w-5 h-5 text-stone-400 transition-transform duration-300 ${activeMobileDropdown === 'conditions' ? 'rotate-180' : ''}`} />
                     </button>
-                    <div className={`overflow-hidden transition-all duration-300 ease-in-out bg-stone-50/50 ${activeMobileDropdown === 'conditions' ? 'max-h-[60vh] opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="px-4 py-2 space-y-1">
+                    <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeMobileDropdown === 'conditions' ? 'max-h-[60vh] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                        <div className="pl-4 space-y-3 border-l-2 border-nature-light/50 ml-2">
                             {CONDITIONS.map(item => (
-                                <Link key={item.id} href={`/condition/${item.id}`} className="block px-4 py-3 text-base text-stone-600 rounded-lg active:bg-white active:text-nature-green">
+                                <Link key={item.id} href={`/condition/${item.id}`} className="block text-lg text-stone-600 hover:text-nature-green transition-colors">
                                     {item.title}
                                 </Link>
                             ))}
                         </div>
                     </div>
                 </div>
+                <div className="h-px bg-stone-100 w-full" />
 
-                <Link href="/pricing" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Pricing</Link>
-                <Link href="/doctor" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">About Doctor</Link>
-                <Link href="/contact" className="block px-4 py-4 text-lg font-medium text-stone-800 border-b border-stone-100 active:bg-nature-light/50">Contact</Link>
+                <Link href="/pricing" className="block text-2xl font-serif font-medium text-stone-800 hover:text-nature-green transition-colors animate-fade-in-up" style={{ animationDelay: '400ms' }}>Pricing</Link>
+                <div className="h-px bg-stone-100 w-full" />
+
+                <Link href="/doctor" className="block text-2xl font-serif font-medium text-stone-800 hover:text-nature-green transition-colors animate-fade-in-up" style={{ animationDelay: '450ms' }}>About Doctor</Link>
+                <div className="h-px bg-stone-100 w-full" />
+
+                <Link href="/contact" className="block text-2xl font-serif font-medium text-stone-800 hover:text-nature-green transition-colors animate-fade-in-up" style={{ animationDelay: '500ms' }}>Contact</Link>
             </nav>
-
-            <div className="mt-8 px-4">
-                <a
-                    href={`https://wa.me/${WHATSAPP}?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment.`}
-                    className="w-full flex justify-center items-center px-6 py-4 text-lg font-bold rounded-xl text-white bg-nature-green shadow-lg shadow-nature-green/20 active:scale-[0.98] transition-all"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Book via WhatsApp
-                </a>
-            </div>
         </div>
       </div>
     </>

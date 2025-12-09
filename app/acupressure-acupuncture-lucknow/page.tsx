@@ -15,7 +15,7 @@ import {
   MapPin,
   CheckCircle2
 } from 'lucide-react';
-import { FAQAccordion, MobileStickyCTA, Timeline } from './components';
+import { FAQAccordion, Timeline } from './components';
 
 export const metadata: Metadata = {
   title: 'Acupressure & Acupuncture in Lucknow – Certified Therapy & Treatments',
@@ -118,8 +118,6 @@ export default function AcupressurePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      <MobileStickyCTA />
 
       {/* Hero Section - Optimized for Mobile First */}
       <section className="relative min-h-[80vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden bg-nature-dark text-white">
