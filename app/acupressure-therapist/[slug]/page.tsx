@@ -233,7 +233,7 @@ export default function TherapistProfile({ params }: Props) {
                             src={img}
                             alt={`${therapist.name} Certificate ${i + 1}`}
                             fill
-                            className="object-cover hover:scale-105 transition duration-300"
+                            className="object-contain hover:scale-105 transition duration-300"
                         />
                     </div>
                   ))}
@@ -246,7 +246,7 @@ export default function TherapistProfile({ params }: Props) {
                         src={therapist.certificateImage}
                         alt={`${therapist.name} Certificate`}
                         fill
-                        className="object-cover hover:scale-105 transition duration-300"
+                        className="object-contain hover:scale-105 transition duration-300"
                     />
                 </div>
               )}
