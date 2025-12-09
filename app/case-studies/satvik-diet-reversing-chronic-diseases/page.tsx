@@ -510,17 +510,17 @@ export default function SatvikDietCaseStudy() {
                   <ul className="text-sm text-stone-600 space-y-2 list-disc pl-5">
                     <li>
                       <a href="#" className="hover:text-nature-green underline decoration-stone-300">
-                        World Health Organization (WHO). "Global Status Report on Noncommunicable Diseases 2014." Geneva: WHO, 2014.
+                        World Health Organization (WHO). &quot;Global Status Report on Noncommunicable Diseases 2014.&quot; Geneva: WHO, 2014.
                       </a>
                     </li>
                     <li>
                       <a href="#" className="hover:text-nature-green underline decoration-stone-300">
-                        Sharma, H., & Chandola, H. M. (2011). "Prameha in Ayurveda: Correlation with Obesity, Metabolic Syndrome, and Diabetes Mellitus." <em>Ayu</em>, 32(3), 350–356.
+                        Sharma, H., & Chandola, H. M. (2011). &quot;Prameha in Ayurveda: Correlation with Obesity, Metabolic Syndrome, and Diabetes Mellitus.&quot; <em>Ayu</em>, 32(3), 350–356.
                       </a>
                     </li>
                     <li>
                       <a href="#" className="hover:text-nature-green underline decoration-stone-300">
-                        Singh, R. H. (2010). "Exploring issues in the development of Naturopathy in India." <em>Indian Journal of Traditional Knowledge</em>, 9(3).
+                        Singh, R. H. (2010). &quot;Exploring issues in the development of Naturopathy in India.&quot; <em>Indian Journal of Traditional Knowledge</em>, 9(3).
                       </a>
                     </li>
                     <li>

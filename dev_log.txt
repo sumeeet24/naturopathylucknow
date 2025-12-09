@@ -23,3 +23,11 @@ https://nextjs.org/telemetry
  ⨯ The requested resource isn't a valid image for /images/therapist/nilima.png received null
  GET /images/therapist/nandlal.jpg 404 in 82ms
  ⨯ The requested resource isn't a valid image for /images/therapist/nandlal.jpg received null
+ ✓ Compiled in 4.6s (648 modules)
+ GET /case-studies/satvik-diet-reversing-chronic-diseases 200 in 434ms
+ ✓ Compiled /_not-found in 176ms (350 modules)
+ GET /images/pattern.png 404 in 332ms
+ GET /images/therapist/nilima.png 404 in 41ms
+ ⨯ The requested resource isn't a valid image for /images/therapist/nilima.png received null
+ GET /images/therapist/nandlal.jpg 404 in 64ms
+ ⨯ The requested resource isn't a valid image for /images/therapist/nandlal.jpg received null
