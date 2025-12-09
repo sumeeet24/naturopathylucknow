@@ -1,0 +1,25 @@
+
+> lucknow-naturopathy@1.0.0 dev
+> next dev
+
+  ▲ Next.js 14.2.33
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 2.1s
+ ○ Compiling /case-studies/satvik-diet-reversing-chronic-diseases ...
+ ✓ Compiled /case-studies/satvik-diet-reversing-chronic-diseases in 7.8s (667 modules)
+ GET /case-studies/satvik-diet-reversing-chronic-diseases 200 in 8553ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 6.1s (650 modules)
+ GET /images/pattern.png 404 in 6361ms
+ GET /images/pattern.png 404 in 24ms
+ GET /images/therapist/nilima.png 404 in 80ms
+ ⨯ The requested resource isn't a valid image for /images/therapist/nilima.png received null
+ GET /images/therapist/nandlal.jpg 404 in 82ms
+ ⨯ The requested resource isn't a valid image for /images/therapist/nandlal.jpg received null
