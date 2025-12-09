@@ -8,25 +8,25 @@ import { Phone, MapPin, Clock, Calendar, ShieldCheck, Award } from 'lucide-react
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Dr. Nilam Kumari | Naturopathy and Yogic Science Expert Lucknow',
-  description: 'Meet Dr. Nilam Kumari, a certified Naturopathy and Yogic Science expert in Lucknow. Specializing in holistic healing, natural treatments, and women\'s wellness. Call 81154 00106.',
+  title: 'Dr. Neelam Kumari | Naturopathy and Yogic Science Expert Lucknow',
+  description: 'Meet Dr. Neelam Kumari, a certified Naturopathy and Yogic Science expert in Lucknow. Specializing in holistic healing, natural treatments, and women\'s wellness. Call 81154 00106.',
 };
 
-export default function DrNilamProfile() {
+export default function DrNeelamProfile() {
   // Doctor Data - Defined locally as requested
   const doctor = {
-    name: "Dr. Nilam Kumari",
+    name: "Dr. Neelam Kumari",
     role: "Naturopathy and Yogic Science Expert",
     image: "/images/team/dr-nilam-kumari.jpg",
     phone: "81154 00106",
     whatsapp: "8115400106",
     experience: "10+ Years Experience", // Estimated placeholder
     location: "Lucknow, India",
-    biography: `Dr. Nilam Kumari is a dedicated and compassionate practitioner of Naturopathy and Yogic Science. With a deep understanding of the body's natural healing capabilities, she focuses on treating the root cause of ailments rather than just the symptoms.
+    biography: `Dr. Neelam Kumari is a dedicated and compassionate practitioner of Naturopathy and Yogic Science. With a deep understanding of the body's natural healing capabilities, she focuses on treating the root cause of ailments rather than just the symptoms.
 
     Her approach integrates traditional naturopathic treatments—such as mud therapy, hydrotherapy, and diet therapy—with the ancient wisdom of Yoga. She believes in empowering patients to take charge of their health through lifestyle modifications and natural remedies.
 
-    Dr. Nilam specializes in lifestyle disorders, women's health issues, and chronic pain management. Her personalized treatment plans are designed to restore balance to the body, mind, and spirit, promoting long-term wellness and vitality.`,
+    Dr. Neelam specializes in lifestyle disorders, women's health issues, and chronic pain management. Her personalized treatment plans are designed to restore balance to the body, mind, and spirit, promoting long-term wellness and vitality.`,
     expertise: [
       {
         title: "Naturopathy",
@@ -61,7 +61,7 @@ export default function DrNilamProfile() {
     certificateImages: [
         {
             src: "/images/certificate/dr-nilam-kumari-certificate.jpg",
-            alt: "Certificate of Dr. Nilam Kumari"
+            alt: "Certificate of Dr. Neelam Kumari"
         }
     ]
   };
@@ -142,7 +142,7 @@ export default function DrNilamProfile() {
                     <span>Call</span>
                   </a>
                   <a
-                    href={`https://wa.me/91${doctor.whatsapp}?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Nilam.`}
+                    href={`https://wa.me/91${doctor.whatsapp}?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Neelam.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-[#25D366] text-white px-8 py-3 rounded-full font-bold hover:bg-green-600 transition shadow-lg flex items-center justify-center gap-2"
@@ -245,7 +245,7 @@ export default function DrNilamProfile() {
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
                 <h3 className="font-bold text-lg text-nature-green mb-2">Is diet therapy difficult to follow?</h3>
-                <p className="text-stone-600">Dr. Nilam creates practical and sustainable diet plans tailored to your lifestyle and preferences, making them easy to adopt.</p>
+                <p className="text-stone-600">Dr. Neelam creates practical and sustainable diet plans tailored to your lifestyle and preferences, making them easy to adopt.</p>
               </div>
             </div>
           </div>
@@ -258,7 +258,7 @@ export default function DrNilamProfile() {
               Start Your Natural Healing Journey
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-              Book a personalized consultation with Dr. Nilam Kumari today.
+              Book a personalized consultation with Dr. Neelam Kumari today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
                <a
