@@ -36,7 +36,7 @@ const Services: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-earth-brown to-transparent mx-auto mb-8 rounded-full"></div>
           <p className="mt-4 max-w-2xl mx-auto text-stone-600 text-lg leading-relaxed font-light">
-            We customize treatment plans according to your disease condition using pure, natural elements.
+            We customize treatment plans according to your disease condition. Available for both <strong className="text-nature-green">In-Patient (Stay)</strong> and <strong className="text-nature-green">Out-Patient (Daily Visit)</strong>.
           </p>
         </div>
 

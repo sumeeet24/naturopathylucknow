@@ -8,7 +8,7 @@ export const EMAIL = "biotb.instantreply@gmail.com";
 
 // Keyword-rich introduction - OPTIMIZED FOR SEO
 export const HERO_TITLE = "Best Naturopathy Clinic & Natural Treatment Hospital in Lucknow | Holistic Healing";
-export const HERO_SUBTITLE = "Experience the power of nature at Lucknow's premier Natural Treatment Hospital. Our Naturopathic Doctors offer drugless cures for chronic diseases using Yoga, Mud Therapy, and Ayurveda. 100% Side-effect free.";
+export const HERO_SUBTITLE = "Experience the power of nature at Lucknow's premier Natural Treatment Hospital and Naturopathy Clinic. We provide both In-Patient (IPD) facility for chronic disease reversal and Out-Patient (OPD) services for daily wellness therapies. 100% Side-effect free.";
 
 export const PRINCIPLES: PrincipleItem[] = [
   {
@@ -278,7 +278,7 @@ export const DOCTOR: DoctorProfile = {
 export const PACKAGES: PackageItem[] = [
   {
     id: 'detox-7',
-    title: '7 Days Detox Program',
+    title: '7 Days Detox Program (Residential)',
     price: '₹5,500',
     duration: '7 Days',
     recommendedFor: "General wellbeing, Skin glow, Mild constipation",
@@ -292,7 +292,7 @@ export const PACKAGES: PackageItem[] = [
   },
   {
     id: 'pain-15',
-    title: 'Chronic Pain Relief',
+    title: 'Chronic Pain Relief (Residential)',
     price: '₹12,000',
     duration: '15 Days',
     recommendedFor: "Arthritis, Back Pain, Sciatica, Spondylitis",
@@ -306,7 +306,7 @@ export const PACKAGES: PackageItem[] = [
   },
   {
     id: 'weight-21',
-    title: '21 Days Weight Loss',
+    title: '21 Days Weight Loss (Residential)',
     price: '₹18,000',
     duration: '21 Days',
     recommendedFor: "Obesity, PCOD, Thyroid, High Cholesterol",
@@ -333,6 +333,14 @@ export const FAQS: FAQItem[] = [
   {
     question: "Is Naturopathy safe compared to modern medicine?",
     answer: "Yes, Naturopathy is completely harmless. Treatment plans rely on diet, exercise, and natural elements, ensuring there are no harmful side effects or negative symptom suppression."
+  },
+  {
+    question: "Do you have residential facilities (Hospital/IPD)?",
+    answer: "Yes, as a fully functional Natural Treatment Hospital, we provide hygienic residential facilities for patients undergoing 7-21 day treatment packages for chronic diseases."
+  },
+  {
+    question: "Can I visit daily for treatment (Clinic/OPD)?",
+    answer: "Absolutely. Our Naturopathy Clinic functions daily. You can consult our doctors and take single therapy sessions like Mud Bath, Massage, or Yoga without admission."
   },
   {
     question: "Where is the best Naturopathy centre in Lucknow located?",
