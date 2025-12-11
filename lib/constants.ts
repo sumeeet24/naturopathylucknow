@@ -1,14 +1,14 @@
 import { ServiceItem, PrincipleItem, FAQItem, ConditionItem, PackageItem, DoctorProfile } from './types';
 
 export const APP_NAME = "Lucknow Natural Healing Centre";
-export const ADDRESS = "123 Wellness Lane, Gomti Nagar, Lucknow, Uttar Pradesh 226010";
+export const ADDRESS = "Gomti Nagar, Lucknow, Uttar Pradesh 226010";
 export const PHONE = "+91 88742 06748";
 export const WHATSAPP = "918874206748";
 export const EMAIL = "biotb.instantreply@gmail.com";
 
-// Keyword-rich introduction
-export const HERO_TITLE = "Best Naturopathy in Lucknow, Natural Treatment Doctor Clinic for Holistic Healing";
-export const HERO_SUBTITLE = "Consult Naturopath in Lucknow to restore your health through the power of Nature. A naturopathy based drugless, holistic healing center in Lucknow for natural treatment without side effects by naturopathic doctor.";
+// Keyword-rich introduction - OPTIMIZED FOR SEO
+export const HERO_TITLE = "Best Naturopathy Clinic & Natural Treatment Hospital in Lucknow | Holistic Healing";
+export const HERO_SUBTITLE = "Experience the power of nature at Lucknow's premier Natural Treatment Hospital. Our Naturopathic Doctors offer drugless cures for chronic diseases using Yoga, Mud Therapy, and Ayurveda. 100% Side-effect free.";
 
 export const PRINCIPLES: PrincipleItem[] = [
   {
@@ -263,16 +263,16 @@ export const CONDITIONS: ConditionItem[] = [
 ];
 
 export const DOCTOR: DoctorProfile = {
-  name: "Dr. Ravi Gupta",
-  title: "Senior Naturopath & Yoga Consultant",
-  qualifications: ["B.N.Y.S (Bachelor of Naturopathy & Yogic Sciences)", "Diploma in Acupressure", "Certified Nutritionist"],
-  specializations: ["Chronic Pain Management", "Diabetes Reversal", "Detoxification Specialist"],
-  experience: "15+ Years",
+  name: "Dr. Nand Lal Yadav",
+  title: "Naturopathic Doctor & Yoga Expert",
+  qualifications: ["B.N.Y.S (Bachelor of Naturopathy & Yogic Sciences)", "Diploma in Acupressure", "Yoga Expert"],
+  specializations: ["Chronic Disease Reversal", "Medical Yoga", "Lifestyle Disorders"],
+  experience: "28+ Years",
   bio: [
-    "Dr. Ravi Gupta is a renowned Naturopath in Lucknow dedicated to the cause of natural living. With over 15 years of clinical experience, he has successfully treated over 5000+ patients with chronic ailments.",
-    "He believes that 'The body heals itself' and focuses on educating patients about their lifestyle. His approach combines modern diagnostic methods with ancient wisdom of Nature Cure."
+    "Dr. Nand Lal Yadav is a pioneer in Medical Yoga and Naturopathy with over 28 years of experience. He has treated over 1,00,000 patients, specializing in reversing chronic diseases like diabetes and hypertension.",
+    "His approach combines the ancient wisdom of Yoga with the healing power of Naturopathy to provide a holistic cure that targets the root cause of the ailment."
   ],
-  image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=400&auto=format&fit=crop"
+  image: "/images/team/dr-nand-lal-yadav.jpg"
 };
 
 export const PACKAGES: PackageItem[] = [
@@ -324,7 +324,7 @@ export const PACKAGES: PackageItem[] = [
 export const FAQS: FAQItem[] = [
   {
     question: "What is Naturopathy and how does it help in Lucknow?",
-    answer: "Naturopathy is a drugless system of healing that uses natural elements like water, mud, and diet to cure diseases. Our clinic in Lucknow focuses on removing the root cause—morbid matter—rather than just suppressing symptoms."
+    answer: "Naturopathy is a drugless system of healing that uses natural elements like water, mud, and diet to cure diseases. Our Natural Treatment Hospital in Lucknow focuses on removing the root cause—morbid matter—rather than just suppressing symptoms."
   },
   {
     question: "Which diseases can be cured by Naturopathy?",

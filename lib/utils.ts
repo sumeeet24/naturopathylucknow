@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { SEO_AREAS } from "./constants";
+import { SEO_AREAS, ADDRESS } from "./constants";
 import { REVIEWS } from "./reviews";
 
 export function cn(...inputs: ClassValue[]) {
@@ -12,14 +12,14 @@ export function generateMedicalClinicSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "name": "Lucknow Naturopathy & Holistic Healing Centre",
-    "image": "https://lucknownaturopathy.com/opengraph-image", // Updated to dynamic image
-    "@id": "https://lucknownaturopathy.com",
-    "url": "https://lucknownaturopathy.com",
+    "name": "Natural Treatment Hospital",
+    "image": "https://naturopathlucknow.in/opengraph-image", // Updated to dynamic image and correct domain
+    "@id": "https://naturopathlucknow.in",
+    "url": "https://naturopathlucknow.in",
     "telephone": "+918874206748",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Wellness Lane, Gomti Nagar",
+      "streetAddress": "Gomti Nagar",
       "addressLocality": "Lucknow",
       "addressRegion": "UP",
       "postalCode": "226010",

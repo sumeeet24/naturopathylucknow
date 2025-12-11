@@ -11,7 +11,11 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 
 export const metadata: Metadata = {
-  title: "No.1 Naturopathy in Lucknow, Natural Treatment Hospital, Naturopath Doctor | Holistic Healing Lucknow",
+  title: "Best Naturopathy Clinic in Lucknow | Natural Treatment Hospital | Dr. Nand Lal Yadav",
+  description: "Visit the #1 Naturopathy Clinic & Natural Treatment Hospital in Lucknow. Cure chronic diseases like diabetes, BP, and arthritis naturally. Book appointment with Dr. Nand Lal Yadav, 28+ years exp.",
+  alternates: {
+    canonical: './',
+  },
 };
 
 export default function Home() {

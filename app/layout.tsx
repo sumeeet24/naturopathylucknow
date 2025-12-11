@@ -20,11 +20,26 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Lucknow Naturopathy & Holistic Healing Centre",
-    default: "Best Naturopathy Clinic in Lucknow | Holistic Healing Centre",
+    template: "%s | Natural Treatment Hospital Lucknow",
+    default: "Best Naturopathy Clinic in Lucknow | Natural Treatment Hospital",
   },
-  description: "Top-rated Naturopathy Centre in Lucknow. Specializing in drugless healing, mud therapy, shirodhara, yoga, and detox. Cure chronic diseases naturally.",
-  keywords: ["Naturopathy in Lucknow", "Naturopathy Centre Lucknow", "Natural Healing Lucknow", "Yoga Therapy Lucknow", "Detox Center Lucknow", "Mud Therapy", "Shirodhara Lucknow", "Drugless Treatment", "Best Naturopath Lucknow"],
+  description: "Top-rated Naturopathy Centre in Lucknow. Specializing in drugless healing, mud therapy, shirodhara, yoga, and detox. Cure chronic diseases naturally at Natural Treatment Hospital.",
+  keywords: [
+    "Naturopathy in Lucknow",
+    "Naturopathy Centre Lucknow",
+    "Natural Healing Lucknow",
+    "Yoga Therapy Lucknow",
+    "Detox Center Lucknow",
+    "Mud Therapy",
+    "Shirodhara Lucknow",
+    "Drugless Treatment",
+    "Best Naturopath Lucknow",
+    "Naturopathy Hospital Lucknow",
+    "Naturopathic Clinic Lucknow",
+    "Natural Treatment Hospital",
+    "Dr Nand Lal Yadav",
+    "Dr Neelam Kumari"
+  ],
   metadataBase: new URL('https://naturopathlucknow.in'),
   alternates: {
     canonical: './',
@@ -40,13 +55,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://naturopathlucknow.in/',
-    siteName: 'Lucknow Naturopathy & Holistic Healing Centre',
+    siteName: 'Natural Treatment Hospital Lucknow',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Lucknow Naturopathy & Holistic Healing Centre',
+        alt: 'Natural Treatment Hospital Lucknow',
       },
     ],
   },
