@@ -138,7 +138,7 @@ export default function DoctorTeamPage() {
         <section className="bg-white py-16 mb-20">
             <div className="container mx-auto px-4 max-w-4xl text-center">
                 <div className="w-16 h-1 bg-nature-green mx-auto mb-8"></div>
-                <h2 className="text-3xl font-playfair font-bold text-stone-800 mb-6">"Treating the Patient, Not Just the Disease"</h2>
+                <h2 className="text-3xl font-playfair font-bold text-stone-800 mb-6">&quot;Treating the Patient, Not Just the Disease&quot;</h2>
                 <p className="text-lg text-stone-600 leading-relaxed mb-8">
                     Our multi-disciplinary team works together to create integrated treatment plans. Whether you need the structural correction of Yoga, the detoxification of Naturopathy, or the energy balance of Acupressure, we ensure you get the most effective holistic care under one roof.
                 </p>
