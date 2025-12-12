@@ -6,6 +6,7 @@ export interface ServiceItem {
   benefits: string[];
   procedure?: string[];
   iconName: string;
+  customLink?: string;
 }
 
 export interface ConditionItem {

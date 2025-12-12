@@ -53,9 +53,9 @@ const Footer: React.FC = () => {
                     <li><Link href="/treatments/hydrotherapy" className="hover:text-nature-green transition-colors">Hydrotherapy</Link></li>
                     <li><Link href="/treatments/massage-therapy" className="hover:text-nature-green transition-colors">Massage Therapy</Link></li>
                     <li><Link href="/treatments/detoxification" className="hover:text-nature-green transition-colors">Detoxification</Link></li>
-                    <li><Link href="/treatments/yoga-therapy" className="hover:text-nature-green transition-colors">Yoga & Meditation</Link></li>
+                    <li><Link href="/yoga-meditation-lucknow" className="hover:text-nature-green transition-colors">Yoga & Meditation</Link></li>
                     <li><Link href="/treatments/shirodhara" className="hover:text-nature-green transition-colors">Shirodhara</Link></li>
-                    <li><Link href="/treatments/acupressure" className="hover:text-nature-green transition-colors">Acupressure</Link></li>
+                    <li><Link href="/acupressure-acupuncture-lucknow" className="hover:text-nature-green transition-colors">Acupressure</Link></li>
                     <li><Link href="/treatments/diet-therapy" className="hover:text-nature-green transition-colors">Diet Therapy</Link></li>
                 </ul>
             </div>
