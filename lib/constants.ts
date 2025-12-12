@@ -1,4 +1,4 @@
-import { ServiceItem, PrincipleItem, FAQItem, ConditionItem, PackageItem, DoctorProfile } from './types';
+import { ServiceItem, PrincipleItem, FAQItem, ConditionItem, PackageItem, DoctorProfile, TestimonialItem } from './types';
 
 export const APP_NAME = "Lucknow Natural Healing Centre";
 export const ADDRESS = "Gomti Nagar, Lucknow, Uttar Pradesh 226010";
@@ -277,76 +277,207 @@ export const DOCTOR: DoctorProfile = {
 
 export const PACKAGES: PackageItem[] = [
   {
-    id: 'detox-7',
-    title: '7 Days Detox Program (Residential)',
-    price: '₹5,500',
-    duration: '7 Days',
-    recommendedFor: "General wellbeing, Skin glow, Mild constipation",
+    id: 'ipd-program',
+    title: 'INTENSIVE RESIDENTIAL (IPD)',
+    price: '₹15,000 - ₹55,000',
+    duration: '7 - 21 Days',
+    recommendedFor: "Chronic Disease Reversal",
     features: [
-      "Consultation with Doctor",
-      "Daily Mud Pack & Enema",
-      "3 Steam Baths",
-      "3 Full Body Massages",
-      "Diet Chart"
+      "Private AC/Non-AC accommodation",
+      "3 wholesome therapeutic meals daily",
+      "Minimum 3-4 therapies per day",
+      "Daily doctor consultation & monitoring",
+      "All medicines & herbal preparations",
+      "Medical yoga classes (morning & evening)",
+      "Blood tests (initial & final)",
+      "Diet chart for home"
     ]
   },
   {
-    id: 'pain-15',
-    title: 'Chronic Pain Relief (Residential)',
-    price: '₹12,000',
-    duration: '15 Days',
-    recommendedFor: "Arthritis, Back Pain, Sciatica, Spondylitis",
+    id: 'opd-program',
+    title: 'OUTPATIENT PROGRAM (OPD)',
+    price: '₹4,500 - ₹20,000',
+    duration: '10 - 30 Sessions',
+    recommendedFor: "Daily Visitors & Professionals",
     features: [
-      "Daily Potli/Herbal Massage",
-      "Local Steam & Spinal Bath",
-      "Acupressure Sessions",
-      "Physiotherapy Exercises",
-      "Anti-inflammatory Diet"
+      "Doctor consultation & treatment plan",
+      "1-2 therapies per visit (45-90 mins)",
+      "Personalized diet chart",
+      "Exercise/yoga guidance",
+      "Weekly progress monitoring",
+      "WhatsApp support",
+      "Flexible timings (Morning/Evening)"
     ]
   },
   {
-    id: 'weight-21',
-    title: '21 Days Weight Loss (Residential)',
-    price: '₹18,000',
-    duration: '21 Days',
-    recommendedFor: "Obesity, PCOD, Thyroid, High Cholesterol",
+    id: 'yoga-classes',
+    title: 'YOGA & MEDITATION CLASSES',
+    price: '₹2,000 / month',
+    duration: 'Daily Sessions',
+    recommendedFor: "Group & Personal Training",
     features: [
-      "Udvartana (Powder Massage)",
-      "Daily Yoga & Power Yoga",
-      "Fasting Therapy (Juice/Fruit)",
-      "Colon Hydrotherapy",
-      "Sauna Bath"
+      "Medical yoga sequences",
+      "Pranayama (breathing exercises)",
+      "Meditation techniques",
+      "Asana practice with alignment",
+      "Trained instructors (RYT certified)",
+      "Group Classes (Morning/Evening)",
+      "Personal Training available",
+      "Medical Yoga Therapy available"
+    ]
+  },
+  {
+    id: 'detox-program',
+    title: 'DETOXIFICATION PROGRAMS',
+    price: '₹8,000 - ₹38,000',
+    duration: '7 - 21 Days',
+    recommendedFor: "Complete Body Cleanse",
+    features: [
+      "Colon hydrotherapy / Enema",
+      "Juice fasting or raw food diet",
+      "Steam bath & Sauna",
+      "Liver detox protocol",
+      "Full Panchakarma (in 21-day plan)",
+      "Yoga & Meditation",
+      "Complete system reset"
     ]
   }
 ];
 
-// Q&A Section specifically for "People Also Ask" SEO ranking
 export const FAQS: FAQItem[] = [
-  {
-    question: "What is Naturopathy and how does it help in Lucknow?",
-    answer: "Naturopathy is a drugless system of healing that uses natural elements like water, mud, and diet to cure diseases. Our Natural Treatment Hospital in Lucknow focuses on removing the root cause—morbid matter—rather than just suppressing symptoms."
-  },
-  {
-    question: "Which diseases can be cured by Naturopathy?",
-    answer: "Naturopathy is highly effective for chronic conditions such as digestive disorders, arthritis, asthma, diabetes, hypertension, skin diseases, and obesity. It reverses disease conditions by boosting the body's self-healing capacity."
-  },
-  {
-    question: "Is Naturopathy safe compared to modern medicine?",
-    answer: "Yes, Naturopathy is completely harmless. Treatment plans rely on diet, exercise, and natural elements, ensuring there are no harmful side effects or negative symptom suppression."
-  },
-  {
-    question: "Do you have residential facilities (Hospital/IPD)?",
-    answer: "Yes, as a fully functional Natural Treatment Hospital, we provide hygienic residential facilities for patients undergoing 7-21 day treatment packages for chronic diseases."
-  },
-  {
-    question: "Can I visit daily for treatment (Clinic/OPD)?",
-    answer: "Absolutely. Our Naturopathy Clinic functions daily. You can consult our doctors and take single therapy sessions like Mud Bath, Massage, or Yoga without admission."
-  },
-  {
-    question: "Where is the best Naturopathy centre in Lucknow located?",
-    answer: "We are located in Gomti Nagar, accessible from Aliganj, Hazratganj, and Indira Nagar. We provide the most comprehensive holistic treatment facilities in the city."
-  }
-];
+    {
+      question: "What is naturopathy and how does it work?",
+      answer: "Naturopathy is a drugless system of healing that uses natural elements like water, mud, diet, yoga, and massage to treat diseases. It works by removing toxins (morbid matter) from the body and activating the body's natural healing mechanisms. Unlike conventional medicine that suppresses symptoms, naturopathy addresses the root cause of disease."
+    },
+    {
+      question: "Is naturopathy scientifically proven or just alternative medicine?",
+      answer: "While classified as alternative medicine, many therapies are backed by research. Studies show yoga reduces HbA1c, hydrotherapy improves circulation, and the DASH diet lowers BP. We integrate traditional wisdom with modern diagnostics (blood tests, monitoring) to ensure evidence-based results."
+    },
+    {
+      question: "How long does naturopathy treatment take to show results?",
+      answer: "It varies. Quick relief (1-2 weeks) for constipation, acidity, and pain. Moderate timeline (4-8 weeks) for BP, weight loss, and stress. Longer timeline (3-6 months) for diabetes reversal and chronic conditions. It's not a quick fix but aims for permanent cure."
+    },
+    {
+      question: "Do I have to stop my current medications to start naturopathy?",
+      answer: "NO. Never stop essential medications abruptly. We start naturopathy alongside your current treatment. As your health parameters (BP, sugar) improve, your doctor will gradually reduce the dosage. Complete elimination happens only under medical supervision when safe."
+    },
+    {
+      question: "What is the success rate of naturopathy for diabetes?",
+      answer: "Based on 15+ years of data: 92% show blood sugar improvement in 3 months. 68% reduce medication by half. 34% achieve medication-free status. Results depend on patient compliance and disease duration. Type 2 diabetes is highly reversible."
+    },
+    {
+      question: "Can naturopathy cure arthritis completely?",
+      answer: "For Osteoarthritis, we can't regenerate lost cartilage but can reduce pain by 70-90% and improve mobility, often avoiding surgery. For Rheumatoid Arthritis, we can reduce inflammation and dependency on steroids significantly."
+    },
+    {
+      question: "Is naturopathy treatment painful or uncomfortable?",
+      answer: "Most treatments like massage, steam bath, and yoga are relaxing. Some like enema or acupressure might have mild discomfort initially but are not painful. We always work within your comfort level."
+    },
+    {
+      question: "What should I bring if I'm admitted for residential treatment (IPD)?",
+      answer: "Comfortable cotton clothes, toiletries, current medications, recent medical reports, and walking shoes. We provide linens, therapy materials, and food. No outside food is allowed."
+    },
+    {
+      question: "Can I continue working while undergoing outpatient (OPD) treatment?",
+      answer: "YES. OPD is designed for working professionals. You can visit for 1-2 hours in the morning (6:30-8:00 AM) or evening (5:00-7:00 PM). We schedule appointments to suit your work life."
+    },
+    {
+      question: "Is your center certified and doctors qualified?",
+      answer: "YES. We are AYUSH registered. Dr. Nand Lal Yadav (BNYS, MD) and Dr. Neelam Kumari (BNYS) are qualified naturopathy doctors. Our therapists are certified. We are ISO certified for hygiene."
+    },
+    {
+      question: "Do you provide diet charts and can I follow them at home?",
+      answer: "YES. You get a personalized chart with simple Indian recipes, portion guides, and shopping lists. It's designed to be practical and sustainable, not boring or impossible to follow."
+    },
+    {
+      question: "What is the difference between Naturopathy and Ayurveda?",
+      answer: "Naturopathy focuses on the 5 elements (Panchamahabhuta) and detoxification without medicines. Ayurveda uses herbs, constitution analysis (Doshas), and formulations. At our center, we practice an integrated approach combining drugless naturopathy with proven Ayurvedic therapies like Abhyanga and Shirodhara."
+    },
+    {
+      question: "Is naturopathy safe for elderly patients (60+ years)?",
+      answer: "YES, it's ideal for seniors as it uses no harsh chemicals. We modify therapies to be gentle (chair yoga, light massage). It improves quality of life for arthritis, BP, and diabetes significantly."
+    },
+    {
+      question: "Can children be treated with naturopathy?",
+      answer: "YES, naturopathy is safe for children (5+ years). We treat chronic constipation, obesity, asthma, allergies, and weak immunity. Treatments like gentle mud packs and fun yoga sessions are child-friendly. Children under 5 need case-by-case evaluation."
+    },
+    {
+      question: "Will I have to follow a boring, tasteless diet?",
+      answer: "NO! Our diet includes familiar Indian foods like roti, dal, and sabzi, just prepared healthily (less oil, better grains). We focus on portion control and timing rather than starving you. It's practical and sustainable."
+    },
+    {
+      question: "How is your center different from other naturopathy centers in Lucknow?",
+      answer: "We offer experienced doctors (28+ years), a complete hospital facility (IPD & OPD), scientific evidence-based protocols (not guesswork), honest communication about results, and affordable pricing. We are a medical facility, not just a spa."
+    }
+  ];
+
+export const TESTIMONIALS: TestimonialItem[] = [
+    {
+      id: 1,
+      name: "Rajesh Verma",
+      age: "52 Years",
+      location: "Aliganj, Lucknow",
+      condition: "Type 2 Diabetes (HbA1c 9.2)",
+      duration: "4 months",
+      title: "REVERSED TYPE 2 DIABETES IN 4 MONTHS",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      quote: "My HbA1c was 9.2, fasting sugar 240. After 3 months at Lucknow Naturopathy Center, HbA1c is now 6.5 and fasting sugar 110. I've reduced my medication from 3 tablets to just 1.",
+      story: "I was diagnosed with diabetes 8 years ago. Traditional doctors said I'd need medication for life. That's when my friend recommended Dr. Nand Lal Yadav. The treatment included a personalized low-GI diet plan, medical yoga, mud therapy, and gradual medication tapering.",
+      verified: true
+    },
+    {
+      id: 2,
+      name: "Meera Gupta",
+      age: "58 Years",
+      location: "Hazratganj, Lucknow",
+      condition: "Severe Osteoarthritis",
+      duration: "6 weeks",
+      title: "AVOIDED KNEE SURGERY WITH NATURAL TREATMENT",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      quote: "I couldn't climb stairs due to severe knee pain. Doctors suggested knee replacement. After 6 weeks of Janu Basti, mud therapy and yoga, I'm now pain-free and can walk 3 km daily.",
+      story: "I was terrified of surgery. My daughter found this center. Dr. Yadav examined my X-rays and started conservative treatment. Week 1: Pain reduced by 30%. Week 6: Painkiller-free. Surgery cancelled! Saved ₹5 lakhs.",
+      verified: true
+    },
+    {
+      id: 3,
+      name: "Priya Sharma",
+      age: "34 Years",
+      location: "Indira Nagar, Lucknow",
+      condition: "Obesity (82 kg)",
+      duration: "3 months",
+      title: "LOST 12 KG NATURALLY WITHOUT CRASH DIETS",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      quote: "I tried every diet – keto, intermittent fasting. Lost weight but gained it back. Dr. Neelam Kumari's approach was different. Lost 12 kg in 3 months and kept it off for 1 year now.",
+      story: "Dr. Neelam explained I was losing muscle, not fat. She designed a sustainable program with balanced 1400-calorie diet, Udvartana massage, and medical yoga. This is the FIRST time I haven't regained weight.",
+      verified: true
+    },
+    {
+      id: 4,
+      name: "Vikram Singh",
+      age: "41 Years",
+      location: "Jankipuram, Lucknow",
+      condition: "Chronic Acidity & GERD",
+      duration: "3 weeks",
+      title: "STOPPED ANTACIDS AFTER 8 YEARS OF DAILY USE",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      quote: "I haven't taken a single antacid in 6 months. Can eat everything in moderation. The key was healing my gut lining and managing stress, not suppressing acid production.",
+      story: "I had severe acidity for 8 years and was dependent on Pantoprazole. Dr. Yadav's approach focused on healing my gut with colon cleansing, mud packs, and a gut-healing diet. Within 3 weeks, I had zero acidity and was medication-free.",
+      verified: true
+    },
+    {
+      id: 5,
+      name: "Anjali Mishra",
+      age: "31 Years",
+      location: "Vikas Nagar, Lucknow",
+      condition: "PCOD & Infertility",
+      duration: "7 months",
+      title: "CONCEIVED NATURALLY AFTER 4 YEARS OF TRYING",
+      image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      quote: "Don't lose hope. PCOD can be managed naturally. We saved ₹2.5 lakhs and avoided IVF stress. Natural conception is possible with the right treatment.",
+      story: "We tried to conceive for 4 years. Fertility doctors suggested IVF. Dr. Neelam Kumari designed a PCOD reversal program with diet, seed cycling, and yoga. Month 4: Regular cycles. Month 7: Naturally conceived!",
+      verified: true
+    }
+  ];
 
 export const SEO_AREAS = [
   "Gomti Nagar", "Aliganj", "Hazratganj", "Indira Nagar", "Mahanagar", 

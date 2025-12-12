@@ -52,3 +52,17 @@ export interface DoctorProfile {
   bio: string[];
   image: string;
 }
+
+export interface TestimonialItem {
+  id: number;
+  name: string;
+  age: string;
+  location: string;
+  condition: string;
+  duration: string;
+  title: string;
+  image: string;
+  quote: string;
+  story: string;
+  verified: boolean;
+}

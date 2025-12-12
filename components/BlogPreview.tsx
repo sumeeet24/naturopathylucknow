@@ -11,7 +11,7 @@ const BlogPreview: React.FC = () => {
       author: "Dr. Nand Lal Yadav",
       date: "Dec 10, 2024",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1544367563-12123d8965cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Replaced with valid diabetes/sugar related image
       tag: "Diabetes"
     },
     {
@@ -20,7 +20,7 @@ const BlogPreview: React.FC = () => {
       author: "Dr. Neelam Kumari",
       date: "Nov 28, 2024",
       readTime: "12 min read",
-      image: "https://images.unsplash.com/photo-1600334019640-eb2e9124237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Replaced with nature/therapy image
       tag: "Therapies"
     },
     {
@@ -29,7 +29,7 @@ const BlogPreview: React.FC = () => {
       author: "Dr. Nand Lal Yadav",
       date: "Nov 15, 2024",
       readTime: "10 min read",
-      image: "https://images.unsplash.com/photo-1552674605-46d990812d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Replaced with joint/pain related image
       tag: "Arthritis"
     }
   ];

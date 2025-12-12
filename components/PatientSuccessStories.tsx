@@ -1,49 +1,10 @@
 import React from 'react';
-import { Star, Play, Quote, ArrowRight } from 'lucide-react';
+import { Star, Play, Quote, ArrowRight, Video } from 'lucide-react';
 import Image from 'next/image';
+import { TESTIMONIALS } from '../lib/constants';
 
 const PatientSuccessStories: React.FC = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Rajesh Verma",
-      age: "52 Years",
-      location: "Aliganj, Lucknow",
-      condition: "Type 2 Diabetes (HbA1c 9.2)",
-      duration: "4 months",
-      title: "REVERSED TYPE 2 DIABETES IN 4 MONTHS",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      quote: "My HbA1c was 9.2, fasting sugar 240. After 3 months at Lucknow Naturopathy Center, HbA1c is now 6.5 and fasting sugar 110. I've reduced my medication from 3 tablets to just 1.",
-      story: "I was diagnosed with diabetes 8 years ago. Traditional doctors said I'd need medication for life. That's when my friend recommended Dr. Nand Lal Yadav. The treatment included a personalized low-GI diet plan, medical yoga, mud therapy, and gradual medication tapering.",
-      verified: true
-    },
-    {
-      id: 2,
-      name: "Meera Gupta",
-      age: "58 Years",
-      location: "Hazratganj, Lucknow",
-      condition: "Severe Osteoarthritis",
-      duration: "6 weeks",
-      title: "AVOIDED KNEE SURGERY WITH NATURAL TREATMENT",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      quote: "I couldn't climb stairs due to severe knee pain. Doctors suggested knee replacement. After 6 weeks of Janu Basti, mud therapy and yoga, I'm now pain-free and can walk 3 km daily.",
-      story: "I was terrified of surgery. My daughter found this center. Dr. Yadav examined my X-rays and started conservative treatment. Week 1: Pain reduced by 30%. Week 6: Painkiller-free. Surgery cancelled! Saved ₹5 lakhs.",
-      verified: true
-    },
-    {
-      id: 3,
-      name: "Priya Sharma",
-      age: "34 Years",
-      location: "Indira Nagar, Lucknow",
-      condition: "Obesity (82 kg)",
-      duration: "3 months",
-      title: "LOST 12 KG NATURALLY WITHOUT CRASH DIETS",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      quote: "I tried every diet – keto, intermittent fasting. Lost weight but gained it back. Dr. Neelam Kumari's approach was different. Lost 12 kg in 3 months and kept it off for 1 year now.",
-      story: "Dr. Neelam explained I was losing muscle, not fat. She designed a sustainable program with balanced 1400-calorie diet, Udvartana massage, and medical yoga. This is the FIRST time I haven't regained weight.",
-      verified: true
-    }
-  ];
+  const testimonials = TESTIMONIALS;
 
   const shortTestimonials = [
     { name: "Suresh Kumar", loc: "Gomti Nagar", condition: "Hypertension", text: "BP reduced from 160/100 to 130/85 in 2 months. Stopped 2 out of 3 BP medications." },
@@ -64,7 +25,7 @@ const PatientSuccessStories: React.FC = () => {
                 Real Patient Success Stories from Lucknow Naturopathy Center
             </h2>
             <p className="text-lg text-stone-600 max-w-3xl mx-auto leading-relaxed">
-                Don&apos;t just take our word for it. Hear directly from patients who have transformed their health through our natural treatment protocols. These are verified results.
+                Don&apos;t just take our word for it. Hear directly from patients who have transformed their health through our natural treatment protocols. These are real people with verified results – not stock photos or made-up testimonials.
             </p>
         </div>
 
@@ -110,7 +71,7 @@ const PatientSuccessStories: React.FC = () => {
                     <div className="bg-white p-4 text-[10px] text-stone-400 font-medium uppercase tracking-wider flex justify-between items-center border-t border-stone-100">
                          <span className="flex items-center text-nature-green"><span className="mr-1">✓</span> Verified Patient</span>
                          <button className="flex items-center hover:text-nature-green transition-colors">
-                            <Play size={12} className="mr-1" /> Watch Video
+                            <Video size={12} className="mr-1" /> Watch Video
                          </button>
                     </div>
                 </div>
