@@ -44,7 +44,7 @@ const Services: React.FC = () => {
           {TREATMENTS.map((service, idx) => (
             <Link 
               key={service.id} 
-              href={`/treatment/${service.id}`}
+              href={`/treatments/${service.id}`}
               className="group bg-white rounded-3xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(58,99,81,0.15)] transition-all duration-500 border border-stone-100 hover:border-nature-green/30 flex flex-col items-start relative overflow-hidden transform hover:-translate-y-2"
             >
               {/* Card Background Decoration */}

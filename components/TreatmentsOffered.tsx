@@ -162,7 +162,7 @@ const TreatmentsOffered: React.FC = () => {
                         </div>
                     </div>
                     <div className="p-4 md:p-6 bg-stone-50 border-t border-stone-100 mt-auto">
-                         <Link href={`/treatment/${treatment.id}`} className="flex items-center justify-center w-full bg-white border border-stone-200 text-stone-700 font-bold py-3.5 md:py-3 rounded-xl hover:bg-nature-green hover:text-white hover:border-nature-green active:bg-nature-green active:text-white active:border-nature-green transition-all group/btn shadow-sm md:shadow-none">
+                         <Link href={`/treatments/${treatment.id}`} className="flex items-center justify-center w-full bg-white border border-stone-200 text-stone-700 font-bold py-3.5 md:py-3 rounded-xl hover:bg-nature-green hover:text-white hover:border-nature-green active:bg-nature-green active:text-white active:border-nature-green transition-all group/btn shadow-sm md:shadow-none">
                             {treatment.cta} <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                          </Link>
                     </div>

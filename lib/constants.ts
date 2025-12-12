@@ -61,7 +61,11 @@ export const TREATMENTS: ServiceItem[] = [
       "For full body mud bath, the patient is covered in mud and sits in sunlight.",
       "After drying, the mud is washed off with a cold shower."
     ],
-    iconName: 'Leaf'
+    iconName: 'Leaf',
+    reviews: [
+      { author: "Rajesh Kumar", text: "Best mud therapy in Lucknow.", rating: 5 },
+      { author: "Anita Singh", text: "I had severe skin issues, but after 5 sessions of mud therapy, my skin is clear and glowing. Highly recommended!", rating: 5 }
+    ]
   },
   {
     id: 'hydrotherapy',
@@ -95,7 +99,12 @@ export const TREATMENTS: ServiceItem[] = [
       "Reduces swelling and pain in arthritic joints.",
       "Promotes deep sleep and mental relaxation."
     ],
-    iconName: 'HeartPulse'
+    iconName: 'HeartPulse',
+    reviews: [
+      { author: "Suresh Verma", text: "Very relaxing and effective massage.", rating: 5 },
+      { author: "Pooja Mishra", text: "The therapeutic massage relieved my chronic back pain completely. The oils used were very soothing and the therapist was expert.", rating: 5 },
+      { author: "Amit Srivastava", text: "Great relief from joint pain.", rating: 5 }
+    ]
   },
   {
     id: 'detox',
@@ -182,7 +191,10 @@ export const TREATMENTS: ServiceItem[] = [
       "Sustainable weight loss.",
       "Reverses lifestyle diseases like Diabetes type 2."
     ],
-    iconName: 'Wind'
+    iconName: 'Wind',
+    reviews: [
+      { author: "Vikram Singh", text: "Dr. Yadav's diet plan is simple to follow and very effective. I lost 5kg in a month without starving myself.", rating: 5 }
+    ]
   }
 ];
 
@@ -293,6 +305,10 @@ export const PACKAGES: PackageItem[] = [
       "Medical yoga classes (morning & evening)",
       "Blood tests (initial & final)",
       "Diet chart for home"
+    ],
+    reviews: [
+      { author: "Deepak Gupta", text: "The 15-day stay changed my life. Staff is very caring and the environment is peaceful. My diabetes is under control now.", rating: 5 },
+      { author: "Ritu Sharma", text: "Excellent facilities.", rating: 5 }
     ]
   },
   {
@@ -342,6 +358,11 @@ export const PACKAGES: PackageItem[] = [
       "Full Panchakarma (in 21-day plan)",
       "Yoga & Meditation",
       "Complete system reset"
+    ],
+    reviews: [
+      { author: "Sanjay Patel", text: "Feeling very light and active.", rating: 5 },
+      { author: "Neha Tiwari", text: "The 7-day detox program was a life changer. My digestion has improved and I feel so much lighter and healthier now.", rating: 5 },
+      { author: "Rahul Khanna", text: "Best detox center.", rating: 5 }
     ]
   }
 ];

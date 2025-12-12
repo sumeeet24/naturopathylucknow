@@ -79,6 +79,27 @@ export default function PriceList() {
                         </li>
                     ))}
                     </ul>
+
+                    {pkg.reviews && pkg.reviews.length > 0 && (
+                      <div className="mt-6 pt-6 border-t border-stone-100">
+                        <p className="text-xs font-bold text-stone-500 mb-3 uppercase tracking-wide">Patient Reviews</p>
+                        <div className="space-y-4">
+                            {pkg.reviews.map((review, rIdx) => (
+                              <div key={rIdx} className="bg-stone-50 p-3 rounded-lg">
+                                  <div className="flex justify-between items-start mb-1">
+                                    <span className="font-bold text-stone-800 text-xs">{review.author}</span>
+                                    <div className="flex text-yellow-400 text-[10px]">
+                                        {[...Array(review.rating)].map((_, starI) => (
+                                          <span key={starI}>★</span>
+                                        ))}
+                                    </div>
+                                  </div>
+                                  <p className="text-stone-600 text-xs italic">"{review.text}"</p>
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                    )}
                 </div>
 
                 <div className="p-6 bg-stone-50 border-t border-stone-100 mt-auto">
