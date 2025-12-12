@@ -26,12 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: service.shortDescription + " Best Naturopathy treatment in Lucknow. Book appointment.",
     keywords: [`${service.title} Lucknow`, `Naturopathy for ${service.title}`, "Natural Cure", "Holistic Healing", ...service.benefits],
     alternates: {
-      canonical: `/treatment/${params.id}`,
+      canonical: `/treatments/${params.id}`,
     },
     openGraph: {
         title: `${service.title} - Natural Healing Lucknow`,
         description: service.shortDescription,
-        url: `/treatment/${params.id}`,
+        url: `/treatments/${params.id}`,
     }
   };
 }
@@ -67,7 +67,7 @@ export default function ServiceDetail({ params }: Props) {
   const breadcrumbJson = generateBreadcrumbSchema([
     { name: 'Home', item: 'https://lucknownaturopathy.com' },
     { name: 'Treatments', item: 'https://lucknownaturopathy.com/treatments' },
-    { name: service.title, item: `https://lucknownaturopathy.com/treatment/${service.id}` }
+    { name: service.title, item: `https://lucknownaturopathy.com/treatments/${service.id}` }
   ]);
 
   return (
