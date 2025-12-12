@@ -21,13 +21,13 @@ const WhyChooseUs: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8">
 
             {/* Card 1 */}
-            <div className="bg-stone-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border border-stone-100 group">
-                <div className="w-14 h-14 bg-nature-light/30 rounded-full flex items-center justify-center mb-6 group-hover:bg-nature-green group-hover:text-white transition-colors text-nature-green">
+            <div className="bg-white md:bg-stone-50 rounded-2xl p-6 md:p-8 shadow-md md:shadow-none hover:shadow-xl transition-all duration-300 border border-stone-100 group">
+                <div className="w-14 h-14 bg-nature-light/50 md:bg-nature-light/30 rounded-full flex items-center justify-center mb-6 group-hover:bg-nature-green group-hover:text-white transition-colors text-nature-green shadow-sm md:shadow-none">
                     <Building2 size={28} />
                 </div>
                 <h3 className="text-xl font-bold text-stone-800 mb-2">COMPLETE MEDICAL FACILITY</h3>
-                <h4 className="text-sm font-bold text-nature-green uppercase tracking-wider mb-4">Inpatient (IPD) & Outpatient (OPD) Services</h4>
-                <p className="text-stone-600 mb-4 leading-relaxed">
+                <h4 className="text-xs md:text-sm font-bold text-nature-green uppercase tracking-wider mb-4">Inpatient (IPD) & Outpatient (OPD) Services</h4>
+                <p className="text-stone-600 mb-4 leading-relaxed text-sm md:text-base">
                     We&apos;re not just a wellness center – we&apos;re a fully functional naturopathy hospital. Our inpatient facility accommodates patients for 7-21 day intensive disease reversal programs with:
                 </p>
                 <ul className="space-y-2 mb-6 text-stone-600 text-sm">
@@ -45,13 +45,13 @@ const WhyChooseUs: React.FC = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-stone-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border border-stone-100 group">
-                <div className="w-14 h-14 bg-nature-light/30 rounded-full flex items-center justify-center mb-6 group-hover:bg-nature-green group-hover:text-white transition-colors text-nature-green">
+            <div className="bg-white md:bg-stone-50 rounded-2xl p-6 md:p-8 shadow-md md:shadow-none hover:shadow-xl transition-all duration-300 border border-stone-100 group">
+                <div className="w-14 h-14 bg-nature-light/50 md:bg-nature-light/30 rounded-full flex items-center justify-center mb-6 group-hover:bg-nature-green group-hover:text-white transition-colors text-nature-green shadow-sm md:shadow-none">
                     <UserCheck size={28} />
                 </div>
                 <h3 className="text-xl font-bold text-stone-800 mb-2">EXPERT MEDICAL TEAM</h3>
-                <h4 className="text-sm font-bold text-nature-green uppercase tracking-wider mb-4">28+ Years of Specialized Experience</h4>
-                <p className="text-stone-600 mb-4 leading-relaxed">
+                <h4 className="text-xs md:text-sm font-bold text-nature-green uppercase tracking-wider mb-4">28+ Years of Specialized Experience</h4>
+                <p className="text-stone-600 mb-4 leading-relaxed text-sm md:text-base">
                     Led by Dr. Nand Lal Yadav (BNYS, MD Yoga Therapy), India&apos;s pioneer in Medical Yoga, our team includes:
                 </p>
                 <ul className="space-y-2 mb-6 text-stone-600 text-sm">
@@ -69,13 +69,13 @@ const WhyChooseUs: React.FC = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-stone-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border border-stone-100 group">
-                <div className="w-14 h-14 bg-nature-light/30 rounded-full flex items-center justify-center mb-6 group-hover:bg-nature-green group-hover:text-white transition-colors text-nature-green">
+            <div className="bg-white md:bg-stone-50 rounded-2xl p-6 md:p-8 shadow-md md:shadow-none hover:shadow-xl transition-all duration-300 border border-stone-100 group">
+                <div className="w-14 h-14 bg-nature-light/50 md:bg-nature-light/30 rounded-full flex items-center justify-center mb-6 group-hover:bg-nature-green group-hover:text-white transition-colors text-nature-green shadow-sm md:shadow-none">
                     <Microscope size={28} />
                 </div>
                 <h3 className="text-xl font-bold text-stone-800 mb-2">EVIDENCE-BASED PROTOCOLS</h3>
-                <h4 className="text-sm font-bold text-nature-green uppercase tracking-wider mb-4">Scientific Approach to Natural Healing</h4>
-                <p className="text-stone-600 mb-4 leading-relaxed">
+                <h4 className="text-xs md:text-sm font-bold text-nature-green uppercase tracking-wider mb-4">Scientific Approach to Natural Healing</h4>
+                <p className="text-stone-600 mb-4 leading-relaxed text-sm md:text-base">
                     Our treatments aren&apos;t based on guesswork. We use evidence-based naturopathy protocols that combine:
                 </p>
                 <ul className="space-y-2 mb-6 text-stone-600 text-sm">
@@ -93,13 +93,13 @@ const WhyChooseUs: React.FC = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="bg-stone-50 rounded-2xl p-8 hover:shadow-xl transition-shadow border border-stone-100 group">
-                <div className="w-14 h-14 bg-nature-light/30 rounded-full flex items-center justify-center mb-6 group-hover:bg-nature-green group-hover:text-white transition-colors text-nature-green">
+            <div className="bg-white md:bg-stone-50 rounded-2xl p-6 md:p-8 shadow-md md:shadow-none hover:shadow-xl transition-all duration-300 border border-stone-100 group">
+                <div className="w-14 h-14 bg-nature-light/50 md:bg-nature-light/30 rounded-full flex items-center justify-center mb-6 group-hover:bg-nature-green group-hover:text-white transition-colors text-nature-green shadow-sm md:shadow-none">
                     <Wallet size={28} />
                 </div>
                 <h3 className="text-xl font-bold text-stone-800 mb-2">TRANSPARENT & AFFORDABLE PRICING</h3>
-                <h4 className="text-sm font-bold text-nature-green uppercase tracking-wider mb-4">Quality Healthcare Within Your Budget</h4>
-                <p className="text-stone-600 mb-4 leading-relaxed">
+                <h4 className="text-xs md:text-sm font-bold text-nature-green uppercase tracking-wider mb-4">Quality Healthcare Within Your Budget</h4>
+                <p className="text-stone-600 mb-4 leading-relaxed text-sm md:text-base">
                     No hidden charges. No surprise bills. We believe natural healing should be accessible to everyone.
                 </p>
                 <ul className="space-y-2 mb-6 text-stone-600 text-sm">

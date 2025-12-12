@@ -121,48 +121,48 @@ const TreatmentsOffered: React.FC = () => {
         </div>
 
         {/* Treatment Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 mb-20">
             {treatments.map((treatment, idx) => (
-                <div key={idx} className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 overflow-hidden group flex flex-col h-full">
-                    <div className="p-8 flex-grow">
+                <div key={idx} className="bg-white rounded-2xl shadow-md md:shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 overflow-hidden group flex flex-col h-full">
+                    <div className="p-6 md:p-8 flex-grow">
                         <div className="flex items-center mb-6">
-                            <div className="w-12 h-12 rounded-full bg-nature-light/30 flex items-center justify-center text-nature-green group-hover:bg-nature-green group-hover:text-white transition-colors">
+                            <div className="w-12 h-12 rounded-full bg-nature-light/50 md:bg-nature-light/30 flex items-center justify-center text-nature-green group-hover:bg-nature-green group-hover:text-white transition-colors shrink-0">
                                 <treatment.icon size={24} />
                             </div>
-                            <h3 className="text-xl font-bold text-stone-800 ml-4 group-hover:text-nature-green transition-colors">
+                            <h3 className="text-lg md:text-xl font-bold text-stone-800 ml-4 group-hover:text-nature-green transition-colors leading-tight">
                                 {treatment.title}
                             </h3>
                         </div>
 
-                        <p className="text-stone-600 mb-6 leading-relaxed italic border-l-4 border-nature-green/30 pl-4">
+                        <p className="text-stone-600 mb-6 leading-relaxed italic border-l-4 border-nature-green/30 pl-4 text-sm md:text-base">
                             {treatment.desc}
                         </p>
 
                         <div className="space-y-4 text-sm text-stone-600">
                              <div>
-                                <strong className="block text-stone-800 mb-2">What We Offer:</strong>
+                                <strong className="block text-stone-800 mb-2 font-bold">What We Offer:</strong>
                                 <ul className="grid grid-cols-2 gap-x-2 gap-y-1">
                                     {treatment.offerings.map((offer, i) => (
                                         <li key={i} className="flex items-start">
                                             <span className="text-nature-green mr-1.5 mt-0.5 text-xs">●</span>
-                                            <span className="text-stone-500">{offer}</span>
+                                            <span className="text-stone-500 text-xs md:text-sm">{offer}</span>
                                         </li>
                                     ))}
                                 </ul>
                              </div>
 
                              <div>
-                                <strong className="text-stone-800">Conditions Treated:</strong> <span className="text-stone-500">{treatment.conditions}</span>
+                                <strong className="text-stone-800 font-bold">Conditions Treated:</strong> <span className="text-stone-500 text-xs md:text-sm">{treatment.conditions}</span>
                              </div>
 
-                             <div className="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-stone-500 uppercase tracking-wide">
-                                <span className="bg-stone-50 px-3 py-1 rounded border border-stone-200">⏳ {treatment.duration}</span>
-                                <span className="bg-stone-50 px-3 py-1 rounded border border-stone-200">💰 {treatment.price}</span>
+                             <div className="flex flex-wrap gap-2 md:gap-4 pt-2 text-xs font-semibold text-stone-500 uppercase tracking-wide">
+                                <span className="bg-stone-50 px-3 py-1.5 rounded border border-stone-200">⏳ {treatment.duration}</span>
+                                <span className="bg-stone-50 px-3 py-1.5 rounded border border-stone-200">💰 {treatment.price}</span>
                              </div>
                         </div>
                     </div>
-                    <div className="p-6 bg-stone-50 border-t border-stone-100 mt-auto">
-                         <Link href={`/treatment/${treatment.id}`} className="flex items-center justify-center w-full bg-white border border-stone-200 text-stone-700 font-bold py-3 rounded-xl hover:bg-nature-green hover:text-white hover:border-nature-green transition-all group/btn">
+                    <div className="p-4 md:p-6 bg-stone-50 border-t border-stone-100 mt-auto">
+                         <Link href={`/treatment/${treatment.id}`} className="flex items-center justify-center w-full bg-white border border-stone-200 text-stone-700 font-bold py-3.5 md:py-3 rounded-xl hover:bg-nature-green hover:text-white hover:border-nature-green active:bg-nature-green active:text-white active:border-nature-green transition-all group/btn shadow-sm md:shadow-none">
                             {treatment.cta} <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                          </Link>
                     </div>

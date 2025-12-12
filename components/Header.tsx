@@ -158,58 +158,58 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-white transform transition-transform duration-300 lg:hidden overflow-y-auto ${
+        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transform transition-transform duration-300 lg:hidden overflow-y-auto ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         style={{ paddingTop: '80px' }}
       >
         <div className="px-6 pb-20 space-y-4">
              {/* Mobile Top Bar Info */}
-            <div className="pb-4 mb-4 border-b border-stone-100 text-sm text-stone-500 space-y-2">
-                <p className="flex items-center"><Phone className="w-4 h-4 mr-2 text-nature-green" /> +91 88742 06748</p>
-                <p className="flex items-center"><Clock className="w-4 h-4 mr-2 text-nature-green" /> Mon-Sat: 8AM-1PM, 4PM-7PM</p>
+            <div className="pb-4 mb-4 border-b border-stone-100 text-sm text-stone-500 space-y-3 bg-stone-50/50 p-4 rounded-xl">
+                <p className="flex items-center font-medium"><Phone className="w-4 h-4 mr-2 text-nature-green" /> +91 88742 06748</p>
+                <p className="flex items-center font-medium"><Clock className="w-4 h-4 mr-2 text-nature-green" /> Mon-Sat: 8AM-1PM, 4PM-7PM</p>
             </div>
 
-            <Link href="/" className="block text-lg font-medium text-stone-800 border-b border-stone-100 pb-3">Home</Link>
-            <Link href="/about-naturopathy" className="block text-lg font-medium text-stone-800 border-b border-stone-100 pb-3">About Naturopathy</Link>
+            <Link href="/" className="block text-lg font-semibold text-stone-800 border-b border-stone-100/50 pb-3 hover:text-nature-green transition-colors">Home</Link>
+            <Link href="/about-naturopathy" className="block text-lg font-semibold text-stone-800 border-b border-stone-100/50 pb-3 hover:text-nature-green transition-colors">About Naturopathy</Link>
 
             <div>
-                <button onClick={() => toggleMobileDropdown('treatments')} className="flex w-full justify-between items-center text-lg font-medium text-stone-800 border-b border-stone-100 pb-3">
-                    Treatments <ChevronDown className={`w-5 h-5 transition-transform ${activeMobileDropdown === 'treatments' ? 'rotate-180' : ''}`} />
+                <button onClick={() => toggleMobileDropdown('treatments')} className="flex w-full justify-between items-center text-lg font-semibold text-stone-800 border-b border-stone-100/50 pb-3 hover:text-nature-green transition-colors">
+                    Treatments <ChevronDown className={`w-5 h-5 text-nature-green transition-transform duration-300 ${activeMobileDropdown === 'treatments' ? 'rotate-180' : ''}`} />
                 </button>
-                {activeMobileDropdown === 'treatments' && (
-                    <div className="pl-4 py-2 space-y-2 bg-stone-50">
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeMobileDropdown === 'treatments' ? 'max-h-[500px] opacity-100 py-2' : 'max-h-0 opacity-0'}`}>
+                    <div className="pl-4 space-y-2 border-l-2 border-nature-green/20 ml-1">
                         {TREATMENTS_MENU.map((item, idx) => (
-                             <Link key={idx} href={`/treatments/${item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} className="block text-stone-600 py-1">
+                             <Link key={idx} href={`/treatments/${item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} className="block text-base text-stone-600 py-1 hover:text-nature-green">
                                 {item}
                              </Link>
                         ))}
                     </div>
-                )}
+                </div>
             </div>
 
             <div>
-                <button onClick={() => toggleMobileDropdown('conditions')} className="flex w-full justify-between items-center text-lg font-medium text-stone-800 border-b border-stone-100 pb-3">
-                    Conditions We Treat <ChevronDown className={`w-5 h-5 transition-transform ${activeMobileDropdown === 'conditions' ? 'rotate-180' : ''}`} />
+                <button onClick={() => toggleMobileDropdown('conditions')} className="flex w-full justify-between items-center text-lg font-semibold text-stone-800 border-b border-stone-100/50 pb-3 hover:text-nature-green transition-colors">
+                    Conditions We Treat <ChevronDown className={`w-5 h-5 text-nature-green transition-transform duration-300 ${activeMobileDropdown === 'conditions' ? 'rotate-180' : ''}`} />
                 </button>
-                {activeMobileDropdown === 'conditions' && (
-                    <div className="pl-4 py-2 space-y-2 bg-stone-50">
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeMobileDropdown === 'conditions' ? 'max-h-[500px] opacity-100 py-2' : 'max-h-0 opacity-0'}`}>
+                    <div className="pl-4 space-y-2 border-l-2 border-nature-green/20 ml-1">
                         {CONDITIONS_MENU.map((item, idx) => (
-                             <Link key={idx} href={`/condition/${item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} className="block text-stone-600 py-1">
+                             <Link key={idx} href={`/condition/${item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} className="block text-base text-stone-600 py-1 hover:text-nature-green">
                                 {item}
                              </Link>
                         ))}
                     </div>
-                )}
+                </div>
             </div>
 
-            <Link href="/doctor" className="block text-lg font-medium text-stone-800 border-b border-stone-100 pb-3">Doctors Team</Link>
-            <Link href="/patient-success-stories" className="block text-lg font-medium text-stone-800 border-b border-stone-100 pb-3">Patient Success Stories</Link>
-            <Link href="/pricing" className="block text-lg font-medium text-stone-800 border-b border-stone-100 pb-3">Packages & Pricing</Link>
-            <Link href="/blog" className="block text-lg font-medium text-stone-800 border-b border-stone-100 pb-3">Blog & Health Tips</Link>
-            <Link href="/contact" className="block text-lg font-medium text-stone-800 border-b border-stone-100 pb-3">Contact Us</Link>
+            <Link href="/doctor" className="block text-lg font-semibold text-stone-800 border-b border-stone-100/50 pb-3 hover:text-nature-green transition-colors">Doctors Team</Link>
+            <Link href="/patient-success-stories" className="block text-lg font-semibold text-stone-800 border-b border-stone-100/50 pb-3 hover:text-nature-green transition-colors">Patient Success Stories</Link>
+            <Link href="/pricing" className="block text-lg font-semibold text-stone-800 border-b border-stone-100/50 pb-3 hover:text-nature-green transition-colors">Packages & Pricing</Link>
+            <Link href="/blog" className="block text-lg font-semibold text-stone-800 border-b border-stone-100/50 pb-3 hover:text-nature-green transition-colors">Blog & Health Tips</Link>
+            <Link href="/contact" className="block text-lg font-semibold text-stone-800 border-b border-stone-100/50 pb-3 hover:text-nature-green transition-colors">Contact Us</Link>
 
-            <Link href="/contact" className="block w-full text-center bg-nature-green text-white font-bold py-3 rounded-xl shadow-md mt-6">
+            <Link href="/contact" className="block w-full text-center bg-gradient-to-r from-nature-green to-nature-dark text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transform active:scale-[0.98] transition-all mt-8">
                 Book Free Consultation
             </Link>
         </div>
