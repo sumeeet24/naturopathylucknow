@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { generateMedicalBusinessSchema } from "@/lib/utils";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 import { Lato, Playfair_Display } from 'next/font/google';
 import "./globals.css";
@@ -78,14 +77,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${lato.variable} ${playfair.variable}`}>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateMedicalBusinessSchema()),
-          }}
-        />
-      </head>
       <body className="font-sans antialiased">
         {children}
         <MobileStickyCTA />
