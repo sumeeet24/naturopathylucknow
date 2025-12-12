@@ -21,13 +21,13 @@ const Hero: React.FC = () => {
         <div className="w-full lg:w-10/12 animate-fade-in-up">
 
           {/* Main H1 Heading */}
-          <h1 className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 drop-shadow-2xl tracking-tight text-white">
+          <h1 className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 drop-shadow-2xl tracking-tight text-white px-2">
             Naturopathy Hospital in Lucknow – <br className="hidden md:block" />
-            <span className="text-nature-light">Natural Treatment for Chronic Diseases</span>
+            <span className="text-nature-light block md:inline mt-2 md:mt-0">Natural Treatment for Chronic Diseases</span>
           </h1>
 
           {/* Subheading (H2) */}
-          <h2 className="text-lg sm:text-xl md:text-2xl text-stone-200 font-medium mb-8 max-w-4xl mx-auto leading-relaxed">
+          <h2 className="text-lg sm:text-xl md:text-2xl text-stone-200 font-medium mb-8 max-w-4xl mx-auto leading-relaxed px-4 drop-shadow-md">
             India&apos;s Leading Drugless Therapy Center for Diabetes, Hypertension, Arthritis & Chronic Disease Reversal
           </h2>
 
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           </p>
 
           {/* Key Features */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 mb-10 text-left max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 mb-10 text-left max-w-5xl mx-auto px-4">
              {[
                 "28+ Years Experience – Dr. Nand Lal Yadav",
                 "5,000+ Patients Cured – Verified success stories",
@@ -46,51 +46,51 @@ const Hero: React.FC = () => {
                 "Insurance Accepted – Cashless for AYUSH policies",
                 "Certified Therapists – Trained naturopathy doctors"
              ].map((feature, idx) => (
-                <div key={idx} className="flex items-center text-sm md:text-base text-stone-200">
+                <div key={idx} className="flex items-center text-sm md:text-base text-stone-200 bg-black/20 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none p-2 rounded-lg md:p-0">
                     <span className="text-nature-green mr-2 font-bold">✓</span> {feature}
                 </div>
              ))}
           </div>
 
           {/* Primary CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 px-4 w-full">
             <a
               href="https://wa.me/918874206748"
-              className="bg-[#25D366] text-white font-bold text-base px-8 py-4 rounded-full shadow-lg hover:bg-[#20bd5a] transition-all transform hover:-translate-y-1 flex items-center justify-center"
+              className="bg-[#25D366] text-white font-bold text-base px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:bg-[#20bd5a] transition-all transform hover:-translate-y-1 active:scale-95 flex items-center justify-center w-full sm:w-auto backdrop-blur-sm bg-opacity-90"
             >
               Book Appointment on WhatsApp
             </a>
             <a
               href="tel:+918874206748"
-              className="bg-white text-stone-900 font-bold text-base px-8 py-4 rounded-full shadow-lg hover:bg-stone-100 transition-all transform hover:-translate-y-1 flex items-center justify-center"
+              className="bg-white text-stone-900 font-bold text-base px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:bg-stone-100 transition-all transform hover:-translate-y-1 active:scale-95 flex items-center justify-center w-full sm:w-auto"
             >
               Call: 88742-06748
             </a>
           </div>
 
           {/* Below Buttons Info */}
-          <div className="text-sm text-stone-300 space-y-1 mb-10">
-             <p>📅 Next Available Slot: <span className="text-nature-light font-bold">Today, 5:30 PM</span></p>
-             <p>⚡ Free Consultation for First-Time Visitors</p>
+          <div className="text-sm text-stone-300 space-y-1 mb-12">
+             <p className="drop-shadow-md">📅 Next Available Slot: <span className="text-nature-light font-bold">Today, 5:30 PM</span></p>
+             <p className="drop-shadow-md">⚡ Free Consultation for First-Time Visitors</p>
           </div>
 
           {/* Trust Badges Row */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
-                <span className="text-yellow-400 font-bold text-lg">★ 4.8</span>
-                <span className="text-xs text-stone-300">Google Rating<br/>(156 Reviews)</span>
+          <div className="grid grid-cols-2 md:flex flex-wrap justify-center gap-3 md:gap-8 px-2">
+             <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-2 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-colors">
+                <span className="text-yellow-400 font-bold text-lg md:text-xl">★ 4.8</span>
+                <span className="text-xs text-stone-200 leading-tight">Google Rating<br/>(156 Reviews)</span>
              </div>
-             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
-                <ShieldCheck className="text-nature-light w-6 h-6" />
-                <span className="text-xs text-stone-300">Certified<br/>AYUSH Facility</span>
+             <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-2 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-colors">
+                <ShieldCheck className="text-nature-light w-6 h-6 md:w-8 md:h-8" />
+                <span className="text-xs text-stone-200 leading-tight">Certified<br/>AYUSH Facility</span>
              </div>
-             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
-                <Award className="text-nature-light w-6 h-6" />
-                <span className="text-xs text-stone-300">15+ Years<br/>Established</span>
+             <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-2 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-colors">
+                <Award className="text-nature-light w-6 h-6 md:w-8 md:h-8" />
+                <span className="text-xs text-stone-200 leading-tight">15+ Years<br/>Established</span>
              </div>
-             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
-                <Heart className="text-nature-light w-6 h-6" />
-                <span className="text-xs text-stone-300">5000+ Happy<br/>Patients</span>
+             <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-2 bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/20 shadow-lg hover:bg-white/15 transition-colors">
+                <Heart className="text-nature-light w-6 h-6 md:w-8 md:h-8" />
+                <span className="text-xs text-stone-200 leading-tight">5000+ Happy<br/>Patients</span>
              </div>
           </div>
 
