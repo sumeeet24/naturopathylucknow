@@ -20,7 +20,6 @@ export default function sitemap() {
     '/acupressure-acupuncture-lucknow',
     '/yoga-meditation-lucknow',
     '/physiotherapy-lucknow',
-    '/physiotherapy',
     '/naturopathy-therapist/neelam-kumari',
     '/yoga-therapist/nand-lal-yadav',
     '/privacy',

@@ -129,7 +129,8 @@ export const TREATMENTS: ServiceItem[] = [
       "Lowers blood pressure.",
       "Improves lung capacity."
     ],
-    iconName: 'Sun'
+    iconName: 'Sun',
+    customLink: '/yoga-meditation-lucknow'
   },
   {
     id: 'shirodhara',
@@ -163,7 +164,8 @@ export const TREATMENTS: ServiceItem[] = [
       "Enhances spirituality and mental clarity.",
       "Effective for sinus and allergy problems."
     ],
-    iconName: 'Flower'
+    iconName: 'Flower',
+    customLink: '/acupressure-acupuncture-lucknow'
   },
   {
     id: 'diet-therapy',

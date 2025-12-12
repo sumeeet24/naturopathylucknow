@@ -7,6 +7,21 @@ const nextConfig = {
         destination: '/acupressure-acupuncture-lucknow',
         permanent: true,
       },
+      {
+        source: '/treatments/acupressure',
+        destination: '/acupressure-acupuncture-lucknow',
+        permanent: true,
+      },
+      {
+        source: '/treatments/yoga-therapy',
+        destination: '/yoga-meditation-lucknow',
+        permanent: true,
+      },
+      {
+        source: '/physiotherapy',
+        destination: '/physiotherapy-lucknow',
+        permanent: true,
+      },
     ];
   },
   images: {
