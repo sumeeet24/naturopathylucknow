@@ -6,23 +6,9 @@
   - Local:        http://localhost:3000
 
  ✓ Starting...
-Attention: Next.js now collects completely anonymous telemetry regarding usage.
-This information is used to shape Next.js' roadmap and prioritize features.
-You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-https://nextjs.org/telemetry
-
- ✓ Ready in 1737ms
- ○ Compiling /doctor ...
- ✓ Compiled /doctor in 7s (665 modules)
- GET /doctor 200 in 7633ms
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 6.5s (648 modules)
- GET /images/pattern-leaf.png 404 in 6675ms
- GET /images/pattern-leaf.png 404 in 25ms
- ✓ Compiled /physiotherapy-lucknow in 262ms (638 modules)
- GET /physiotherapy-lucknow 200 in 365ms
- ✓ Compiled /acupressure-acupuncture-lucknow in 379ms (659 modules)
- GET /acupressure-acupuncture-lucknow 200 in 502ms
- ✓ Compiled /yoga-meditation-lucknow in 292ms (661 modules)
- GET /yoga-meditation-lucknow 200 in 426ms
- ✓ Compiled in 4.7s (303 modules)
+ ✓ Ready in 1795ms
+ ○ Compiling /yoga-meditation-lucknow ...
+ ✓ Compiled /yoga-meditation-lucknow in 9.4s (666 modules)
+ GET /yoga-meditation-lucknow 200 in 10265ms
+ GET /yoga-meditation-lucknow 200 in 153ms
+ GET /yoga-meditation-lucknow 200 in 110ms
