@@ -1,3 +1,9 @@
+export interface Review {
+  author: string;
+  text: string;
+  rating: number;
+}
+
 export interface ServiceItem {
   id: string;
   title: string;
@@ -7,6 +13,7 @@ export interface ServiceItem {
   procedure?: string[];
   iconName: string;
   customLink?: string;
+  reviews?: Review[];
 }
 
 export interface ConditionItem {
@@ -42,6 +49,7 @@ export interface PackageItem {
   duration: string;
   features: string[];
   recommendedFor: string;
+  reviews?: Review[];
 }
 
 export interface DoctorProfile {

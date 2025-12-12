@@ -11,18 +11,18 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
- ✓ Ready in 1737ms
- ○ Compiling /doctor ...
- ✓ Compiled /doctor in 7s (665 modules)
- GET /doctor 200 in 7633ms
+ ✓ Ready in 1941ms
+ ○ Compiling / ...
+ ✓ Compiled / in 7.2s (729 modules)
+ GET / 200 in 8480ms
  ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 6.5s (648 modules)
- GET /images/pattern-leaf.png 404 in 6675ms
- GET /images/pattern-leaf.png 404 in 25ms
- ✓ Compiled /physiotherapy-lucknow in 262ms (638 modules)
- GET /physiotherapy-lucknow 200 in 365ms
- ✓ Compiled /acupressure-acupuncture-lucknow in 379ms (659 modules)
- GET /acupressure-acupuncture-lucknow 200 in 502ms
- ✓ Compiled /yoga-meditation-lucknow in 292ms (661 modules)
- GET /yoga-meditation-lucknow 200 in 426ms
- ✓ Compiled in 4.7s (303 modules)
+ ✓ Compiled /_not-found in 862ms (712 modules)
+ GET /treatment/mud-therapy 404 in 98ms
+ ✓ Compiled in 750ms (712 modules)
+ GET / 200 in 471ms
+ ✓ Compiled /treatments/[id] in 492ms (712 modules)
+ ✓ Compiled in 684ms (723 modules)
+ GET / 200 in 487ms
+ ○ Compiling /pricing ...
+ ✓ Compiled /pricing in 728ms (714 modules)
+ GET /pricing 200 in 1067ms

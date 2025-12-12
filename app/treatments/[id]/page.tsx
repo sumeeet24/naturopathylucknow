@@ -51,7 +51,7 @@ export default function ServiceDetail({ params }: Props) {
   }
 
   // Schema Markup for Service
-  const jsonLd = {
+  const jsonLd: any = {
     "@context": "https://schema.org",
     "@type": "TherapeuticProcedure",
     "name": service.title,
@@ -63,6 +63,29 @@ export default function ServiceDetail({ params }: Props) {
       "image": "https://lucknownaturopathy.com/opengraph-image"
     }
   };
+
+  if (service.reviews && service.reviews.length > 0) {
+    jsonLd.aggregateRating = {
+      "@type": "AggregateRating",
+      "ratingValue": service.reviews.reduce((acc, review) => acc + review.rating, 0) / service.reviews.length,
+      "reviewCount": service.reviews.length,
+      "bestRating": "5",
+      "worstRating": "1"
+    };
+    jsonLd.review = service.reviews.map(review => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": review.author
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": review.rating,
+        "bestRating": "5"
+      },
+      "reviewBody": review.text
+    }));
+  }
 
   const breadcrumbJson = generateBreadcrumbSchema([
     { name: 'Home', item: 'https://lucknownaturopathy.com' },
@@ -149,6 +172,36 @@ export default function ServiceDetail({ params }: Props) {
                     ))}
                     </ol>
                 </div>
+                )}
+
+                {/* Patient Reviews Section */}
+                {service.reviews && service.reviews.length > 0 && (
+                  <div className="mb-10">
+                    <h3 className="text-xl font-bold text-stone-800 mb-6 flex items-center">
+                      <MessageCircle className="w-6 h-6 text-nature-green mr-2" />
+                      Patient Reviews
+                    </h3>
+                    <div className="grid gap-6">
+                      {service.reviews.map((review, idx) => (
+                        <div key={idx} className="bg-stone-50 rounded-lg p-6 border border-stone-100">
+                          <div className="flex items-center mb-3">
+                            <div className="w-8 h-8 rounded-full bg-nature-green/20 flex items-center justify-center text-nature-green font-bold text-sm mr-3">
+                              {review.author.charAt(0)}
+                            </div>
+                            <div>
+                              <div className="font-bold text-stone-800 text-sm">{review.author}</div>
+                              <div className="flex text-yellow-400 text-xs">
+                                {[...Array(review.rating)].map((_, i) => (
+                                  <span key={i}>★</span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                          <p className="text-stone-600 text-sm italic">"{review.text}"</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 )}
             </div>
 
