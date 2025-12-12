@@ -157,22 +157,51 @@ export function generatePersonSchema() {
   };
 }
 
-export function generateBreadcrumbSchema() {
+export function generateBreadcrumbSchema(items?: { name: string; item: string }[]) {
+  if (!items || items.length === 0) {
+      return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://naturopathlucknow.in/"
+          }
+        ]
+      };
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
+    "itemListElement": items.map((item, index) => ({
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://naturopathlucknow.in/"
-      }
-    ]
+        "position": index + 1,
+        "name": item.name,
+        "item": item.item
+    }))
   };
 }
 
-export function generateFAQSchema() {
+export function generateFAQSchema(faqs?: { question: string; answer: string }[]) {
+  if (faqs && faqs.length > 0) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+  }
+
+  // Default FAQs if none provided
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",

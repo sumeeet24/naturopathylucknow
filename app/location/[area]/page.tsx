@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import { generateBreadcrumbSchema, generateMedicalClinicSchema } from '@/lib/utils';
+import { generateBreadcrumbSchema, generateMedicalBusinessSchema } from '@/lib/utils';
 
 interface Props {
   params: { area: string }
@@ -58,7 +58,7 @@ export default function LocationPage({ params }: Props) {
 
   // Generate specific LocalBusiness Schema with areaServed focus
   const locationSchema = {
-    ...generateMedicalClinicSchema(),
+    ...generateMedicalBusinessSchema(),
     "areaServed": {
       "@type": "Place",
       "name": originalArea
@@ -66,9 +66,9 @@ export default function LocationPage({ params }: Props) {
   };
 
   const breadcrumbJson = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://lucknownaturopathy.com' },
-    { name: 'Locations', url: 'https://lucknownaturopathy.com' }, // Locations aren't listed on a separate page, pointing to home
-    { name: `Naturopath near ${originalArea}`, url: `https://lucknownaturopathy.com/location/${params.area}` }
+    { name: 'Home', item: 'https://lucknownaturopathy.com' },
+    { name: 'Locations', item: 'https://lucknownaturopathy.com' }, // Locations aren't listed on a separate page, pointing to home
+    { name: `Naturopath near ${originalArea}`, item: `https://lucknownaturopathy.com/location/${params.area}` }
   ]);
 
 

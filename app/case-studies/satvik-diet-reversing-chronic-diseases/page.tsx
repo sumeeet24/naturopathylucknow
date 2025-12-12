@@ -6,7 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AudioPlayer from '@/components/AudioPlayer';
 import TableOfContents from '@/components/TableOfContents';
-import { generateMedicalClinicSchema, generateBreadcrumbSchema } from '@/lib/utils';
+import { generateMedicalBusinessSchema, generateBreadcrumbSchema } from '@/lib/utils';
 import { MessageCircle, Calendar, User, Clock, ArrowRight, Share2, Printer, Volume2, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -163,9 +163,9 @@ export default function SatvikDietCaseStudy() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema([
-          { name: "Home", url: "https://naturopathlucknow.in" },
-          { name: "Case Studies", url: "https://naturopathlucknow.in/case-studies" },
-          { name: "Satvik Diet Study", url: "https://naturopathlucknow.in/case-studies/satvik-diet-reversing-chronic-diseases" }
+          { name: 'Home', item: 'https://naturopathlucknow.in' },
+          { name: 'Case Studies', item: 'https://naturopathlucknow.in/case-studies' },
+          { name: 'Satvik Diet Case Study', item: 'https://naturopathlucknow.in/case-studies/satvik-diet-reversing-chronic-diseases' }
         ])) }}
       />
 

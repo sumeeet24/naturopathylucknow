@@ -24,8 +24,8 @@ const CASE_STUDIES = [
 
 export default function CaseStudiesIndex() {
   const breadcrumbJson = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://naturopathlucknow.in' },
-    { name: 'Case Studies', url: 'https://naturopathlucknow.in/case-studies' }
+    { name: 'Home', item: 'https://naturopathlucknow.in' },
+    { name: 'Case Studies', item: 'https://naturopathlucknow.in/case-studies' }
   ]);
 
   return (
