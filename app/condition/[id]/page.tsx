@@ -67,9 +67,9 @@ export default function ConditionDetail({ params }: Props) {
   };
 
   const breadcrumbJson = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://lucknownaturopathy.com' },
-    { name: 'Conditions', url: 'https://lucknownaturopathy.com/conditions' }, // Assuming a conditions listing exists or purely for structural hierarchy
-    { name: condition.title, url: `https://lucknownaturopathy.com/condition/${condition.id}` }
+    { name: 'Home', item: 'https://lucknownaturopathy.com' },
+    { name: 'Conditions', item: 'https://lucknownaturopathy.com/conditions' }, // Assuming a conditions listing exists or purely for structural hierarchy
+    { name: condition.title, item: `https://lucknownaturopathy.com/condition/${condition.id}` }
   ]);
 
   return (

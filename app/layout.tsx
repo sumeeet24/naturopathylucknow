@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateMedicalClinicSchema } from "@/lib/utils";
+import { generateMedicalBusinessSchema } from "@/lib/utils";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 import { Lato, Playfair_Display } from 'next/font/google';
 import "./globals.css";
@@ -82,7 +82,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateMedicalClinicSchema()),
+            __html: JSON.stringify(generateMedicalBusinessSchema()),
           }}
         />
       </head>

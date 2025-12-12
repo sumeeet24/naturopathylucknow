@@ -63,9 +63,9 @@ export default function BlogPostPage({ params }: Props) {
   const authors = parseAuthors(post.author);
 
   const breadcrumbJson = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://lucknownaturopathy.com' },
-    { name: 'Blog', url: 'https://lucknownaturopathy.com/blog' },
-    { name: post.title, url: `https://lucknownaturopathy.com/blog/${post.slug}` }
+    { name: 'Home', item: 'https://lucknownaturopathy.com' },
+    { name: 'Blog', item: 'https://lucknownaturopathy.com/blog' },
+    { name: post.title, item: `https://lucknownaturopathy.com/blog/${post.slug}` }
   ]);
 
   const articleJson = {

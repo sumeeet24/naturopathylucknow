@@ -19,8 +19,8 @@ export default function BlogIndex() {
   const posts = getBlogPosts();
 
   const breadcrumbJson = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://lucknownaturopathy.com' },
-    { name: 'Blog', url: 'https://lucknownaturopathy.com/blog' }
+    { name: 'Home', item: 'https://lucknownaturopathy.com' },
+    { name: 'Blog', item: 'https://lucknownaturopathy.com/blog' }
   ]);
 
   return (

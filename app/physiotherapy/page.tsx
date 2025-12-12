@@ -6,7 +6,7 @@ import PhysioAbout from './components/PhysioAbout';
 import PhysioBenefits from './components/PhysioBenefits';
 import PhysioTestimonials from './components/PhysioTestimonials';
 import Contact from '@/components/Contact';
-import { generateMedicalClinicSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/lib/utils';
+import { generateMedicalBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/lib/utils';
 import { PHYSIO_HERO_TITLE, PHYSIO_HERO_SUBTITLE, PHYSIO_FAQS } from '@/lib/physiotherapyConstants';
 import { FAQS } from '@/lib/constants'; // Importing global FAQs to verify, but we should use PHYSIO_FAQS
 
@@ -52,8 +52,8 @@ const PhysioFAQ = () => {
 
 export default function PhysiotherapyPage() {
   const breadcrumbItems = [
-    { name: "Home", url: "https://naturopathlucknow.in" },
-    { name: "Physiotherapy", url: "https://naturopathlucknow.in/physiotherapy" }
+    { name: "Home", item: "https://naturopathlucknow.in" },
+    { name: "Physiotherapy", item: "https://naturopathlucknow.in/physiotherapy" }
   ];
 
   return (
@@ -61,7 +61,7 @@ export default function PhysiotherapyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateMedicalClinicSchema()),
+          __html: JSON.stringify(generateMedicalBusinessSchema()),
         }}
       />
       <script

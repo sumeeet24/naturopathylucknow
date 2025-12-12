@@ -65,9 +65,9 @@ export default function ServiceDetail({ params }: Props) {
   };
 
   const breadcrumbJson = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://lucknownaturopathy.com' },
-    { name: 'Treatments', url: 'https://lucknownaturopathy.com/treatments' },
-    { name: service.title, url: `https://lucknownaturopathy.com/treatment/${service.id}` }
+    { name: 'Home', item: 'https://lucknownaturopathy.com' },
+    { name: 'Treatments', item: 'https://lucknownaturopathy.com/treatments' },
+    { name: service.title, item: `https://lucknownaturopathy.com/treatment/${service.id}` }
   ]);
 
   return (

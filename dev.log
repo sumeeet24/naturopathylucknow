@@ -6,12 +6,64 @@
   - Local:        http://localhost:3000
 
  ✓ Starting...
-Attention: Next.js now collects completely anonymous telemetry regarding usage.
-This information is used to shape Next.js' roadmap and prioritize features.
-You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-https://nextjs.org/telemetry
-
- ✓ Ready in 1796ms
+ ✓ Ready in 1931ms
  ○ Compiling / ...
- ✓ Compiled / in 8.1s (700 modules)
- GET / 200 in 9795ms
+ ⚠ ./app/layout.tsx
+Attempted import error: 'generateMedicalClinicSchema' is not exported from '@/lib/utils' (imported as 'generateMedicalClinicSchema').
+
+Import trace for requested module:
+./app/layout.tsx
+ ⨯ app/layout.tsx (85:63) @ generateMedicalClinicSchema
+ ⨯ TypeError: (0 , _lib_utils__WEBPACK_IMPORTED_MODULE_1__.generateMedicalClinicSchema) is not a function
+    at RootLayout (./app/layout.tsx:87:119)
+    at stringify (<anonymous>)
+digest: "697677429"
+[0m [90m 83 |[39m           type[33m=[39m[32m"application/ld+json"[39m[0m
+[0m [90m 84 |[39m           dangerouslySetInnerHTML[33m=[39m{{[0m
+[0m[31m[1m>[22m[39m[90m 85 |[39m             __html[33m:[39m [33mJSON[39m[33m.[39mstringify(generateMedicalClinicSchema())[33m,[39m[0m
+[0m [90m    |[39m                                                               [31m[1m^[22m[39m[0m
+[0m [90m 86 |[39m           }}[0m
+[0m [90m 87 |[39m         [33m/[39m[33m>[39m[0m
+[0m [90m 88 |[39m       [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+ ⨯ app/layout.tsx (85:63) @ generateMedicalClinicSchema
+ ⨯ TypeError: (0 , _lib_utils__WEBPACK_IMPORTED_MODULE_1__.generateMedicalClinicSchema) is not a function
+    at RootLayout (./app/layout.tsx:87:119)
+    at stringify (<anonymous>)
+digest: "697677429"
+[0m [90m 83 |[39m           type[33m=[39m[32m"application/ld+json"[39m[0m
+[0m [90m 84 |[39m           dangerouslySetInnerHTML[33m=[39m{{[0m
+[0m[31m[1m>[22m[39m[90m 85 |[39m             __html[33m:[39m [33mJSON[39m[33m.[39mstringify(generateMedicalClinicSchema())[33m,[39m[0m
+[0m [90m    |[39m                                                               [31m[1m^[22m[39m[0m
+[0m [90m 86 |[39m           }}[0m
+[0m [90m 87 |[39m         [33m/[39m[33m>[39m[0m
+[0m [90m 88 |[39m       [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+ GET / 500 in 14977ms
+ ✓ Compiled / in 760ms (709 modules)
+ GET / 200 in 491ms
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1544367563-12123d8965cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600334019640-eb2e9124237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1552674605-46d990812d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600334019640-eb2e9124237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1544367563-12123d8965cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1552674605-46d990812d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600334019640-eb2e9124237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1544367563-12123d8965cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1552674605-46d990812d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600334019640-eb2e9124237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1552674605-46d990812d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1544367563-12123d8965cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600334019640-eb2e9124237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1544367563-12123d8965cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1552674605-46d990812d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80 404
+ ✓ Compiled in 6.1s (709 modules)
+ ✓ Compiled in 588ms (304 modules)
+ ✓ Compiled in 525ms (304 modules)
+ ✓ Compiled in 517ms (304 modules)
+ ✓ Compiled in 949ms (304 modules)
+ ✓ Compiled in 864ms (304 modules)
+ ✓ Compiled in 627ms (304 modules)
+ ✓ Compiled in 532ms (304 modules)
+ ✓ Compiled in 704ms (304 modules)
+ ✓ Compiled in 534ms (304 modules)
+ ✓ Compiled in 1383ms (709 modules)
+ ✓ Compiled in 552ms (304 modules)
