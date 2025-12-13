@@ -2,56 +2,15 @@
 > lucknow-naturopathy@1.0.0 dev
 > next dev
 
- ⚠ Port 3000 is in use, trying 3001 instead.
   ▲ Next.js 14.2.35
-  - Local:        http://localhost:3001
+  - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 1853ms
+ ✓ Ready in 1747ms
  ○ Compiling / ...
- ✓ Compiled / in 6.9s (729 modules)
- GET / 200 in 8609ms
- ○ Compiling /conditions/cancer ...
- ✓ Compiled /conditions/cancer in 859ms (715 modules)
- GET /conditions/cancer 200 in 1209ms
- ✓ Compiled /_not-found in 203ms (704 modules)
- GET /conditions/childless-couple-infertility 404 in 271ms
- GET / 200 in 430ms
- GET /conditions/cancer 200 in 91ms
- GET /conditions/childless-couple-infertility 404 in 37ms
- GET /conditions/childless-couple-infertility 404 in 27ms
- HEAD /conditions/cancer 200 in 52ms
- HEAD /conditions/childless-couple-infertility 404 in 18ms
- HEAD /conditions/sexual-health 404 in 27ms
- HEAD /conditions/autism 404 in 18ms
- HEAD /conditions/alzheimers-dementia 404 in 20ms
- HEAD /conditions/fatty-liver-cirrhosis 404 in 17ms
- HEAD /conditions/chronic-eye-problems 404 in 19ms
- ✓ Compiled in 1915ms (711 modules)
- ✓ Compiled /conditions/cancer in 285ms (410 modules)
- HEAD /conditions/cancer 200 in 537ms
- ✓ Compiled /conditions/childless-couple-infertility in 400ms (704 modules)
- HEAD /conditions/childless-couple-infertility 200 in 592ms
- ✓ Compiled /_not-found in 117ms (414 modules)
- HEAD /conditions/sexual-health 404 in 167ms
- GET / 200 in 404ms
- GET /conditions/cancer 200 in 113ms
- GET /conditions/childless-couple-infertility 200 in 98ms
- ✓ Compiled in 3s (711 modules)
- ✓ Compiled in 727ms (306 modules)
- ✓ Compiled in 674ms (306 modules)
- ✓ Compiled in 744ms (306 modules)
- ✓ Compiled in 688ms (711 modules)
- ✓ Compiled in 629ms (306 modules)
- ✓ Compiled in 468ms (306 modules)
- ✓ Compiled /_not-found in 123ms (407 modules)
- HEAD /conditions/sexual-health 404 in 358ms
- ✓ Compiled in 623ms (306 modules)
- ✓ Compiled in 573ms (713 modules)
- ✓ Compiled in 1288ms (711 modules)
- GET / 200 in 808ms
- ○ Compiling /conditions/cancer ...
- ✓ Compiled /conditions/cancer in 779ms (410 modules)
- GET /conditions/cancer 200 in 1242ms
- ✓ Compiled /conditions/childless-couple-infertility in 351ms (412 modules)
- GET /conditions/childless-couple-infertility 200 in 587ms
+ ✓ Compiled / in 8.1s (729 modules)
+ GET / 200 in 9612ms
+ GET / 200 in 322ms
+ ○ Compiling /treatments ...
+ ✓ Compiled /treatments in 930ms (716 modules)
+ GET /treatments 200 in 1263ms
