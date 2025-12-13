@@ -2,11 +2,38 @@
 > lucknow-naturopathy@1.0.0 dev
 > next dev
 
-  ▲ Next.js 14.2.33
-  - Local:        http://localhost:3000
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3001
 
  ✓ Starting...
- ✓ Ready in 2.2s
- ○ Compiling /yoga-meditation-lucknow ...
- ✓ Compiled /yoga-meditation-lucknow in 8.3s (686 modules)
- GET /yoga-meditation-lucknow 200 in 9154ms
+ ✓ Ready in 1853ms
+ ○ Compiling / ...
+ ✓ Compiled / in 6.9s (729 modules)
+ GET / 200 in 8609ms
+ ○ Compiling /conditions/cancer ...
+ ✓ Compiled /conditions/cancer in 859ms (715 modules)
+ GET /conditions/cancer 200 in 1209ms
+ ✓ Compiled /_not-found in 203ms (704 modules)
+ GET /conditions/childless-couple-infertility 404 in 271ms
+ GET / 200 in 430ms
+ GET /conditions/cancer 200 in 91ms
+ GET /conditions/childless-couple-infertility 404 in 37ms
+ GET /conditions/childless-couple-infertility 404 in 27ms
+ HEAD /conditions/cancer 200 in 52ms
+ HEAD /conditions/childless-couple-infertility 404 in 18ms
+ HEAD /conditions/sexual-health 404 in 27ms
+ HEAD /conditions/autism 404 in 18ms
+ HEAD /conditions/alzheimers-dementia 404 in 20ms
+ HEAD /conditions/fatty-liver-cirrhosis 404 in 17ms
+ HEAD /conditions/chronic-eye-problems 404 in 19ms
+ ✓ Compiled in 1915ms (711 modules)
+ ✓ Compiled /conditions/cancer in 285ms (410 modules)
+ HEAD /conditions/cancer 200 in 537ms
+ ✓ Compiled /conditions/childless-couple-infertility in 400ms (704 modules)
+ HEAD /conditions/childless-couple-infertility 200 in 592ms
+ ✓ Compiled /_not-found in 117ms (414 modules)
+ HEAD /conditions/sexual-health 404 in 167ms
+ GET / 200 in 404ms
+ GET /conditions/cancer 200 in 113ms
+ GET /conditions/childless-couple-infertility 200 in 98ms
