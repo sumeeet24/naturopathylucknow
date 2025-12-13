@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Diet for hormonal imbalance",
     "Ayurvedic Diet for IBS"
   ],
-  authors: [{ name: "Dr. Neelam Kumari" }, { name: "Dr. Ravi Gupta" }, { name: "Dr. Nand Lal Yadav" }],
+  authors: [{ name: "Dr. Neelam Kumari" }, { name: "Dr. Nand Lal Yadav" }],
   alternates: {
     canonical: 'https://naturopathlucknow.in/case-studies/satvik-diet-reversing-chronic-diseases',
   },
@@ -78,11 +78,6 @@ export default function SatvikDietCaseStudy() {
             "name": "Dr. Neelam Kumari",
             "url": "https://naturopathlucknow.in/naturopathy-therapist/neelam-kumari",
             "jobTitle": "Senior Naturopath"
-          },
-          {
-            "@type": "Person",
-            "name": "Dr. Ravi Gupta",
-            "jobTitle": "Medical Director"
           },
           {
             "@type": "Person",
@@ -196,7 +191,7 @@ export default function SatvikDietCaseStudy() {
               <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base text-white/80 font-medium">
                 <div className="flex items-center gap-2">
                   <User className="w-5 h-5" />
-                  <span>Dr. Neelam, Dr. Gupta, Dr. Yadav</span>
+                  <span>Dr. Neelam, Dr. Yadav</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
@@ -588,13 +583,6 @@ export default function SatvikDietCaseStudy() {
                  <h4 className="font-serif font-bold text-lg group-hover:text-nature-green transition-colors">Dr. Neelam Kumari</h4>
                  <p className="text-xs text-stone-500 uppercase tracking-wide">Senior Naturopath</p>
               </Link>
-              <div className="bg-white p-6 rounded-xl shadow-sm max-w-xs w-full">
-                 <div className="w-20 h-20 bg-stone-200 rounded-full mx-auto mb-4 flex items-center justify-center text-stone-400">
-                   <User size={40} />
-                 </div>
-                 <h4 className="font-serif font-bold text-lg">Dr. Ravi Gupta</h4>
-                 <p className="text-xs text-stone-500 uppercase tracking-wide">Medical Director</p>
-              </div>
               <Link href="/yoga-therapist/nand-lal-yadav" className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all max-w-xs w-full">
                  <div className="w-20 h-20 bg-stone-200 rounded-full mx-auto mb-4 overflow-hidden">
                    <Image src="/images/therapist/nandlal.jpg" alt="Dr. Nand Lal Yadav" width={80} height={80} className="w-full h-full object-cover object-center" />

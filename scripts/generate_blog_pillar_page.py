@@ -16,7 +16,7 @@ BLOG_DB_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__fi
 # --- PROMPT TEMPLATE ---
 # This prompt is designed for "Pillar Pages" with high E-E-A-T.
 PILLAR_PAGE_PROMPT_TEMPLATE = """
-You are Dr. Ravi Gupta, a highly experienced Naturopathic Doctor based in Lucknow with 15+ years of experience.
+You are Dr. Nand Lal Yadav, a highly experienced Naturopathic Doctor and Yoga Expert based in Lucknow with 28+ years of experience.
 You are writing a "Pillar Page" blog post for your website "Natural Treatment Hospital".
 
 **Topic:** {topic}
@@ -121,7 +121,7 @@ def generate_blog(topic, specific_instructions):
             "excerpt": blog_data['excerpt'],
             "content": blog_data['content'],
             "date": datetime.datetime.now().isoformat(),
-            "author": "Dr. Ravi Gupta",
+            "author": "Dr. Nand Lal Yadav",
             "tags": blog_data.get('tags', []),
             "keywords": blog_data.get('keywords', [])
         }

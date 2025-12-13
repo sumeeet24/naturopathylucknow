@@ -68,7 +68,7 @@ export async function GET(request: NextRequest) {
       excerpt: blogData.excerpt,
       content: blogData.content,
       date: new Date().toISOString(),
-      author: "Dr. Ravi Gupta", // Default author
+      author: "Dr. Nand Lal Yadav", // Default author
       tags: blogData.tags,
       keywords: blogData.keywords
     };

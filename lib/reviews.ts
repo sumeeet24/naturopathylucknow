@@ -12,7 +12,7 @@ export const REVIEWS: Review[] = [
     author: "Amit Srivastava",
     rating: 5,
     date: "2023-10-12",
-    text: "I was suffering from chronic back pain for 3 years. Doctors suggested surgery, but I wanted to try something natural. Dr. Ravi Gupta's treatment in Gomti Nagar changed my life. The potli massage and spinal bath therapy worked wonders. Highly recommend!",
+    text: "I was suffering from chronic back pain for 3 years. Doctors suggested surgery, but I wanted to try something natural. Dr. Nand Lal Yadav's treatment in Gomti Nagar changed my life. The potli massage and spinal bath therapy worked wonders. Highly recommend!",
     treatment: "Chronic Back Pain",
     location: "Gomti Nagar"
   },
@@ -28,7 +28,7 @@ export const REVIEWS: Review[] = [
     author: "Rajesh Verma",
     rating: 5,
     date: "2023-09-20",
-    text: "My diabetes levels were uncontrollable (HbA1c was 9.2). After 3 months of treatment here, it's down to 6.5 without heavy medication. The mud therapy and karela juice diet really works. Dr. Ravi is very knowledgeable.",
+    text: "My diabetes levels were uncontrollable (HbA1c was 9.2). After 3 months of treatment here, it's down to 6.5 without heavy medication. The mud therapy and karela juice diet really works. Dr. Yadav is very knowledgeable.",
     treatment: "Diabetes Management",
     location: "Aliganj"
   },
@@ -60,7 +60,7 @@ export const REVIEWS: Review[] = [
     author: "Rahul Dixit",
     rating: 5,
     date: "2023-11-22",
-    text: "Dr. Ravi Gupta gives a lot of time to understand the patient's history. He explained why I had migraines and treated the root cause with diet and acupressure. No painkillers needed anymore!",
+    text: "Dr. Nand Lal Yadav gives a lot of time to understand the patient's history. He explained why I had migraines and treated the root cause with diet and acupressure. No painkillers needed anymore!",
     treatment: "Migraine",
     location: "Ashiyana"
   },
@@ -108,7 +108,7 @@ export const REVIEWS: Review[] = [
     author: "Dr. A.K. Asthana",
     rating: 5,
     date: "2023-11-15",
-    text: "Being a doctor myself, I appreciate their scientific approach to natural healing. No quackery, just pure science of body and nature. Dr. Ravi is a gem.",
+    text: "Being a doctor myself, I appreciate their scientific approach to natural healing. No quackery, just pure science of body and nature. Dr. Yadav is a gem.",
     treatment: "Wellness",
     location: "Civil Lines"
   },
