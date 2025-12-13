@@ -73,7 +73,7 @@ export default function InfertilityPage() {
               Natural Fertility Treatment
             </h1>
             <p className="text-xl md:text-2xl text-stone-600 max-w-2xl mb-8 font-light">
-              Don't lose hope. Address the root cause of infertility—be it PCOD, stress, or hormonal imbalance—and welcome the joy of parenthood naturally.
+              Don&apos;t lose hope. Address the root cause of infertility—be it PCOD, stress, or hormonal imbalance—and welcome the joy of parenthood naturally.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -94,7 +94,7 @@ export default function InfertilityPage() {
               <div>
                 <h2 className="text-3xl font-serif font-bold text-stone-900 mb-6">Why Natural Conception?</h2>
                 <p className="text-stone-600 mb-4 leading-relaxed">
-                  Infertility is often a symptom of underlying health issues. Stress, poor diet, toxins, and hormonal imbalances disrupt the body's natural reproductive rhythms.
+                  Infertility is often a symptom of underlying health issues. Stress, poor diet, toxins, and hormonal imbalances disrupt the body&apos;s natural reproductive rhythms.
                 </p>
                 <p className="text-stone-600 mb-6 leading-relaxed">
                   Before opting for invasive and expensive procedures like IVF, give your body a chance to heal. Our protocols detoxify the reproductive system, regulate hormones, and prepare the womb for a healthy pregnancy.

@@ -33,7 +33,7 @@ export default function CancerPage() {
   const faqs = [
     {
       question: "Can naturopathy cure cancer?",
-      answer: "Naturopathy is an excellent supportive therapy. While we do not claim to 'cure' cancer in isolation, our integrative approach helps boost immunity, manage side effects of chemotherapy/radiation, and improve the quality of life significantly. Many patients find it essential for recovery and prevention of recurrence."
+      answer: "Naturopathy is an excellent supportive therapy. While we do not claim to &apos;cure&apos; cancer in isolation, our integrative approach helps boost immunity, manage side effects of chemotherapy/radiation, and improve the quality of life significantly. Many patients find it essential for recovery and prevention of recurrence."
     },
     {
       question: "Is it safe to do naturopathy along with chemotherapy?",
@@ -74,7 +74,7 @@ export default function CancerPage() {
               Cancer Care & Recovery
             </h1>
             <p className="text-xl md:text-2xl text-nature-light max-w-2xl mb-8 font-light">
-              Strengthen your body's fight against cancer. Reduce side effects and improve quality of life with our holistic protocols.
+              Strengthen your body&apos;s fight against cancer. Reduce side effects and improve quality of life with our holistic protocols.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -111,7 +111,7 @@ export default function CancerPage() {
                 <div className="bg-stone-50 p-6 rounded-xl border-l-4 border-nature-green">
                   <h3 className="text-lg font-bold text-stone-800 mb-2">Our Philosophy</h3>
                   <p className="text-stone-600 text-sm">
-                    "Treat the person, not just the tumor." We believe that healing requires addressing the physical toxicity, nutritional deficiencies, and emotional trauma that often accompany cancer.
+                    &quot;Treat the person, not just the tumor.&quot; We believe that healing requires addressing the physical toxicity, nutritional deficiencies, and emotional trauma that often accompany cancer.
                   </p>
                 </div>
               </div>

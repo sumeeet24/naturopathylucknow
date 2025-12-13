@@ -37,3 +37,21 @@
  GET / 200 in 404ms
  GET /conditions/cancer 200 in 113ms
  GET /conditions/childless-couple-infertility 200 in 98ms
+ ✓ Compiled in 3s (711 modules)
+ ✓ Compiled in 727ms (306 modules)
+ ✓ Compiled in 674ms (306 modules)
+ ✓ Compiled in 744ms (306 modules)
+ ✓ Compiled in 688ms (711 modules)
+ ✓ Compiled in 629ms (306 modules)
+ ✓ Compiled in 468ms (306 modules)
+ ✓ Compiled /_not-found in 123ms (407 modules)
+ HEAD /conditions/sexual-health 404 in 358ms
+ ✓ Compiled in 623ms (306 modules)
+ ✓ Compiled in 573ms (713 modules)
+ ✓ Compiled in 1288ms (711 modules)
+ GET / 200 in 808ms
+ ○ Compiling /conditions/cancer ...
+ ✓ Compiled /conditions/cancer in 779ms (410 modules)
+ GET /conditions/cancer 200 in 1242ms
+ ✓ Compiled /conditions/childless-couple-infertility in 351ms (412 modules)
+ GET /conditions/childless-couple-infertility 200 in 587ms
