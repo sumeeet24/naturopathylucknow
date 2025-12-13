@@ -6,9 +6,7 @@
   - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 1795ms
+ ✓ Ready in 2.2s
  ○ Compiling /yoga-meditation-lucknow ...
- ✓ Compiled /yoga-meditation-lucknow in 9.4s (666 modules)
- GET /yoga-meditation-lucknow 200 in 10265ms
- GET /yoga-meditation-lucknow 200 in 153ms
- GET /yoga-meditation-lucknow 200 in 110ms
+ ✓ Compiled /yoga-meditation-lucknow in 8.3s (686 modules)
+ GET /yoga-meditation-lucknow 200 in 9154ms
