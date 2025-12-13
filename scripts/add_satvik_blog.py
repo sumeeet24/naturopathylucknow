@@ -10,10 +10,10 @@ AUDIO_PATH = "/audio/satvik-diet-case-study.mp3"
 # Content preparation
 slug = "satvik-diet-pcos-digestive-health-case-study"
 title = "The Satvik Diet: A Clinical Case Study & Comprehensive Naturopathic Guide"
-author = "Dr. Ravi Gupta, Dr. Nilima Kumari & Dr. Nand Lal Yadav"
+author = "Dr. Neelam Kumari & Dr. Nand Lal Yadav"
 excerpt = "A detailed clinical case study on reversing PCOS and digestive issues using the Satvik diet. Discover the ancient wisdom of Naturopathy combined with modern nutritional science to heal from within."
 tags = ["Satvik Diet", "PCOS Reversal", "Digestive Health", "Naturopathy", "Case Study", "Holistic Nutrition", "Gut Health", "Yoga Diet"]
-keywords = ["Satvik Diet for PCOS", "Naturopathy for Digestive Issues", "Satvik Food List", "Dr Ravi Gupta Lucknow", "Dr Nilima Kumari Naturopath", "Dr Nand Lal Yadav Yoga", "Holistic Healing Lucknow", "Gut Health Naturopathy"]
+keywords = ["Satvik Diet for PCOS", "Naturopathy for Digestive Issues", "Satvik Food List", "Dr Neelam Kumari Naturopath", "Dr Nand Lal Yadav Yoga", "Holistic Healing Lucknow", "Gut Health Naturopathy"]
 
 # Read the text file
 try:

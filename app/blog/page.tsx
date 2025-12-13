@@ -9,7 +9,7 @@ import { generateBreadcrumbSchema } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Health & Wellness Blog | Naturopathy Tips Lucknow',
-  description: 'Read our latest articles on natural healing, diet therapy, yoga, and holistic living from Dr. Ravi Gupta.',
+  description: 'Read our latest articles on natural healing, diet therapy, yoga, and holistic living from Dr. Nand Lal Yadav.',
   alternates: {
     canonical: '/blog',
   },
