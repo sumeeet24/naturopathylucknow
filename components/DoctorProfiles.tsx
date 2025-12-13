@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Award, Users, Star, Phone, MessageCircle } from 'lucide-react';
 
 const DoctorProfiles: React.FC = () => {
@@ -21,7 +22,7 @@ const DoctorProfiles: React.FC = () => {
                 {/* Image Side */}
                 <div className="lg:col-span-5 relative h-[500px] lg:h-auto">
                     <Image
-                        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80" // Placeholder for Dr. Yadav
+                        src="/images/team/dr-nand-lal-yadav.jpg"
                         alt="Dr. Nand Lal Yadav - Naturopathic Doctor"
                         fill
                         className="object-cover object-top"
@@ -70,14 +71,18 @@ const DoctorProfiles: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                    <div className="flex flex-col sm:flex-row gap-4 mb-4">
                         <a href="tel:+918874206748" className="flex-1 bg-stone-900 text-white font-bold py-3 rounded-xl hover:bg-stone-800 transition-colors flex items-center justify-center shadow-lg">
                             <Phone className="w-4 h-4 mr-2" /> Book Appointment
                         </a>
-                        <div className="flex-1 flex flex-col justify-center text-xs text-stone-500 text-center sm:text-left">
-                            <span className="font-bold text-stone-800">Available:</span>
-                            Mon-Sat, 9 AM - 1 PM, 4 PM - 7 PM
-                        </div>
+                        <Link href="/yoga-therapist/nand-lal-yadav" className="flex-1 bg-white border border-stone-300 text-stone-800 font-bold py-3 rounded-xl hover:bg-stone-50 transition-colors flex items-center justify-center shadow-sm">
+                            View Profile
+                        </Link>
+                    </div>
+
+                    <div className="flex flex-col justify-center text-xs text-stone-500 text-center sm:text-left mb-8">
+                        <span className="font-bold text-stone-800">Available:</span>
+                        Mon-Sat, 9 AM - 1 PM, 4 PM - 7 PM
                     </div>
 
                     <div className="flex items-center text-sm font-bold text-stone-800">
@@ -95,7 +100,7 @@ const DoctorProfiles: React.FC = () => {
                 {/* Image Side (Order Last on Desktop to alternate layout) */}
                 <div className="lg:col-span-5 lg:order-last relative h-[500px] lg:h-auto">
                     <Image
-                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80" // Placeholder for Dr. Neelam
+                        src="/images/team/dr-nilam-kumari.jpg"
                         alt="Dr. Neelam Kumari - Naturopathic Doctor"
                         fill
                         className="object-cover object-top"
@@ -145,14 +150,18 @@ const DoctorProfiles: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                    <div className="flex flex-col sm:flex-row gap-4 mb-4">
                         <a href={`https://wa.me/918115400106`} className="flex-1 bg-[#25D366] text-white font-bold py-3 rounded-xl hover:bg-[#20bd5a] transition-colors flex items-center justify-center shadow-lg">
                             <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp Appointment
                         </a>
-                         <div className="flex-1 flex flex-col justify-center text-xs text-stone-500 text-center sm:text-left">
-                            <span className="font-bold text-stone-800">Female-Only Hours:</span>
-                            Tue & Thu, 10 AM - 12 PM
-                        </div>
+                        <Link href="/naturopathy-therapist/neelam-kumari" className="flex-1 bg-white border border-stone-300 text-stone-800 font-bold py-3 rounded-xl hover:bg-stone-50 transition-colors flex items-center justify-center shadow-sm">
+                            View Profile
+                        </Link>
+                    </div>
+
+                    <div className="flex flex-col justify-center text-xs text-stone-500 text-center sm:text-left mb-8">
+                        <span className="font-bold text-stone-800">Female-Only Hours:</span>
+                        Tue & Thu, 10 AM - 12 PM
                     </div>
 
                     <div className="flex items-center text-sm font-bold text-stone-800">
