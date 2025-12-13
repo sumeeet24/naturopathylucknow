@@ -64,15 +64,15 @@ const Footer: React.FC = () => {
             <div>
                 <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-6">Conditions We Treat</h3>
                 <ul className="space-y-3 text-sm">
-                    <li><Link href="/condition/diabetes" className="hover:text-nature-green transition-colors">Diabetes Type 2</Link></li>
-                    <li><Link href="/condition/hypertension" className="hover:text-nature-green transition-colors">Hypertension (High BP)</Link></li>
-                    <li><Link href="/condition/arthritis" className="hover:text-nature-green transition-colors">Arthritis & Joint Pain</Link></li>
-                    <li><Link href="/condition/obesity" className="hover:text-nature-green transition-colors">Obesity & Weight Loss</Link></li>
-                    <li><Link href="/condition/digestive-disorders" className="hover:text-nature-green transition-colors">Digestive Disorders</Link></li>
-                    <li><Link href="/condition/skin-diseases" className="hover:text-nature-green transition-colors">Skin Diseases</Link></li>
-                    <li><Link href="/condition/thyroid" className="hover:text-nature-green transition-colors">Thyroid Disorders</Link></li>
-                    <li><Link href="/condition/pcod" className="hover:text-nature-green transition-colors">PCOD/PCOS</Link></li>
-                    <li><Link href="/condition/stress-anxiety" className="hover:text-nature-green transition-colors">Stress & Anxiety</Link></li>
+                    <li><Link href="/conditions/diabetes-type-2" className="hover:text-nature-green transition-colors">Diabetes Type 2</Link></li>
+                    <li><Link href="/conditions/hypertension-high-bp" className="hover:text-nature-green transition-colors">Hypertension (High BP)</Link></li>
+                    <li><Link href="/conditions/arthritis-joint-pain" className="hover:text-nature-green transition-colors">Arthritis & Joint Pain</Link></li>
+                    <li><Link href="/conditions/obesity-weight-loss" className="hover:text-nature-green transition-colors">Obesity & Weight Loss</Link></li>
+                    <li><Link href="/conditions/digestive-disorders" className="hover:text-nature-green transition-colors">Digestive Disorders</Link></li>
+                    <li><Link href="/conditions/skin-diseases" className="hover:text-nature-green transition-colors">Skin Diseases</Link></li>
+                    <li><Link href="/conditions/thyroid-disorders" className="hover:text-nature-green transition-colors">Thyroid Disorders</Link></li>
+                    <li><Link href="/conditions/pcod-pcos" className="hover:text-nature-green transition-colors">PCOD/PCOS</Link></li>
+                    <li><Link href="/conditions/stress-anxiety" className="hover:text-nature-green transition-colors">Stress & Anxiety</Link></li>
                     <li><Link href="/conditions" className="text-nature-green font-medium hover:text-white transition-colors">View All Conditions →</Link></li>
                 </ul>
             </div>

@@ -103,9 +103,15 @@ const ConditionsWeTreat: React.FC = () => {
   ];
 
   const otherConditions = [
-    { name: "Skin Diseases", link: "/conditions/skin-disorders" },
-    { name: "Thyroid Disorders", link: "/conditions/thyroid" },
-    { name: "PCOD/PCOS", link: "/conditions/pcod" },
+    { name: "Diabetes Type 2", link: "/conditions/diabetes-type-2" },
+    { name: "High Blood Pressure", link: "/conditions/hypertension-high-bp" },
+    { name: "Arthritis & Joint Pain", link: "/conditions/arthritis-joint-pain" },
+    { name: "Digestive Disorders", link: "/conditions/digestive-disorders" },
+    { name: "Obesity & Weight Loss", link: "/conditions/obesity-weight-loss" },
+    { name: "Skin Diseases", link: "/conditions/skin-diseases" },
+    { name: "Thyroid Disorders", link: "/conditions/thyroid-disorders" },
+    { name: "PCOD/PCOS", link: "/conditions/pcod-pcos" },
+    { name: "Stress & Anxiety", link: "/conditions/stress-anxiety" },
     { name: "Asthma & Respiratory Issues", link: "/conditions/respiratory" },
     { name: "Kidney Stones", link: "/conditions/kidney-stones" },
     { name: "Fatty Liver Disease", link: "/conditions/fatty-liver" },
@@ -181,7 +187,15 @@ const ConditionsWeTreat: React.FC = () => {
                         <button className="flex-1 bg-white border border-stone-300 text-stone-700 font-bold py-3 rounded-xl hover:bg-stone-100 transition-colors text-xs sm:text-sm flex items-center justify-center">
                             <Download className="w-4 h-4 mr-2" /> {condition.primaryCta.replace("Download ", "").replace(" (PDF)", "")}
                         </button>
-                        <Link href="/contact" className="flex-1 bg-nature-green text-white font-bold py-3 rounded-xl hover:bg-nature-dark transition-colors text-xs sm:text-sm flex items-center justify-center shadow-lg shadow-nature-green/20">
+                        <Link href={
+                            condition.id === 'diabetes' ? '/conditions/diabetes-type-2' :
+                            condition.id === 'hypertension' ? '/conditions/hypertension-high-bp' :
+                            condition.id === 'arthritis' ? '/conditions/arthritis-joint-pain' :
+                            condition.id === 'obesity' ? '/conditions/obesity-weight-loss' :
+                            condition.id === 'digestive' ? '/conditions/digestive-disorders' :
+                            condition.id === 'stress' ? '/conditions/stress-anxiety' :
+                            '/contact'
+                        } className="flex-1 bg-nature-green text-white font-bold py-3 rounded-xl hover:bg-nature-dark transition-colors text-xs sm:text-sm flex items-center justify-center shadow-lg shadow-nature-green/20">
                             {condition.secondaryCta} <ArrowRight className="w-4 h-4 ml-2" />
                         </Link>
                     </div>

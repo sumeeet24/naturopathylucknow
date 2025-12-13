@@ -17,14 +17,16 @@ const TREATMENTS_MENU = [
 ];
 
 const CONDITIONS_MENU = [
-  "Diabetes Type 2",
-  "High Blood Pressure",
-  "Arthritis & Joint Pain",
-  "Digestive Disorders",
-  "Obesity & Weight Loss",
-  "Skin Diseases",
-  "Thyroid Disorders",
-  "All Conditions"
+  { name: "Diabetes Type 2", href: "/conditions/diabetes-type-2" },
+  { name: "High Blood Pressure", href: "/conditions/hypertension-high-bp" },
+  { name: "Arthritis & Joint Pain", href: "/conditions/arthritis-joint-pain" },
+  { name: "Digestive Disorders", href: "/conditions/digestive-disorders" },
+  { name: "Obesity & Weight Loss", href: "/conditions/obesity-weight-loss" },
+  { name: "Skin Diseases", href: "/conditions/skin-diseases" },
+  { name: "Thyroid Disorders", href: "/conditions/thyroid-disorders" },
+  { name: "PCOD/PCOS", href: "/conditions/pcod-pcos" },
+  { name: "Stress & Anxiety", href: "/conditions/stress-anxiety" },
+  { name: "All Conditions", href: "/conditions" }
 ];
 
 const Header: React.FC = () => {
@@ -121,8 +123,8 @@ const Header: React.FC = () => {
                 <div className="absolute left-0 top-full pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
                    <div className="bg-white rounded-lg shadow-xl border border-stone-100 py-2">
                      {CONDITIONS_MENU.map((item, idx) => (
-                        <Link key={idx} href={`/condition/${item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} className="block px-4 py-2 text-sm text-stone-600 hover:bg-nature-light/20 hover:text-nature-green">
-                           {item}
+                        <Link key={idx} href={item.href} className="block px-4 py-2 text-sm text-stone-600 hover:bg-nature-light/20 hover:text-nature-green">
+                           {item.name}
                         </Link>
                      ))}
                    </div>
@@ -195,8 +197,8 @@ const Header: React.FC = () => {
                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeMobileDropdown === 'conditions' ? 'max-h-[500px] opacity-100 py-2' : 'max-h-0 opacity-0'}`}>
                     <div className="pl-4 space-y-2 border-l-2 border-nature-green/20 ml-1">
                         {CONDITIONS_MENU.map((item, idx) => (
-                             <Link key={idx} href={`/condition/${item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} className="block text-base text-stone-600 py-1 hover:text-nature-green">
-                                {item}
+                             <Link key={idx} href={item.href} className="block text-base text-stone-600 py-1 hover:text-nature-green">
+                                {item.name}
                              </Link>
                         ))}
                     </div>
